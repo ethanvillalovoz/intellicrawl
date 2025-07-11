@@ -1,4 +1,4 @@
-# Intellicrawl: Autonomous AI Research Agent for Developer Tools 🚀
+# IntelliCrawl: Autonomous AI Research Agent for Developer Tools 🚀
 
 ![Python](https://img.shields.io/badge/python-3.13-blue)
 ![LangChain](https://img.shields.io/badge/langchain-graph-green)
@@ -10,13 +10,13 @@
 
 ## Introduction
 
-**Intellicrawl** is an advanced multi-step AI research agent for autonomous web-powered knowledge extraction and developer tool comparison.
+**IntelliCrawl** is an advanced multi-step AI research agent for autonomous web-powered knowledge extraction and developer tool comparison.
 
 ---
 
 ## Description
 
-Intellicrawl leverages LangGraph, LangChain, and Firecrawl to automate the process of discovering, analyzing, and recommending developer tools. It supports batch, single, and interactive CLI modes, customizable output formats (text, markdown, JSON, CSV), and extensible workflows. Caching and async support ensure fast, efficient research.
+IntelliCrawl leverages LangGraph, LangChain, and Firecrawl to automate the process of discovering, analyzing, and recommending developer tools. It supports batch, single, and interactive CLI modes, customizable output formats (text, markdown, JSON, CSV), and extensible workflows. Caching and async support ensure fast, efficient research.
 
 ---
 
