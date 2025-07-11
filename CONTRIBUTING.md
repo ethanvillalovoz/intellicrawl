@@ -50,7 +50,6 @@ Please be respectful and constructive in all interactions. See [GitHub Community
 ## Useful Links
 
 - [README.md](README.md) – Project overview and setup
-- [docs/](docs/) – Additional documentation
 - [.github/ISSUE_TEMPLATE/](.github/ISSUE_TEMPLATE/) – Issue templates
 
 ---
