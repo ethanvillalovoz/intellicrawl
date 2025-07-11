@@ -1,3 +1,4 @@
+import logging
 from typing import Dict, Any
 from langgraph.graph import StateGraph, END
 from langchain_openai import ChatOpenAI
@@ -5,6 +6,11 @@ from langchain_core.messages import HumanMessage, SystemMessage
 from .models import ResearchState, CompanyInfo, CompanyAnalysis
 from .firecrawl import FirecrawlService
 from .prompts import DeveloperToolsPrompts
+from .logging_config import setup_logging
+
+# Set up logging
+setup_logging()
+logger = logging.getLogger(__name__)
 
 class Workflow:
     """
@@ -37,10 +43,7 @@ class Workflow:
         return graph.compile()
 
     def _extract_tools_step(self, state: ResearchState) -> Dict[str, Any]:
-        """
-        Step 1: Search for articles and extract developer tool names.
-        """
-        print(f"🔍 Finding articles about: {state.query}")
+        logger.info(f"Finding articles about: {state.query}")
 
         # Formulate search query for articles
         article_query = f"{state.query} tools comparison best alternatives"
@@ -68,10 +71,10 @@ class Workflow:
                 for name in response.content.strip().split("\n")
                 if name.strip()
             ]
-            print(f"Extracted tools: {', '.join(tool_names[:5])}")
+            logger.info(f"Extracted tools: {', '.join(tool_names[:5])}")
             return {"extracted_tools": tool_names}
         except Exception as e:
-            print(f"Error extracting tools: {e}")
+            logger.exception("Error extracting tools")
             return {"extracted_tools": []}
 
     def _analyze_company_content(self, company_name: str, content: str) -> CompanyAnalysis:
@@ -89,12 +92,12 @@ class Workflow:
             analysis = structured_llm.invoke(messages)
             return analysis
         except Exception as e:
-            print(f"Error analyzing company content: {e}")
+            logger.exception(f"Error analyzing company content for {company_name}")
             return CompanyAnalysis(
                 pricing_model="Unknown",
                 is_open_source=None,
                 tech_stack=[],
-                description="Failed",
+                description="Analysis failed",
                 api_available=None,
                 language_support=[],
                 integration_capabilities=[],
@@ -108,7 +111,7 @@ class Workflow:
 
         # Fallback to direct search if no tools extracted
         if not extracted_tools:
-            print("⚠️ No extracted tools found, falling back to direct search")
+            logger.warning("No extracted tools found, falling back to direct search")
             search_results = self.firecrawl.search_companies(state.query, num_results=4)
             tool_names = [
                 result.get("metadata", {}).get("title", "Unknown")
@@ -117,7 +120,7 @@ class Workflow:
         else:
             tool_names = extracted_tools[:4]
 
-        print(f"🔬 Researching specific tools: {', '.join(tool_names)}")
+        logger.info(f"Researching specific tools: {', '.join(tool_names)}")
 
         companies = []
         for tool_name in tool_names:
@@ -158,7 +161,7 @@ class Workflow:
         """
         Step 3: Generate recommendations based on researched companies.
         """
-        print("Generating recommendations")
+        logger.info("Generating recommendations")
 
         # Serialize company data for LLM input
         company_data = ", ".join([
@@ -170,8 +173,12 @@ class Workflow:
             HumanMessage(content=self.prompts.recommendations_user(state.query, company_data))
         ]
 
-        response = self.llm.invoke(messages)
-        return {"analysis": response.content}
+        try:
+            response = self.llm.invoke(messages)
+            return {"analysis": response.content}
+        except Exception as e:
+            logger.exception("Error generating recommendations")
+            return {"analysis": "Analysis failed due to an error."}
 
     def run(self, query: str) -> ResearchState:
         """
@@ -179,5 +186,9 @@ class Workflow:
         Returns the final research state.
         """
         initial_state = ResearchState(query=query)
-        final_state = self.workflow.invoke(initial_state)
-        return ResearchState(**final_state)
+        try:
+            final_state = self.workflow.invoke(initial_state)
+            return ResearchState(**final_state)
+        except Exception as e:
+            logger.critical(f"Workflow failed for query '{query}': {e}")
+            return ResearchState(query=query)

@@ -1,6 +1,12 @@
 import os
+import logging
 from firecrawl import FirecrawlApp, ScrapeOptions
 from dotenv import load_dotenv
+
+# Import and set up logging
+from .logging_config import setup_logging
+setup_logging()
+logger = logging.getLogger(__name__)
 
 # Load environment variables from .env file
 load_dotenv()
@@ -19,6 +25,7 @@ class FirecrawlService:
         """
         api_key = os.getenv("FIRECRAWL_API_KEY")
         if not api_key:
+            logger.error("Missing FIRECRAWL_API_KEY environment variable")
             raise ValueError("Missing FIRECRAWL_API_KEY environment variable")
         self.app = FirecrawlApp(api_key=api_key)
 
@@ -36,8 +43,11 @@ class FirecrawlService:
                 )
             )
             return result
+        except ConnectionError as ce:
+            logger.error(f"Network error during search_companies: {ce}")
+            return []
         except Exception as e:
-            print(f"Error in search_companies: {e}")
+            logger.exception("Unexpected error in search_companies")
             return []
 
     def scrape_company_pages(self, url: str):
@@ -51,6 +61,9 @@ class FirecrawlService:
                 formats=["markdown"]
             )
             return result
+        except ValueError as ve:
+            logger.warning(f"Invalid URL provided: {url} - {ve}")
+            return None
         except Exception as e:
-            print(f"Error in scrape_company_pages: {e}")
+            logger.exception("Unexpected error in scrape_company_pages")
             return None
