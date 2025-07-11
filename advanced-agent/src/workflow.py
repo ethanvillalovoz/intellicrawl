@@ -16,6 +16,7 @@ logger = logging.getLogger(__name__)
 class Workflow:
     """
     Async Workflow class orchestrates the research process using Firecrawl and LLM.
+
     Steps:
         1. Extract relevant developer tools from articles.
         2. Research each tool/company for details.
@@ -23,22 +24,29 @@ class Workflow:
     """
 
     def __init__(self):
-        # Initialize Firecrawl API service, LLM, and prompt templates
-        self.firecrawl = FirecrawlService()
-        self.llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.1)
-        self.prompts = DeveloperToolsPrompts()
-        # Build the workflow graph and assign to self.workflow
-        self.workflow = self._build_workflow()
+        """
+        Initialize the Workflow with Firecrawl service, LLM, and prompt templates.
+        Builds the workflow graph for orchestrating research steps.
+        """
+        self.firecrawl = FirecrawlService()  # Firecrawl API service
+        self.llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.1)  # LLM for analysis
+        self.prompts = DeveloperToolsPrompts()  # Prompt templates
+        self.workflow = self._build_workflow()  # Build the workflow graph
 
     def _build_workflow(self):
         """
-        Build the workflow graph for research steps.
+        Build the workflow graph for research steps using StateGraph.
+
+        Returns:
+            StateGraph: Compiled workflow graph.
         """
         graph = StateGraph(ResearchState)
+        # Register workflow steps as nodes
         graph.add_node("extract_tools", self._extract_tools_step)
         graph.add_node("research", self._research_step)
         graph.add_node("analyze", self._analyze_step)
-        graph.set_entry_point("extract_tools")
+        graph.set_entry_point("extract_tools")  # Entry point
+        # Define step transitions
         graph.add_edge("extract_tools", "research")
         graph.add_edge("research", "analyze")
         graph.add_edge("analyze", END)
@@ -47,13 +55,21 @@ class Workflow:
     async def _extract_tools_step(self, state: ResearchState) -> Dict[str, Any]:
         """
         Step 1: Search for articles and extract developer tool names asynchronously.
+
+        Args:
+            state (ResearchState): Current research state.
+
+        Returns:
+            Dict[str, Any]: Dictionary with extracted tool names.
         """
         logger.info(f"Finding articles about: {state.query}")
 
+        # Build article search query
         article_query = f"{state.query} tools comparison best alternatives"
+        # Search for companies/tools using Firecrawl (cached)
         search_results = await self.firecrawl.search_companies_async(article_query, num_results=3)
 
-        # Aggregate scraped content from search results
+        # Aggregate scraped content from search results for LLM context
         all_content = ""
         for result in search_results.data:
             url = result.get("url", "")
@@ -84,6 +100,13 @@ class Workflow:
     async def _analyze_company_content(self, company_name: str, content: str) -> CompanyAnalysis:
         """
         Analyze scraped company content using LLM and structured output asynchronously.
+
+        Args:
+            company_name (str): Name of the company/tool.
+            content (str): Scraped website content.
+
+        Returns:
+            CompanyAnalysis: Structured analysis result.
         """
         structured_llm = self.llm.with_structured_output(CompanyAnalysis)
         messages = [
@@ -95,6 +118,7 @@ class Workflow:
             return analysis
         except Exception as e:
             logger.exception(f"Error analyzing company content for {company_name}")
+            # Return default analysis if LLM fails
             return CompanyAnalysis(
                 pricing_model="Unknown",
                 is_open_source=None,
@@ -108,6 +132,12 @@ class Workflow:
     async def _research_step(self, state: ResearchState) -> Dict[str, Any]:
         """
         Step 2: Research each extracted tool/company for details asynchronously.
+
+        Args:
+            state (ResearchState): Current research state.
+
+        Returns:
+            Dict[str, Any]: Dictionary with list of CompanyInfo objects.
         """
         extracted_tools = getattr(state, "extracted_tools", [])
 
@@ -133,6 +163,7 @@ class Workflow:
                 result = tool_search_results.data[0]
                 url = result.get("url", "")
 
+                # Create CompanyInfo object with initial data
                 company = CompanyInfo(
                     name=tool_name,
                     description=result.get("markdown", ""),
@@ -141,6 +172,7 @@ class Workflow:
                     competitors=[]
                 )
 
+                # Scrape company page for more details
                 scraped = await self.firecrawl.scrape_company_pages_async(url)
                 if scraped:
                     content = scraped.markdown
@@ -162,6 +194,12 @@ class Workflow:
     async def _analyze_step(self, state: ResearchState) -> Dict[str, Any]:
         """
         Step 3: Generate recommendations based on researched companies asynchronously.
+
+        Args:
+            state (ResearchState): Current research state.
+
+        Returns:
+            Dict[str, Any]: Dictionary with analysis/recommendation string.
         """
         logger.info("Generating recommendations")
 
@@ -185,11 +223,16 @@ class Workflow:
     async def run(self, query: str) -> ResearchState:
         """
         Run the async workflow for a given user query.
-        Returns the final research state.
+
+        Args:
+            query (str): The user's research query.
+
+        Returns:
+            ResearchState: Final research state with all results.
         """
         initial_state = ResearchState(query=query)
         try:
-            # If your graph supports async, use await here
+            # Run the workflow graph asynchronously
             final_state = await self.workflow.ainvoke(initial_state)
             return ResearchState(**final_state)
         except Exception as e:

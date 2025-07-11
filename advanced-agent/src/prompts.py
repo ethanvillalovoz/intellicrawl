@@ -18,7 +18,13 @@ class DeveloperToolsPrompts:
     def tool_extraction_user(query: str, content: str) -> str:
         """
         User prompt for extracting tool/service names from article content.
-        Returns a formatted string with extraction instructions and example.
+
+        Args:
+            query (str): The developer tools query.
+            content (str): The article content to analyze.
+
+        Returns:
+            str: Formatted prompt string with extraction instructions and example.
         """
         return (
             f"Query: {query}\n"
@@ -54,11 +60,17 @@ class DeveloperToolsPrompts:
     def tool_analysis_user(company_name: str, content: str) -> str:
         """
         User prompt for analyzing a company/tool from website content.
-        Returns a formatted string with analysis instructions and required fields.
+
+        Args:
+            company_name (str): The name of the company or tool.
+            content (str): The website content to analyze.
+
+        Returns:
+            str: Formatted prompt string with analysis instructions and required fields.
         """
         return (
             f"Company/Tool: {company_name}\n"
-            f"Website Content: {content[:2500]}\n\n"
+            f"Website Content: {content[:2500]}\n\n"  # Limit content to 2500 chars for brevity
             "Analyze this content from a developer's perspective and provide:\n"
             "- pricing_model: One of \"Free\", \"Freemium\", \"Paid\", \"Enterprise\", or \"Unknown\"\n"
             "- is_open_source: true if open source, false if proprietary, null if unclear\n"
@@ -84,7 +96,13 @@ class DeveloperToolsPrompts:
     def recommendations_user(query: str, company_data: str) -> str:
         """
         User prompt for generating developer tool recommendations.
-        Returns a formatted string with recommendation instructions.
+
+        Args:
+            query (str): The developer's query.
+            company_data (str): Serialized data about the analyzed companies/tools.
+
+        Returns:
+            str: Formatted prompt string with recommendation instructions.
         """
         return (
             f"Developer Query: {query}\n"

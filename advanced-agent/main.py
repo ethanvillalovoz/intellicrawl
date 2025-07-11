@@ -11,16 +11,26 @@ import asyncio
 import re
 from yaspin import yaspin
 
-# Set up logging
+# Set up logging configuration
 setup_logging()
 logger = logging.getLogger(__name__)
 
 # Load environment variables from .env file
 load_dotenv()
+# Initialize colorama for colored terminal output
 init(autoreset=True)
 
 
 def display_result(result, query, output_format="text"):
+    """
+    Display the research results in the specified format.
+    Supports text, markdown, JSON, and CSV output.
+
+    Args:
+        result: ResearchState object containing results.
+        query: The original user query.
+        output_format: Output format ("text", "json", "markdown", "csv").
+    """
     if output_format == "json":
         print(result.json())
         return
@@ -74,7 +84,7 @@ def display_result(result, query, output_format="text"):
             print(result.analysis)
         return
 
-    # Default: colorized text output
+    # Default: colorized text output for terminal
     print(f"\n{Fore.CYAN}📊 Results for: {query}{Style.RESET_ALL}")
     print(Fore.YELLOW + "=" * 60 + Style.RESET_ALL)
     for i, company in enumerate(result.companies, 1):
@@ -111,6 +121,15 @@ def display_result(result, query, output_format="text"):
 
 
 def is_safe_query(query: str) -> bool:
+    """
+    Validate user input to allow only safe characters.
+
+    Args:
+        query: The user query string.
+
+    Returns:
+        bool: True if query is safe, False otherwise.
+    """
     # Only allow letters, numbers, spaces, and basic punctuation
     return bool(re.match(r"^[\w\s\-.,/()]+$", query))
 
@@ -119,6 +138,7 @@ def main():
     """
     Main entry point for the Developer Tools Research Agent.
     Handles user input, runs the research workflow, and displays results.
+    Supports batch, single, and interactive modes.
     """
     parser = argparse.ArgumentParser(
         description="Developer Tools Research Agent: Analyze and compare developer tools using LLMs and Firecrawl."
@@ -150,6 +170,7 @@ def main():
             with open(args.batch, "r") as f:
                 queries = [line.strip() for line in f if line.strip()]
             for query in queries:
+                # Run workflow for each query and display results
                 result = asyncio.run(workflow.run(query))
                 display_result(result, query, args.output)
         except Exception as e:
@@ -160,7 +181,7 @@ def main():
         result = asyncio.run(workflow.run(args.query))
         display_result(result, args.query, args.output)
     else:
-        # Interactive mode
+        # Interactive mode: prompt user for queries until exit
         print("Developer Tools Research Agent (interactive mode)")
         while True:
             try:
@@ -169,10 +190,12 @@ def main():
                     logger.info("User exited the agent.")
                     break
                 if query:
+                    # Validate user input before running workflow
                     if not is_safe_query(query):
                         print("Invalid query: Only letters, numbers, spaces, and basic punctuation allowed.")
                         logger.warning(f"Blocked potentially unsafe query: {query}")
                         continue
+                    # Show spinner while processing query
                     with yaspin(text="Researching...", color="cyan") as spinner:
                         result = asyncio.run(workflow.run(query))
                         spinner.ok("✅ ")
