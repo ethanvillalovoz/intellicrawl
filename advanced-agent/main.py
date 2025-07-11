@@ -9,6 +9,7 @@ from io import StringIO
 from colorama import Fore, Style, init
 import asyncio
 import re
+from yaspin import yaspin
 
 # Set up logging
 setup_logging()
@@ -98,6 +99,16 @@ def display_result(result, query, output_format="text"):
         print(Fore.YELLOW + "-" * 40 + Style.RESET_ALL)
         print(result.analysis)
 
+    # Summary statistics
+    num_companies = len(result.companies)
+    pricing_models = [c.pricing_model for c in result.companies if c.pricing_model]
+    pricing_count = {p: pricing_models.count(p) for p in set(pricing_models)}
+    print(f"\n{Fore.GREEN}Summary:{Style.RESET_ALL}")
+    print(f"Companies found: {num_companies}")
+    print("Pricing models breakdown:")
+    for model, count in pricing_count.items():
+        print(f"  {model}: {count}")
+
 
 def is_safe_query(query: str) -> bool:
     # Only allow letters, numbers, spaces, and basic punctuation
@@ -162,8 +173,10 @@ def main():
                         print("Invalid query: Only letters, numbers, spaces, and basic punctuation allowed.")
                         logger.warning(f"Blocked potentially unsafe query: {query}")
                         continue
-                    result = asyncio.run(workflow.run(query))
-                    display_result(result, query)
+                    with yaspin(text="Researching...", color="cyan") as spinner:
+                        result = asyncio.run(workflow.run(query))
+                        spinner.ok("✅ ")
+                    display_result(result, query, args.output)
             except Exception as e:
                 logger.critical(f"Fatal error in main loop: {e}")
                 print("A fatal error occurred. Please check the logs for details.")

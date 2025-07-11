@@ -8,3 +8,4 @@ pytest
 pytest-mock
 colorama
 diskcache
+yaspin
