@@ -7,6 +7,7 @@ import json
 import csv
 from io import StringIO
 from colorama import Fore, Style, init
+import asyncio
 
 # Set up logging
 setup_logging()
@@ -132,14 +133,14 @@ def main():
             with open(args.batch, "r") as f:
                 queries = [line.strip() for line in f if line.strip()]
             for query in queries:
-                result = workflow.run(query)
+                result = asyncio.run(workflow.run(query))
                 display_result(result, query, args.output)
         except Exception as e:
             logger.critical(f"Batch processing failed: {e}")
             print("Batch processing failed. See logs for details.")
     elif args.query:
         # Single query mode
-        result = workflow.run(args.query)
+        result = asyncio.run(workflow.run(args.query))
         display_result(result, args.query, args.output)
     else:
         # Interactive mode
@@ -151,7 +152,7 @@ def main():
                     logger.info("User exited the agent.")
                     break
                 if query:
-                    result = workflow.run(query)
+                    result = asyncio.run(workflow.run(query))
                     display_result(result, query)
             except Exception as e:
                 logger.critical(f"Fatal error in main loop: {e}")

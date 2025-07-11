@@ -1,4 +1,5 @@
 import logging
+import asyncio
 from typing import Dict, Any
 from langgraph.graph import StateGraph, END
 from langchain_openai import ChatOpenAI
@@ -8,13 +9,13 @@ from .firecrawl_service import FirecrawlService
 from .prompts import DeveloperToolsPrompts
 from .logging_config import setup_logging
 
-# Set up logging
+# Set up logging for the workflow
 setup_logging()
 logger = logging.getLogger(__name__)
 
 class Workflow:
     """
-    Workflow class orchestrates the research process using Firecrawl and LLM.
+    Async Workflow class orchestrates the research process using Firecrawl and LLM.
     Steps:
         1. Extract relevant developer tools from articles.
         2. Research each tool/company for details.
@@ -26,6 +27,7 @@ class Workflow:
         self.firecrawl = FirecrawlService()
         self.llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.1)
         self.prompts = DeveloperToolsPrompts()
+        # Build the workflow graph and assign to self.workflow
         self.workflow = self._build_workflow()
 
     def _build_workflow(self):
@@ -42,18 +44,20 @@ class Workflow:
         graph.add_edge("analyze", END)
         return graph.compile()
 
-    def _extract_tools_step(self, state: ResearchState) -> Dict[str, Any]:
+    async def _extract_tools_step(self, state: ResearchState) -> Dict[str, Any]:
+        """
+        Step 1: Search for articles and extract developer tool names asynchronously.
+        """
         logger.info(f"Finding articles about: {state.query}")
 
-        # Formulate search query for articles
         article_query = f"{state.query} tools comparison best alternatives"
-        search_results = self.firecrawl.search_companies(article_query, num_results=3)
+        search_results = await self.firecrawl.search_companies_async(article_query, num_results=3)
 
         # Aggregate scraped content from search results
         all_content = ""
         for result in search_results.data:
             url = result.get("url", "")
-            scraped = self.firecrawl.scrape_company_pages(url)
+            scraped = await self.firecrawl.scrape_company_pages_async(url)
             if scraped:
                 all_content += scraped.markdown[:1500] + "\n\n"
 
@@ -63,9 +67,9 @@ class Workflow:
             HumanMessage(content=self.prompts.tool_extraction_user(state.query, all_content))
         ]
 
-        # Invoke LLM to extract tool names
+        # Invoke LLM to extract tool names asynchronously
         try:
-            response = self.llm.invoke(messages)
+            response = await self.llm.ainvoke(messages)
             tool_names = [
                 name.strip()
                 for name in response.content.strip().split("\n")
@@ -77,19 +81,17 @@ class Workflow:
             logger.exception("Error extracting tools")
             return {"extracted_tools": []}
 
-    def _analyze_company_content(self, company_name: str, content: str) -> CompanyAnalysis:
+    async def _analyze_company_content(self, company_name: str, content: str) -> CompanyAnalysis:
         """
-        Analyze scraped company content using LLM and structured output.
+        Analyze scraped company content using LLM and structured output asynchronously.
         """
         structured_llm = self.llm.with_structured_output(CompanyAnalysis)
-
         messages = [
             SystemMessage(content=self.prompts.TOOL_ANALYSIS_SYSTEM),
             HumanMessage(content=self.prompts.tool_analysis_user(company_name, content))
         ]
-
         try:
-            analysis = structured_llm.invoke(messages)
+            analysis = await structured_llm.ainvoke(messages)
             return analysis
         except Exception as e:
             logger.exception(f"Error analyzing company content for {company_name}")
@@ -103,16 +105,16 @@ class Workflow:
                 integration_capabilities=[],
             )
 
-    def _research_step(self, state: ResearchState) -> Dict[str, Any]:
+    async def _research_step(self, state: ResearchState) -> Dict[str, Any]:
         """
-        Step 2: Research each extracted tool/company for details.
+        Step 2: Research each extracted tool/company for details asynchronously.
         """
         extracted_tools = getattr(state, "extracted_tools", [])
 
         # Fallback to direct search if no tools extracted
         if not extracted_tools:
             logger.warning("No extracted tools found, falling back to direct search")
-            search_results = self.firecrawl.search_companies(state.query, num_results=4)
+            search_results = await self.firecrawl.search_companies_async(state.query, num_results=4)
             tool_names = [
                 result.get("metadata", {}).get("title", "Unknown")
                 for result in search_results.data
@@ -124,8 +126,8 @@ class Workflow:
 
         companies = []
         for tool_name in tool_names:
-            # Search for official site and scrape details
-            tool_search_results = self.firecrawl.search_companies(tool_name + " official site", num_results=1)
+            # Search for official site and scrape details asynchronously
+            tool_search_results = await self.firecrawl.search_companies_async(tool_name + " official site", num_results=1)
 
             if tool_search_results:
                 result = tool_search_results.data[0]
@@ -139,10 +141,10 @@ class Workflow:
                     competitors=[]
                 )
 
-                scraped = self.firecrawl.scrape_company_pages(url)
+                scraped = await self.firecrawl.scrape_company_pages_async(url)
                 if scraped:
                     content = scraped.markdown
-                    analysis = self._analyze_company_content(company.name, content)
+                    analysis = await self._analyze_company_content(company.name, content)
 
                     # Populate company info with analysis results
                     company.pricing_model = analysis.pricing_model
@@ -157,9 +159,9 @@ class Workflow:
 
         return {"companies": companies}
 
-    def _analyze_step(self, state: ResearchState) -> Dict[str, Any]:
+    async def _analyze_step(self, state: ResearchState) -> Dict[str, Any]:
         """
-        Step 3: Generate recommendations based on researched companies.
+        Step 3: Generate recommendations based on researched companies asynchronously.
         """
         logger.info("Generating recommendations")
 
@@ -174,20 +176,21 @@ class Workflow:
         ]
 
         try:
-            response = self.llm.invoke(messages)
+            response = await self.llm.ainvoke(messages)
             return {"analysis": response.content}
         except Exception as e:
             logger.exception("Error generating recommendations")
             return {"analysis": "Analysis failed due to an error."}
 
-    def run(self, query: str) -> ResearchState:
+    async def run(self, query: str) -> ResearchState:
         """
-        Run the workflow for a given user query.
+        Run the async workflow for a given user query.
         Returns the final research state.
         """
         initial_state = ResearchState(query=query)
         try:
-            final_state = self.workflow.invoke(initial_state)
+            # If your graph supports async, use await here
+            final_state = await self.workflow.ainvoke(initial_state)
             return ResearchState(**final_state)
         except Exception as e:
             logger.critical(f"Workflow failed for query '{query}': {e}")
