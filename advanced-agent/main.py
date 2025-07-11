@@ -8,6 +8,7 @@ import csv
 from io import StringIO
 from colorama import Fore, Style, init
 import asyncio
+import re
 
 # Set up logging
 setup_logging()
@@ -98,6 +99,11 @@ def display_result(result, query, output_format="text"):
         print(result.analysis)
 
 
+def is_safe_query(query: str) -> bool:
+    # Only allow letters, numbers, spaces, and basic punctuation
+    return bool(re.match(r"^[\w\s\-.,/()]+$", query))
+
+
 def main():
     """
     Main entry point for the Developer Tools Research Agent.
@@ -152,6 +158,10 @@ def main():
                     logger.info("User exited the agent.")
                     break
                 if query:
+                    if not is_safe_query(query):
+                        print("Invalid query: Only letters, numbers, spaces, and basic punctuation allowed.")
+                        logger.warning(f"Blocked potentially unsafe query: {query}")
+                        continue
                     result = asyncio.run(workflow.run(query))
                     display_result(result, query)
             except Exception as e:
