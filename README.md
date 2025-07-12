@@ -5,12 +5,24 @@
 ![Firecrawl](https://img.shields.io/badge/firecrawl-api-orange)
 ![OpenAI](https://img.shields.io/badge/openai-api-blue)
 ![License](https://img.shields.io/github/license/ethanvillalovoz/intellicrawl)
+![CI/CD](https://img.shields.io/github/actions/workflow/status/ethanvillalovoz/intellicrawl/ci.yml?branch=main)
 
 ---
 
 ## Introduction
 
 **IntelliCrawl** is an advanced multi-step AI research agent for autonomous web-powered knowledge extraction and developer tool comparison.
+
+---
+
+## CI/CD
+
+This project uses **GitHub Actions** for automated CI/CD:
+
+- **Continuous Integration (CI):** Installs dependencies and checks builds on every push and pull request.
+- **Continuous Deployment (CD):** Automatically creates a GitHub release on every push to `main`.
+
+You can view workflow status in the Actions tab of the repository.
 
 ---
 
