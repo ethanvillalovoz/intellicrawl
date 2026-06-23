@@ -1,27 +1,34 @@
-# Pull Request
-
-Thank you for your contribution! Please fill out the following checklist and provide details about your changes.
-
 ## Description
 
-<!-- Please include a summary of the change and which issue is fixed. Also include relevant motivation and context. -->
+<!-- Summarize the change, motivation, and affected agent path. -->
 
 Fixes #(issue)
 
 ## Type of change
+
 - [ ] Bug fix
-- [ ] New feature
+- [ ] Agent/workflow change
+- [ ] Output formatting change
 - [ ] Documentation update
-- [ ] Other (please describe):
+- [ ] Tests / CI
+- [ ] Refactor with no intended behavior change
+- [ ] Other:
+
+## Verification
+
+<!-- Include commands run. For live API behavior, include sanitized query/output notes. -->
+
+- [ ] `PYTHONPATH=advanced-agent pytest tests`
+- [ ] `python -m compileall advanced-agent simple-agent tests`
+- [ ] Manual live query was run, or not needed
 
 ## Checklist
-- [ ] My code follows the project style guidelines
+
 - [ ] I have performed a self-review of my code
-- [ ] I have commented my code, particularly in hard-to-understand areas
-- [ ] I have made corresponding changes to the documentation (if relevant)
-- [ ] My changes generate no new warnings
-- [ ] I have added tests that prove my fix is effective or that my feature works (if applicable)
-- [ ] New and existing tests pass locally with my changes
+- [ ] I kept the CLI contract unchanged or documented the change
+- [ ] I added/updated tests where useful
+- [ ] I updated README/docs for user-facing changes
+- [ ] I did not commit `.env`, API keys, cache files, private scraped content, or generated exports
 
 ## Additional context
 

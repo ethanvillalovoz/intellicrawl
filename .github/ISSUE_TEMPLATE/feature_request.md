@@ -1,17 +1,25 @@
 ---
-name: "✨ Feature Request"
-about: Suggest an idea for this project
+name: "Feature Request"
+about: Suggest an agent, workflow, output, or documentation improvement
 labels: enhancement
 ---
 
 **Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex: I'm always frustrated when [...]
+What limitation or workflow gap does this address?
 
 **Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+What should change?
 
 **Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+What other approaches did you consider?
+
+**Scope**
+- [ ] Advanced agent workflow
+- [ ] Simple MCP agent
+- [ ] Output formatting
+- [ ] Tests / CI
+- [ ] Documentation
+- [ ] Security / API-key handling
 
 **Additional context**
-Add any other context or screenshots about the feature request here.
+Include example queries, desired output shape, or related tools when useful.

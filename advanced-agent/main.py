@@ -32,7 +32,10 @@ def display_result(result, query, output_format="text"):
         output_format: Output format ("text", "json", "markdown", "csv").
     """
     if output_format == "json":
-        print(result.json())
+        if hasattr(result, "model_dump_json"):
+            print(result.model_dump_json())
+        else:
+            print(result.json())
         return
 
     if output_format == "markdown":

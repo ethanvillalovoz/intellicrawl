@@ -1,66 +1,55 @@
-# Contributing to intellicrawl
+# Contributing to IntelliCrawl
 
-Thank you for your interest in contributing! We welcome all kinds of contributions, including bug reports, feature requests, documentation improvements, and code changes.
+Thanks for helping improve IntelliCrawl. This project values clear agent behavior, reproducible examples, safe API-key handling, and honest documentation.
 
----
+## Development Setup
 
-## How to Contribute
+```sh
+git clone https://github.com/ethanvillalovoz/intellicrawl.git
+cd intellicrawl
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+pip install -r requirements-ci.txt
+```
 
-1. **Fork the repository**  
-   Click "Fork" at the top right of the GitHub page and clone your fork locally.
+For live advanced-agent runs:
 
-2. **Create a branch**  
-   Create a new branch for your feature or bugfix:
-   ```sh
-   git checkout -b my-feature
-   ```
+```sh
+pip install -r advanced-agent/requirements.txt
+cp advanced-agent/.env.example advanced-agent/.env
+```
 
-3. **Make your changes**  
-   - Follow the project style guidelines.
-   - Add docstrings and inline comments where appropriate.
-   - Write or update tests if applicable.
+Add your own local API keys to `.env`. Do not commit real keys or generated cache files.
 
-4. **Run tests locally**  
-   Make sure all tests pass before submitting a PR:
-   ```sh
-   pytest tests/
-   ```
+## Before Opening A Pull Request
 
-5. **Submit a Pull Request**  
-   - Push your branch to GitHub.
-   - Open a pull request from your branch to `main`.
-   - Fill out the PR template ([see here](.github/PULL_REQUEST_TEMPLATE.md)).
+Run:
 
----
+```sh
+PYTHONPATH=advanced-agent pytest tests
+python -m compileall advanced-agent simple-agent tests
+```
 
-## Issue and PR Templates
+For changes that affect Firecrawl/OpenAI behavior, also run a manual live query and include:
 
-- For bug reports, use the [bug report template](.github/ISSUE_TEMPLATE/bug_report.md).
-- For feature requests, use the [feature request template](.github/ISSUE_TEMPLATE/feature_request.md).
-- For pull requests, fill out the [PR template](.github/PULL_REQUEST_TEMPLATE.md).
+- Query used
+- Output mode
+- Relevant logs or sanitized output
+- Any API/provider errors
 
----
+## Contribution Guidelines
 
-## Code of Conduct
+- Keep pull requests focused and small.
+- Preserve the existing CLI contract unless the PR clearly explains a user-facing change.
+- Mock external services in tests instead of calling live APIs in CI.
+- Update docs when commands, environment variables, output formats, or workflow behavior changes.
+- Avoid committing `.env`, API responses, cache directories, private scraped content, or generated exports.
 
-Please be respectful and constructive in all interactions. See [GitHub Community Guidelines](https://docs.github.com/en/site-policy/github-terms/github-community-guidelines).
+## Reporting Issues
 
----
+Use the bug report template and include the agent path (`advanced-agent` or `simple-agent`), command, Python version, OS, dependency versions, and any relevant sanitized error output.
 
-## Useful Links
+## Code Of Conduct
 
-- [README.md](README.md) – Project overview and setup
-- [.github/ISSUE_TEMPLATE/](.github/ISSUE_TEMPLATE/) – Issue templates
-
----
-
-## Community Expectations
-
-- Write clear commit messages and PR descriptions.
-- Reference related issues in your PRs (e.g., `closes #123`).
-- Respond to review feedback in a timely manner.
-- Help others by reviewing PRs and answering questions.
-
----
-
-Thank you for helping make
+Please follow [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).

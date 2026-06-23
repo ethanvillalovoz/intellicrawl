@@ -1,6 +1,10 @@
 import os
 import logging
-from firecrawl import FirecrawlApp, ScrapeOptions
+try:
+    from firecrawl import V1FirecrawlApp as FirecrawlApp
+    from firecrawl import V1ScrapeOptions as ScrapeOptions
+except ImportError:  # Backward compatibility for older firecrawl-py versions.
+    from firecrawl import FirecrawlApp, ScrapeOptions
 from dotenv import load_dotenv
 import diskcache
 import asyncio
@@ -115,8 +119,8 @@ class FirecrawlService:
         Returns:
             object: Search results in markdown format (Firecrawl response object).
         """
-        # Note: FirecrawlApp does not support async, so this just wraps the sync method.
-        return self.search_companies(query, num_results)
+        # FirecrawlApp is synchronous, so run it off the event loop.
+        return await asyncio.to_thread(self.search_companies, query, num_results)
 
     async def scrape_company_pages_async(self, url: str):
         """
@@ -128,5 +132,5 @@ class FirecrawlService:
         Returns:
             object: Scraped result in markdown format, or None if an error occurs.
         """
-        # Note: FirecrawlApp does not support async, so this just wraps the sync method.
-        return self.scrape_company_pages(url)
+        # FirecrawlApp is synchronous, so run it off the event loop.
+        return await asyncio.to_thread(self.scrape_company_pages, url)

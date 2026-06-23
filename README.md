@@ -1,195 +1,177 @@
-# IntelliCrawl: Autonomous AI Research Agent for Developer Tools 🚀
+# IntelliCrawl
 
-![Python](https://img.shields.io/badge/python-3.13-blue)
-![LangChain](https://img.shields.io/badge/langchain-graph-green)
-![Firecrawl](https://img.shields.io/badge/firecrawl-api-orange)
-![OpenAI](https://img.shields.io/badge/openai-api-blue)
-![License](https://img.shields.io/github/license/ethanvillalovoz/intellicrawl)
-![CI/CD](https://img.shields.io/github/actions/workflow/status/ethanvillalovoz/intellicrawl/ci.yml?branch=main)
+[![CI](https://github.com/ethanvillalovoz/intellicrawl/actions/workflows/ci.yml/badge.svg)](https://github.com/ethanvillalovoz/intellicrawl/actions/workflows/ci.yml)
+[![License](https://img.shields.io/github/license/ethanvillalovoz/intellicrawl)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/)
+[![LangGraph](https://img.shields.io/badge/LangGraph-agent-green.svg)](https://www.langchain.com/langgraph)
+[![Firecrawl](https://img.shields.io/badge/Firecrawl-web%20research-orange.svg)](https://www.firecrawl.dev/)
 
----
+IntelliCrawl is a web-powered AI research agent for comparing developer tools. It combines Firecrawl search/scraping, LangGraph orchestration, LangChain/OpenAI reasoning, structured Pydantic models, caching, and CLI output modes so users can research tool categories such as vector databases, CI/CD platforms, auth providers, hosting options, and developer APIs.
 
-## Introduction
+![Example developer-tool comparison](advanced-agent/docs/examples/firebase.png)
 
-**IntelliCrawl** is an advanced multi-step AI research agent for autonomous web-powered knowledge extraction and developer tool comparison.
+## What It Does
 
----
+- Searches the web for articles and official pages related to a developer-tool query
+- Extracts candidate tools from scraped content using an LLM
+- Scrapes official tool pages for developer-facing details
+- Produces structured comparisons with pricing model, open-source status, APIs, supported languages, integrations, tech stack, and short recommendations
+- Supports interactive, single-query, and batch CLI workflows
+- Outputs text, Markdown, JSON, or CSV
+- Includes a smaller MCP-based prototype agent for Firecrawl tool experimentation
 
-## CI/CD
+## Repository Status
 
-This project uses **GitHub Actions** for automated CI/CD:
+This is a portfolio/research project, not a hosted production service. The advanced agent is the primary implementation. It requires live Firecrawl and OpenAI API keys for real research runs. CI intentionally validates deterministic code paths, models, docs, and syntax without calling external APIs.
 
-- **Continuous Integration (CI):** Installs dependencies and checks builds on every push and pull request.
-- **Continuous Deployment (CD):** Automatically creates a GitHub release on every push to `main`.
+## Project Layout
 
-You can view workflow status in the Actions tab of the repository.
-
----
-
-## Description
-
-IntelliCrawl leverages LangGraph, LangChain, and Firecrawl to automate the process of discovering, analyzing, and recommending developer tools. It supports batch, single, and interactive CLI modes, customizable output formats (text, markdown, JSON, CSV), and extensible workflows. Caching and async support ensure fast, efficient research.
-
----
-
-## Visuals
-
-![Diagram](advanced-agent/docs/examples/firebase.png)
-<!-- You can use a Mermaid diagram or add screenshots/gifs here -->
-
-```mermaid
-flowchart TD
-    CLI[main.py] --> Workflow
-    Workflow --> FirecrawlService
-    Workflow --> OpenAI
-    FirecrawlService --> FirecrawlAPI
-    Workflow --> Output
-```
-
----
-
-## Prerequisites / Requirements
-
-- Python 3.13+
-- Conda (recommended)
-- npm (for MCP/firecrawl-mcp)
-- Firecrawl API key ([get one here](https://www.firecrawl.dev/))
-- OpenAI API key ([get one here](https://platform.openai.com/api-keys))
-- Node.js (for MCP integration)
-- [colorama](https://pypi.org/project/colorama/), [yaspin](https://pypi.org/project/yaspin/), [diskcache](https://pypi.org/project/diskcache/)
-
----
-
-## Technologies Used
-
-- **LangGraph** (multi-step agent workflows)
-- **LangChain** (LLM orchestration)
-- **Firecrawl** (web scraping/search API)
-- **OpenAI** (LLM for analysis)
-- **MCP** (simple agent, optional)
-- **Pydantic** (data models)
-- **colorama**, **yaspin** (UX enhancements)
-- **diskcache** (caching)
-
----
-
-## QuickStart Guide
-
-```sh
-# Clone the repo
-git clone https://github.com/ethanvillalovoz/intellicrawl.git
-cd intellicrawl
-
-# Create and activate environment
-conda create -n intellicrawl python=3.13
-conda activate intellicrawl
-
-# Install dependencies
-pip install -r advanced-agent/requirements.txt
-
-# Set up .env file
-echo "FIRECRAWL_API_KEY=your_key" > .env
-echo "OPENAI_API_KEY=your_key" >> .env
-
-# Run the agent (interactive mode)
-python advanced-agent/main.py
-```
-
----
-
-## Advanced Usage
-
-- **Batch mode:**  
-  `python advanced-agent/main.py --batch queries.txt --output markdown`
-- **Custom output:**  
-  `python advanced-agent/main.py "vector database" --output csv`
-- **Simple agent (MCP):**  
-  `python simple-agent/main.py`
-
----
-
-## Configuration
-
-- `.env` file for API keys:
-  ```
-  FIRECRAWL_API_KEY=your_key
-  OPENAI_API_KEY=your_key
-  ```
-- `requirements.txt`: Python dependencies.
-
----
-
-<!-- ## Automated Test
-
-```sh
-# Run tests (if available)
-pytest tests/
-```
-
---- -->
-
-## Roadmap
-
-| Feature                | Status      |
-|------------------------|------------|
-| Async workflow         | ✅ Done     |
-| Caching                | ✅ Done     |
-| Customizable prompts   | ⏳ Planned  |
-| Plugin architecture    | ⏳ Planned  |
-| Web UI                 | ⏳ Planned  |
-| More output formats    | ⏳ Planned  |
-
----
-
-## Contribution
-
-We welcome contributions!  
-- Fork the repo and submit a PR.
-- See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-- Please add tests for new features.
-
----
-
-## Folder Structure
-
-```
-intellicrawl/
+```text
+.
 ├── advanced-agent/
-│   ├── main.py
-│   ├── src/
-│   │   ├── workflow.py
-│   │   ├── firecrawl_service.py
-│   │   ├── models.py
-│   │   ├── prompts.py
-│   │   └── logging_config.py
-│   ├── requirements.txt
+│   ├── main.py                         # Primary CLI entry point
+│   ├── requirements.txt                # Full runtime dependencies
+│   ├── .env.example                    # Required environment variables
+│   ├── docs/examples/                  # Example output screenshots
+│   └── src/
+│       ├── firecrawl_service.py        # Firecrawl search/scrape wrapper and cache
+│       ├── logging_config.py           # Logging setup
+│       ├── models.py                   # Pydantic result/state schemas
+│       ├── prompts.py                  # Prompt templates
+│       └── workflow.py                 # LangGraph research workflow
 ├── simple-agent/
-│   └── main.py
-├── docs/
-├── .env
-├── .gitignore
-├── LICENSE
+│   ├── main.py                         # MCP-based prototype agent
+│   ├── requirements.txt
+│   └── .env.example
+├── tests/                              # Lightweight deterministic tests
+├── docs/                               # Architecture, usage, and FAQ
 └── README.md
 ```
 
----
+## Quick Start
 
-## FAQ / Troubleshooting
+Clone the repository:
 
-- **API rate limit:** Wait or upgrade your Firecrawl plan.
-- **Missing API key:** Check your `.env` file.
-- **npm not found:** Install Node.js and npm.
+```sh
+git clone https://github.com/ethanvillalovoz/intellicrawl.git
+cd intellicrawl
+```
 
----
+Create a Python environment:
+
+```sh
+conda create -n intellicrawl python=3.11
+conda activate intellicrawl
+python -m pip install --upgrade pip
+```
+
+Install the advanced agent:
+
+```sh
+pip install -r advanced-agent/requirements.txt
+```
+
+Create an environment file:
+
+```sh
+cp advanced-agent/.env.example advanced-agent/.env
+```
+
+Then fill in:
+
+```text
+FIRECRAWL_API_KEY=your_firecrawl_api_key
+OPENAI_API_KEY=your_openai_api_key
+```
+
+Run the interactive CLI:
+
+```sh
+cd advanced-agent
+python main.py
+```
+
+Run a single query:
+
+```sh
+cd advanced-agent
+python main.py "vector databases" --output markdown
+```
+
+Run batch mode:
+
+```sh
+cd advanced-agent
+python main.py --batch queries.txt --output csv
+```
+
+## Output Modes
+
+| Mode | Command | Use case |
+| --- | --- | --- |
+| Text | `python main.py "auth platforms"` | Human-readable terminal output |
+| Markdown | `python main.py "vector databases" --output markdown` | Notes, docs, blog drafts |
+| JSON | `python main.py "observability tools" --output json` | Downstream structured processing |
+| CSV | `python main.py "cloud databases" --output csv` | Spreadsheet comparison |
+
+## Advanced Agent Workflow
+
+```mermaid
+flowchart TD
+    Q["User query"] --> E["Extract candidate tools"]
+    E --> S["Search with Firecrawl"]
+    S --> C["Scrape official pages"]
+    C --> A["Analyze tool details with OpenAI"]
+    A --> R["Generate recommendation"]
+    R --> O["Render text / Markdown / JSON / CSV"]
+```
+
+## Simple Agent
+
+The `simple-agent/` folder is a smaller prototype that connects a LangGraph ReAct agent to Firecrawl MCP tools through `npx firecrawl-mcp`.
+
+```sh
+cd simple-agent
+pip install -r requirements.txt
+cp .env.example .env
+python main.py
+```
+
+Use the advanced agent for the polished comparison workflow. Use the simple agent when experimenting directly with MCP tool calls.
+
+## Development
+
+Run lightweight tests:
+
+```sh
+pip install -r requirements-ci.txt
+PYTHONPATH=advanced-agent pytest tests
+```
+
+Run syntax checks:
+
+```sh
+python -m compileall advanced-agent simple-agent tests
+```
+
+CI does not call Firecrawl or OpenAI. Keep live API experiments local unless a test is explicitly marked as an integration test.
+
+## Documentation
+
+- [Architecture](docs/architecture.md)
+- [Usage Guide](docs/usage-guide.md)
+- [FAQ](docs/faq.md)
+- [Security Policy](SECURITY.md)
+- [Contributing Guide](CONTRIBUTING.md)
+
+## Roadmap
+
+- Add mocked Firecrawl/OpenAI integration tests
+- Add export-to-file flags for JSON, Markdown, and CSV output
+- Add optional scoring/ranking rubric for developer tools
+- Add richer batch summaries across multiple queries
+- Add a small web UI once the CLI workflow is stable
 
 ## License
 
-MIT License
-
----
-
-## Maintainers & Contributors
-
-See [CONTRIBUTORS.md](CONTRIBUTORS.md) for a full list.
-
----
+This project is released under the [MIT License](LICENSE).

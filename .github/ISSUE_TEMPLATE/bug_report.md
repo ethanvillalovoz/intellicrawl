@@ -1,29 +1,40 @@
 ---
-name: "🐛 Bug Report"
-about: Report a bug to help us improve
+name: "Bug Report"
+about: Report an IntelliCrawl CLI, workflow, dependency, or documentation issue
 labels: bug
 ---
 
 **Describe the bug**
-A clear and concise description of what the bug is.
+A clear description of the issue.
 
 **To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '...'
-3. Scroll down to '...'
-4. See error
+Command or steps:
+1.
+2.
+3.
 
 **Expected behavior**
-A clear and concise description of what you expected to happen.
+What should have happened?
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+**Actual behavior**
+What happened instead? Include sanitized logs or tracebacks when useful.
 
-**Environment (please complete the following information):**
-- OS: [e.g. macOS, Windows, Linux]
-- Browser [e.g. Chrome, Safari]
-- Python version [e.g. 3.10]
+**Agent path**
+- [ ] `advanced-agent`
+- [ ] `simple-agent`
+
+**Environment**
+- OS:
+- Python version:
+- Output mode:
+- Firecrawl package version:
+- LangChain/LangGraph package versions:
+
+**External services**
+- [ ] Reproduces without live API calls
+- [ ] Requires Firecrawl
+- [ ] Requires OpenAI
+- [ ] Requires MCP / `npx firecrawl-mcp`
 
 **Additional context**
-Add any other context about the problem here.
+Do not paste API keys, private scraped content, or confidential output.

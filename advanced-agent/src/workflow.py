@@ -68,14 +68,17 @@ class Workflow:
         article_query = f"{state.query} tools comparison best alternatives"
         # Search for companies/tools using Firecrawl (cached)
         search_results = await self.firecrawl.search_companies_async(article_query, num_results=3)
+        search_data = getattr(search_results, "data", []) or []
 
         # Aggregate scraped content from search results for LLM context
         all_content = ""
-        for result in search_results.data:
+        for result in search_data:
             url = result.get("url", "")
+            if not url:
+                continue
             scraped = await self.firecrawl.scrape_company_pages_async(url)
             if scraped:
-                all_content += scraped.markdown[:1500] + "\n\n"
+                all_content += getattr(scraped, "markdown", "")[:1500] + "\n\n"
 
         # Prepare LLM messages for tool extraction
         messages = [
@@ -145,9 +148,10 @@ class Workflow:
         if not extracted_tools:
             logger.warning("No extracted tools found, falling back to direct search")
             search_results = await self.firecrawl.search_companies_async(state.query, num_results=4)
+            search_data = getattr(search_results, "data", []) or []
             tool_names = [
                 result.get("metadata", {}).get("title", "Unknown")
-                for result in search_results.data
+                for result in search_data
             ]
         else:
             tool_names = extracted_tools[:4]
@@ -159,9 +163,12 @@ class Workflow:
             # Search for official site and scrape details asynchronously
             tool_search_results = await self.firecrawl.search_companies_async(tool_name + " official site", num_results=1)
 
-            if tool_search_results:
-                result = tool_search_results.data[0]
+            tool_search_data = getattr(tool_search_results, "data", []) or []
+            if tool_search_data:
+                result = tool_search_data[0]
                 url = result.get("url", "")
+                if not url:
+                    continue
 
                 # Create CompanyInfo object with initial data
                 company = CompanyInfo(
@@ -204,9 +211,12 @@ class Workflow:
         logger.info("Generating recommendations")
 
         # Serialize company data for LLM input
-        company_data = ", ".join([
-            company.json() for company in state.companies
-        ])
+        company_data = ", ".join(
+            company.model_dump_json()
+            if hasattr(company, "model_dump_json")
+            else company.json()
+            for company in state.companies
+        )
 
         messages = [
             SystemMessage(content=self.prompts.RECOMMENDATIONS_SYSTEM),
