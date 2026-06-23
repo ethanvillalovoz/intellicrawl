@@ -1,0 +1,4 @@
+Name,Website,Pricing,Open Source,Tech Stack,Language Support,API,Integrations,Description
+Weaviate,https://weaviate.io,Freemium,True,"Python, Go, GraphQL","Python, JavaScript, Go",Available,"OpenAI, Hugging Face, LangChain",Open-source vector database for semantic search and retrieval-augmented generation.
+
+Developer Recommendations,"Use Weaviate when you want an open-source vector database with strong developer integrations. Choose a managed service if your team wants less infrastructure ownership, and compare pricing carefully for high-volume embedding workloads."

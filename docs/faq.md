@@ -18,8 +18,10 @@ Interactive mode includes a conservative query validator to keep terminal input 
 
 ## Can I export output to a file?
 
-The current CLI prints to stdout. You can redirect output:
+Yes. Use `--output-file` with any output format:
 
 ```sh
-python main.py "vector databases" --output markdown > results.md
+python main.py "vector databases" --output markdown --output-file results.md
 ```
+
+For batch JSON, the output file is a valid JSON list.

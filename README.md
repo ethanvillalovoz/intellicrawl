@@ -43,6 +43,7 @@ This is a portfolio/research project, not a hosted production service. The advan
 │   ├── main.py                         # MCP-based prototype agent
 │   ├── requirements.txt
 │   └── .env.example
+├── examples/                           # Sanitized sample Markdown, JSON, and CSV outputs
 ├── tests/                              # Lightweight deterministic tests
 ├── docs/                               # Architecture, usage, and FAQ
 └── README.md
@@ -98,6 +99,13 @@ cd advanced-agent
 python main.py "vector databases" --output markdown
 ```
 
+Save output directly to a file:
+
+```sh
+cd advanced-agent
+python main.py "vector databases" --output markdown --output-file ../exports/vector-databases.md
+```
+
 Run batch mode:
 
 ```sh
@@ -113,6 +121,8 @@ python main.py --batch queries.txt --output csv
 | Markdown | `python main.py "vector databases" --output markdown` | Notes, docs, blog drafts |
 | JSON | `python main.py "observability tools" --output json` | Downstream structured processing |
 | CSV | `python main.py "cloud databases" --output csv` | Spreadsheet comparison |
+
+Each format can be written to disk with `--output-file`. See [examples/](examples/) for sanitized sample outputs.
 
 ## Advanced Agent Workflow
 
@@ -156,6 +166,12 @@ python -m compileall advanced-agent simple-agent tests
 
 CI does not call Firecrawl or OpenAI. Keep live API experiments local unless a test is explicitly marked as an integration test.
 
+## Examples
+
+- [Markdown sample](examples/sample-output.md)
+- [JSON sample](examples/sample-output.json)
+- [CSV sample](examples/sample-output.csv)
+
 ## Documentation
 
 - [Architecture](docs/architecture.md)
@@ -167,7 +183,6 @@ CI does not call Firecrawl or OpenAI. Keep live API experiments local unless a t
 ## Roadmap
 
 - Add mocked Firecrawl/OpenAI integration tests
-- Add export-to-file flags for JSON, Markdown, and CSV output
 - Add optional scoring/ranking rubric for developer tools
 - Add richer batch summaries across multiple queries
 - Add a small web UI once the CLI workflow is stable
