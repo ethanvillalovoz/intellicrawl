@@ -1,7 +1,0 @@
-colorama
-diskcache
-firecrawl-py
-pydantic
-pytest
-python-dotenv
-yaspin

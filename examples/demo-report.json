@@ -1,0 +1,261 @@
+{
+  "query": "vector databases for production RAG",
+  "mode": "demo",
+  "snapshot_date": "2026-07-11",
+  "status": "complete",
+  "model": "deterministic-fixture",
+  "tools": [
+    {
+      "name": "Weaviate",
+      "website": "https://weaviate.io/developers/weaviate",
+      "description": "Open-source vector database with managed cloud and a broad client ecosystem.",
+      "pricing_model": "freemium",
+      "is_open_source": "yes",
+      "tech_stack": [
+        "vector search",
+        "GraphQL",
+        "REST"
+      ],
+      "api_available": "yes",
+      "language_support": [
+        "Python",
+        "TypeScript",
+        "Go",
+        "Java"
+      ],
+      "integrations": [
+        "OpenAI",
+        "Hugging Face",
+        "LangChain"
+      ],
+      "evidence": [
+        {
+          "field": "description",
+          "source_ids": [
+            "S1"
+          ],
+          "note": "Product documentation"
+        },
+        {
+          "field": "pricing_model",
+          "source_ids": [
+            "S2"
+          ],
+          "note": "Published pricing"
+        },
+        {
+          "field": "is_open_source",
+          "source_ids": [
+            "S1"
+          ],
+          "note": "Documentation"
+        },
+        {
+          "field": "api_available",
+          "source_ids": [
+            "S1"
+          ],
+          "note": "API documentation"
+        },
+        {
+          "field": "language_support",
+          "source_ids": [
+            "S1"
+          ],
+          "note": "Client docs"
+        },
+        {
+          "field": "integrations",
+          "source_ids": [
+            "S1"
+          ],
+          "note": "Integration docs"
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "S1",
+          "title": "Weaviate documentation",
+          "url": "https://weaviate.io/developers/weaviate"
+        },
+        {
+          "source_id": "S2",
+          "title": "Weaviate pricing",
+          "url": "https://weaviate.io/pricing"
+        }
+      ],
+      "status": "complete"
+    },
+    {
+      "name": "Pinecone",
+      "website": "https://docs.pinecone.io/",
+      "description": "Managed vector database focused on hosted retrieval infrastructure.",
+      "pricing_model": "freemium",
+      "is_open_source": "no",
+      "tech_stack": [
+        "vector search",
+        "serverless"
+      ],
+      "api_available": "yes",
+      "language_support": [
+        "Python",
+        "TypeScript",
+        "Java",
+        "Go"
+      ],
+      "integrations": [
+        "OpenAI",
+        "LangChain",
+        "LlamaIndex"
+      ],
+      "evidence": [
+        {
+          "field": "description",
+          "source_ids": [
+            "S1"
+          ],
+          "note": "Product documentation"
+        },
+        {
+          "field": "pricing_model",
+          "source_ids": [
+            "S2"
+          ],
+          "note": "Published pricing"
+        },
+        {
+          "field": "is_open_source",
+          "source_ids": [
+            "S1"
+          ],
+          "note": "Hosted product docs"
+        },
+        {
+          "field": "api_available",
+          "source_ids": [
+            "S1"
+          ],
+          "note": "API documentation"
+        },
+        {
+          "field": "language_support",
+          "source_ids": [
+            "S1"
+          ],
+          "note": "SDK docs"
+        },
+        {
+          "field": "integrations",
+          "source_ids": [
+            "S1"
+          ],
+          "note": "Integration docs"
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "S1",
+          "title": "Pinecone documentation",
+          "url": "https://docs.pinecone.io/"
+        },
+        {
+          "source_id": "S2",
+          "title": "Pinecone pricing",
+          "url": "https://www.pinecone.io/pricing"
+        }
+      ],
+      "status": "complete"
+    },
+    {
+      "name": "Qdrant",
+      "website": "https://qdrant.tech/documentation",
+      "description": "Open-source vector search engine available self-hosted or as a managed cloud.",
+      "pricing_model": "freemium",
+      "is_open_source": "yes",
+      "tech_stack": [
+        "Rust",
+        "vector search",
+        "REST",
+        "gRPC"
+      ],
+      "api_available": "yes",
+      "language_support": [
+        "Python",
+        "TypeScript",
+        "Rust",
+        "Go"
+      ],
+      "integrations": [
+        "LangChain",
+        "LlamaIndex",
+        "OpenAI"
+      ],
+      "evidence": [
+        {
+          "field": "description",
+          "source_ids": [
+            "S1"
+          ],
+          "note": "Product documentation"
+        },
+        {
+          "field": "pricing_model",
+          "source_ids": [
+            "S2"
+          ],
+          "note": "Published pricing"
+        },
+        {
+          "field": "is_open_source",
+          "source_ids": [
+            "S1"
+          ],
+          "note": "Documentation"
+        },
+        {
+          "field": "api_available",
+          "source_ids": [
+            "S1"
+          ],
+          "note": "API documentation"
+        },
+        {
+          "field": "language_support",
+          "source_ids": [
+            "S1"
+          ],
+          "note": "Client docs"
+        },
+        {
+          "field": "integrations",
+          "source_ids": [
+            "S1"
+          ],
+          "note": "Integration docs"
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "S1",
+          "title": "Qdrant documentation",
+          "url": "https://qdrant.tech/documentation"
+        },
+        {
+          "source_id": "S2",
+          "title": "Qdrant cloud pricing",
+          "url": "https://qdrant.tech/pricing"
+        }
+      ],
+      "status": "complete"
+    }
+  ],
+  "recommendation": {
+    "summary": "Choose Pinecone when a fully managed path is the priority. Choose Weaviate or Qdrant when open-source deployment flexibility matters; compare their operational models and client ecosystems against your workload before committing.",
+    "best_for": [
+      "Pinecone: managed operations",
+      "Weaviate: integrated open-source platform",
+      "Qdrant: self-hosted control"
+    ]
+  },
+  "warnings": []
+}

@@ -1,31 +1,33 @@
-from src.prompts import DeveloperToolsPrompts
+from intellicrawl.demo import TOOL_SOURCES
+from intellicrawl.prompts import (
+    SYSTEM_GUARD,
+    analysis_prompt,
+    recommendation_prompt,
+    selection_prompt,
+    source_context,
+)
 
 
-def test_tool_extraction_prompt_includes_query_and_content():
-    prompt = DeveloperToolsPrompts.tool_extraction_user(
-        "vector databases",
-        "The article compares Pinecone and Weaviate.",
-    )
-
-    assert "vector databases" in prompt
-    assert "Pinecone and Weaviate" in prompt
-    assert "Return just the tool names" in prompt
+def test_source_context_is_bounded_and_identified() -> None:
+    source = TOOL_SOURCES["weaviate"][0].model_copy(update={"content": "x" * 10_000})
+    context = source_context([source], per_source_chars=100)
+    assert 'id="S1"' in context
+    assert "x" * 101 not in context
 
 
-def test_analysis_prompt_truncates_long_content():
-    content = "x" * 3000
-    prompt = DeveloperToolsPrompts.tool_analysis_user("ExampleTool", content)
-    prompt_content = prompt.split("Website Content: ", 1)[1].split("\n\n", 1)[0]
+def test_prompts_treat_sources_as_evidence() -> None:
+    sources = TOOL_SOURCES["weaviate"]
+    selection = selection_prompt("vector databases", sources, 3)
+    analysis = analysis_prompt("Weaviate", sources)
+    assert "at most 3" in selection
+    assert "Allowed source IDs: S1, S2" in analysis
+    assert "untrusted external data" in SYSTEM_GUARD
 
-    assert "Company/Tool: ExampleTool" in prompt
-    assert prompt_content == "x" * 2500
 
+async def test_recommendation_prompt_uses_validated_profiles() -> None:
+    from intellicrawl.demo import create_demo_report
 
-def test_recommendations_prompt_is_concise():
-    prompt = DeveloperToolsPrompts.recommendations_user(
-        "serverless hosting",
-        "Vercel, Netlify",
-    )
-
-    assert "3-4 sentences max" in prompt
-    assert "serverless hosting" in prompt
+    report = await create_demo_report()
+    prompt = recommendation_prompt(report.query, report.tools)
+    assert "Weaviate" in prompt
+    assert "Do not introduce new facts" in prompt

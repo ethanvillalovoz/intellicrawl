@@ -1,35 +1,21 @@
-## Description
+## What changed
 
-<!-- Summarize the change, motivation, and affected agent path. -->
+<!-- Explain the behavior, motivation, and affected boundary. -->
 
-Fixes #(issue)
+## Evidence
 
-## Type of change
+<!-- Include tests, a sanitized demo, or a generated-artifact diff. -->
 
-- [ ] Bug fix
-- [ ] Agent/workflow change
-- [ ] Output formatting change
-- [ ] Documentation update
-- [ ] Tests / CI
-- [ ] Refactor with no intended behavior change
-- [ ] Other:
+- [ ] `make check`
+- [ ] Live provider smoke test completed, or not applicable
 
-## Verification
+## Review checklist
 
-<!-- Include commands run. For live API behavior, include sanitized query/output notes. -->
+- [ ] Claims still resolve to explicit source IDs.
+- [ ] Unsupported data remains unknown or partial.
+- [ ] External calls are mocked in automated tests.
+- [ ] User-facing commands and schemas are documented.
+- [ ] Generated artifacts were regenerated when relevant.
+- [ ] No credentials, caches, private page bodies, or sensitive reports are included.
 
-- [ ] `PYTHONPATH=advanced-agent pytest tests`
-- [ ] `python -m compileall advanced-agent simple-agent tests`
-- [ ] Manual live query was run, or not needed
-
-## Checklist
-
-- [ ] I have performed a self-review of my code
-- [ ] I kept the CLI contract unchanged or documented the change
-- [ ] I added/updated tests where useful
-- [ ] I updated README/docs for user-facing changes
-- [ ] I did not commit `.env`, API keys, cache files, private scraped content, or generated exports
-
-## Additional context
-
-<!-- Add any other context about the PR here. -->
+Closes #
