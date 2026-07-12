@@ -1,27 +1,41 @@
 # FAQ
 
-## Which agent should I use?
+## Can I evaluate IntelliCrawl without API keys?
 
-Use `advanced-agent/` for the polished developer-tool comparison workflow. Use `simple-agent/` for lower-level MCP experimentation.
+Yes. `intellicrawl demo` runs a dated, deterministic comparison through the same graph and report models as live mode. It does not call external services.
 
-## Why does CI not call Firecrawl or OpenAI?
+## Are demo results current recommendations?
 
-Live API calls would make CI slower, more expensive, and dependent on external service availability. CI validates deterministic models, prompt helpers, and syntax. Live integration tests should be run manually with API keys.
+No. They are a reproducible snapshot used to demonstrate behavior and test exports. Run live research and inspect the cited source pages for a current decision.
 
-## Where is cached scraped data stored?
+## Why is a report marked partial?
 
-The advanced agent uses `.firecrawl_cache/` through `diskcache`. Cache directories are ignored by git because they can contain generated scraped content.
+A profile becomes partial when a required field lacks valid source evidence. The overall report is partial when it contains a warning, such as a failed tool profile or unavailable recommendation. IntelliCrawl keeps valid evidence instead of hiding the entire run.
 
-## Why does the CLI reject some characters in interactive mode?
+## Why does a value say unknown?
 
-Interactive mode includes a conservative query validator to keep terminal input simple and reduce accidental shell-like or markup-heavy input. Single-query mode currently passes the query directly.
+The available sources did not support a confident normalized value. Unknown is an intentional result, not a parsing failure.
 
-## Can I export output to a file?
+## Where is scraped content stored?
 
-Yes. Use `--output-file` with any output format:
+Live mode uses a bounded local `diskcache` directory under the operating system's user cache path unless `INTELLICRAWL_CACHE_DIR` overrides it. That cache may contain public page content and should still be treated as private local data.
 
-```sh
-python main.py "vector databases" --output markdown --output-file results.md
-```
+## Does the exported report contain scraped pages?
 
-For batch JSON, the output file is a valid JSON list.
+No. Reports contain normalized claims, evidence notes, titles, and public URLs. Full scraped content is excluded from public serialization.
+
+## Why does CI avoid live API calls?
+
+Provider calls cost money, vary with external availability, and are not reproducible. CI tests the adapters, orchestration, failure behavior, and deterministic providers without credentials.
+
+## How do I force fresh source retrieval?
+
+Use `intellicrawl research "your query" --no-cache`. You can also set `INTELLICRAWL_CACHE_TTL=0` to disable cache writes.
+
+## Can I use another search or analysis provider?
+
+Yes. Implement the `SearchProvider` or `AnalysisProvider` protocol in `contracts.py`, then assemble it with `ResearchPipeline`. The graph does not depend directly on Firecrawl or OpenAI.
+
+## Is this a hosted recommendation service?
+
+No. IntelliCrawl is a local research CLI. Review citations before using its output for procurement, security, financial, or other consequential decisions.

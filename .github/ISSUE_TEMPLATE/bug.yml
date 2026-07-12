@@ -1,0 +1,58 @@
+name: Bug report
+description: Report a reproducible CLI, pipeline, provider, or export problem.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include API keys, cached page bodies, private reports, or confidential logs.
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Mode
+      options:
+        - Deterministic demo
+        - Live research
+        - Both
+        - Development tooling or documentation
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the observed and expected behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Include the sanitized command and the smallest repeatable steps.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include OS, Python version, IntelliCrawl version, and relevant provider versions.
+      placeholder: |
+        OS: macOS 15
+        Python: 3.12.4
+        IntelliCrawl: 2.0.0
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Sanitized output
+      description: Paste warnings or a traceback after removing secrets and private content.
+      render: text
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed credentials, private source content, and sensitive output.
+          required: true

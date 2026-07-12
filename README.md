@@ -1,192 +1,108 @@
 # IntelliCrawl
 
 [![CI](https://github.com/ethanvillalovoz/intellicrawl/actions/workflows/ci.yml/badge.svg)](https://github.com/ethanvillalovoz/intellicrawl/actions/workflows/ci.yml)
-[![License](https://img.shields.io/github/license/ethanvillalovoz/intellicrawl)](LICENSE)
-[![Python](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/)
-[![LangGraph](https://img.shields.io/badge/LangGraph-agent-green.svg)](https://www.langchain.com/langgraph)
-[![Firecrawl](https://img.shields.io/badge/Firecrawl-web%20research-orange.svg)](https://www.firecrawl.dev/)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-3776ab)](https://www.python.org/)
+[![MIT License](https://img.shields.io/badge/license-MIT-171717)](LICENSE)
 
-IntelliCrawl is a web-powered AI research agent for comparing developer tools. It combines Firecrawl search/scraping, LangGraph orchestration, LangChain/OpenAI reasoning, structured Pydantic models, caching, and CLI output modes so users can research tool categories such as vector databases, CI/CD platforms, auth providers, hosting options, and developer APIs.
+Source-backed developer-tool research with Firecrawl, OpenAI, and LangGraph.
 
-![Example developer-tool comparison](advanced-agent/docs/examples/firebase.png)
+![IntelliCrawl research pipeline](docs/media/intellicrawl-preview.webp)
 
-## What It Does
+IntelliCrawl turns a comparison question into a compact report whose claims stay connected to public sources. It discovers candidate tools, profiles them concurrently, preserves unknowns instead of guessing, and exports the result as a terminal table, Markdown, JSON, or CSV.
 
-- Searches the web for articles and official pages related to a developer-tool query
-- Extracts candidate tools from scraped content using an LLM
-- Scrapes official tool pages for developer-facing details
-- Produces structured comparisons with pricing model, open-source status, APIs, supported languages, integrations, tech stack, and short recommendations
-- Supports interactive, single-query, and batch CLI workflows
-- Outputs text, Markdown, JSON, or CSV
-- Includes a smaller MCP-based prototype agent for Firecrawl tool experimentation
-
-## Repository Status
-
-This is a portfolio/research project, not a hosted production service. The advanced agent is the primary implementation. It requires live Firecrawl and OpenAI API keys for real research runs. CI intentionally validates deterministic code paths, models, docs, and syntax without calling external APIs.
-
-## Project Layout
-
-```text
-.
-├── advanced-agent/
-│   ├── main.py                         # Primary CLI entry point
-│   ├── requirements.txt                # Full runtime dependencies
-│   ├── .env.example                    # Required environment variables
-│   ├── docs/examples/                  # Example output screenshots
-│   └── src/
-│       ├── firecrawl_service.py        # Firecrawl search/scrape wrapper and cache
-│       ├── logging_config.py           # Logging setup
-│       ├── models.py                   # Pydantic result/state schemas
-│       ├── prompts.py                  # Prompt templates
-│       └── workflow.py                 # LangGraph research workflow
-├── simple-agent/
-│   ├── main.py                         # MCP-based prototype agent
-│   ├── requirements.txt
-│   └── .env.example
-├── examples/                           # Sanitized sample Markdown, JSON, and CSV outputs
-├── tests/                              # Lightweight deterministic tests
-├── docs/                               # Architecture, usage, and FAQ
-└── README.md
-```
-
-## Quick Start
-
-Clone the repository:
+## Try It Without API Keys
 
 ```sh
 git clone https://github.com/ethanvillalovoz/intellicrawl.git
 cd intellicrawl
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -e .
+intellicrawl demo
 ```
 
-Create a Python environment:
+The deterministic demo exercises the same LangGraph pipeline and report models as live research. Its dated comparison is reproducible and available as [Markdown](examples/demo-report.md), [JSON](examples/demo-report.json), and [CSV](examples/demo-report.csv).
+
+## Run Live Research
 
 ```sh
-conda create -n intellicrawl python=3.11
-conda activate intellicrawl
-python -m pip install --upgrade pip
+python -m pip install -e ".[live]"
+cp .env.example .env
+# Add FIRECRAWL_API_KEY and OPENAI_API_KEY to .env.
+intellicrawl research "vector databases for production RAG"
 ```
 
-Install the advanced agent:
+Export a report atomically:
 
 ```sh
-pip install -r advanced-agent/requirements.txt
+intellicrawl research "managed Postgres for a small team" \
+  --format markdown \
+  --output reports/postgres.md
 ```
 
-Create an environment file:
+Use `--format table`, `markdown`, `json`, or `csv`. Add `--no-cache` when a run must bypass the local source cache.
 
-```sh
-cp advanced-agent/.env.example advanced-agent/.env
-```
+## Why The Output Is Inspectable
 
-Then fill in:
+- Every normalized claim carries one or more source IDs.
+- Evidence IDs are validated against the report's actual source list.
+- Missing evidence produces a partial report or an explicit unknown, not a fabricated value.
+- Full scraped content stays in the private provider/cache boundary and is excluded from exports.
+- Prompt instructions treat web content as untrusted data.
+- CSV cells are neutralized against spreadsheet formula execution.
+- A failed tool profile does not erase successful profiles or their warnings.
 
-```text
-FIRECRAWL_API_KEY=your_firecrawl_api_key
-OPENAI_API_KEY=your_openai_api_key
-```
-
-Run the interactive CLI:
-
-```sh
-cd advanced-agent
-python main.py
-```
-
-Run a single query:
-
-```sh
-cd advanced-agent
-python main.py "vector databases" --output markdown
-```
-
-Save output directly to a file:
-
-```sh
-cd advanced-agent
-python main.py "vector databases" --output markdown --output-file ../exports/vector-databases.md
-```
-
-Run batch mode:
-
-```sh
-cd advanced-agent
-python main.py --batch queries.txt --output csv
-```
-
-## Output Modes
-
-| Mode | Command | Use case |
-| --- | --- | --- |
-| Text | `python main.py "auth platforms"` | Human-readable terminal output |
-| Markdown | `python main.py "vector databases" --output markdown` | Notes, docs, blog drafts |
-| JSON | `python main.py "observability tools" --output json` | Downstream structured processing |
-| CSV | `python main.py "cloud databases" --output csv` | Spreadsheet comparison |
-
-Each format can be written to disk with `--output-file`. See [examples/](examples/) for sanitized sample outputs.
-
-## Advanced Agent Workflow
+## Pipeline
 
 ```mermaid
-flowchart TD
-    Q["User query"] --> E["Extract candidate tools"]
-    E --> S["Search with Firecrawl"]
-    S --> C["Scrape official pages"]
-    C --> A["Analyze tool details with OpenAI"]
-    A --> R["Generate recommendation"]
-    R --> O["Render text / Markdown / JSON / CSV"]
+flowchart LR
+    Q["Research question"] --> D["Discover candidate tools"]
+    D --> P["Profile tools concurrently"]
+    P --> E["Validate claim evidence"]
+    E --> R["Generate recommendation"]
+    R --> O["Table / Markdown / JSON / CSV"]
 ```
 
-## Simple Agent
+The provider contracts keep orchestration independent from Firecrawl and OpenAI. Deterministic providers power tests and the demo; live adapters implement the same interfaces.
 
-The `simple-agent/` folder is a smaller prototype that connects a LangGraph ReAct agent to Firecrawl MCP tools through `npx firecrawl-mcp`.
-
-```sh
-cd simple-agent
-pip install -r requirements.txt
-cp .env.example .env
-python main.py
+```text
+src/intellicrawl/
+├── pipeline.py      # LangGraph workflow and failure semantics
+├── providers.py     # Firecrawl normalization, validation, and TTL cache
+├── live.py          # Structured OpenAI analysis and live assembly
+├── demo.py          # Deterministic no-key providers
+├── models.py        # Strict public and internal report schemas
+├── renderers.py     # Terminal and file exports
+└── cli.py           # Scriptable command surface
 ```
 
-Use the advanced agent for the polished comparison workflow. Use the simple agent when experimenting directly with MCP tool calls.
+Read the [architecture notes](docs/architecture.md) for boundaries and state transitions, or the [usage guide](docs/usage-guide.md) for configuration and export details.
 
 ## Development
 
-Run lightweight tests:
-
 ```sh
-pip install -r requirements-ci.txt
-PYTHONPATH=advanced-agent pytest tests
+python -m pip install -e ".[live,media,dev]"
+make check
+make media
 ```
 
-Run syntax checks:
+`make check` runs Ruff, 49 deterministic tests with a 90% coverage gate, regenerates the example exports, and fails if committed artifacts drift. CI tests Python 3.11 and 3.12 and never spends API credits.
 
-```sh
-python -m compileall advanced-agent simple-agent tests
-```
+## Runtime Boundaries
 
-CI does not call Firecrawl or OpenAI. Keep live API experiments local unless a test is explicitly marked as an integration test.
+Live mode sends the research query and public web content to Firecrawl and OpenAI. API pricing, model behavior, source pages, and search results can change. Review generated claims and citations before making a consequential decision.
 
-## Examples
-
-- [Markdown sample](examples/sample-output.md)
-- [JSON sample](examples/sample-output.json)
-- [CSV sample](examples/sample-output.csv)
+The live provider path has adapter, timeout, caching, validation, and failure tests. A real end-to-end query is intentionally not run in CI because it requires user-owned credentials and incurs external API calls.
 
 ## Documentation
 
+- [Usage guide](docs/usage-guide.md)
 - [Architecture](docs/architecture.md)
-- [Usage Guide](docs/usage-guide.md)
 - [FAQ](docs/faq.md)
-- [Security Policy](SECURITY.md)
-- [Contributing Guide](CONTRIBUTING.md)
-
-## Roadmap
-
-- Add mocked Firecrawl/OpenAI integration tests
-- Add optional scoring/ranking rubric for developer tools
-- Add richer batch summaries across multiple queries
-- Add a small web UI once the CLI workflow is stable
+- [Security policy](SECURITY.md)
+- [Contributing](CONTRIBUTING.md)
+- [Changelog](CHANGELOG.md)
 
 ## License
 
-This project is released under the [MIT License](LICENSE).
+Released under the [MIT License](LICENSE).

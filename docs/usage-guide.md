@@ -1,97 +1,105 @@
 # Usage Guide
 
-## Environment Variables
+## Install
 
-The advanced agent requires:
+IntelliCrawl requires Python 3.11 or newer.
+
+```sh
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -e .
+```
+
+The base install supports deterministic demo mode:
+
+```sh
+intellicrawl demo
+```
+
+## Live Configuration
+
+Install the optional provider dependencies and create a local environment file:
+
+```sh
+python -m pip install -e ".[live]"
+cp .env.example .env
+```
+
+Required variables:
 
 ```text
-FIRECRAWL_API_KEY=your_firecrawl_api_key
-OPENAI_API_KEY=your_openai_api_key
+FIRECRAWL_API_KEY=fc-your-key
+OPENAI_API_KEY=sk-your-key
 ```
 
-Create the local file from the example:
+Optional controls:
+
+| Variable | Default | Constraint |
+| --- | ---: | --- |
+| `INTELLICRAWL_OPENAI_MODEL` | `gpt-5.4-mini` | non-empty model name |
+| `INTELLICRAWL_CACHE_TTL` | `86400` | zero or more seconds |
+| `INTELLICRAWL_TIMEOUT` | `60` | positive seconds |
+| `INTELLICRAWL_MAX_TOOLS` | `4` | 1 through 6 |
+| `INTELLICRAWL_CONCURRENCY` | `3` | 1 through 8 |
+| `INTELLICRAWL_CACHE_DIR` | platform user cache | writable local path |
+
+`LiveSettings` validates these values before constructing any provider. API keys are omitted from its representation.
+
+## Research
 
 ```sh
-cp advanced-agent/.env.example advanced-agent/.env
+intellicrawl research "authentication providers for a B2B SaaS"
 ```
 
-## Interactive Mode
+Queries are whitespace-normalized and must contain 3 to 180 characters. The same validation applies to every invocation path.
+
+Bypass cached source results when freshness matters:
 
 ```sh
-cd advanced-agent
-python main.py
-```
-
-Enter a developer-tool category when prompted, such as:
-
-```text
-vector databases
-serverless Postgres
-developer observability platforms
-```
-
-Type `quit` or `exit` to stop.
-
-## Single Query Mode
-
-```sh
-cd advanced-agent
-python main.py "authentication platforms" --output markdown
-```
-
-To write the rendered result directly to disk:
-
-```sh
-python main.py "authentication platforms" --output markdown --output-file ../exports/auth-platforms.md
-```
-
-## Batch Mode
-
-Create a local `queries.txt` file:
-
-```text
-vector databases
-CI/CD platforms
-serverless hosting
-```
-
-Then run:
-
-```sh
-cd advanced-agent
-python main.py --batch queries.txt --output csv
-```
-
-Batch output can also be written to a single file:
-
-```sh
-python main.py --batch queries.txt --output json --output-file ../exports/research-batch.json
+intellicrawl research "serverless Postgres" --no-cache
 ```
 
 ## Output Formats
 
-- `text`: colorized terminal output
-- `markdown`: structured notes suitable for docs
-- `json`: structured agent state
-- `csv`: spreadsheet-friendly table
+| Format | Command | Intended use |
+| --- | --- | --- |
+| Terminal | `--format table` | interactive inspection |
+| Markdown | `--format markdown` | notes and decision records |
+| JSON | `--format json` | typed downstream processing |
+| CSV | `--format csv` | spreadsheet comparison |
 
-Use `--output-file` with any format. For batch JSON, IntelliCrawl writes a valid JSON list where each item contains the query and result. For batch CSV, IntelliCrawl writes a single table with a `Query` column.
-
-## Example Outputs
-
-- [Markdown sample](../examples/sample-output.md)
-- [JSON sample](../examples/sample-output.json)
-- [CSV sample](../examples/sample-output.csv)
-
-## Simple Agent
-
-The simple agent requires Node.js/npm because it launches Firecrawl MCP through `npx`.
+Without `--output`, non-table formats write only machine-readable data to standard output:
 
 ```sh
-cd simple-agent
-pip install -r requirements.txt
-cp .env.example .env
-python main.py
+intellicrawl demo --format json | jq '.tools[].name'
 ```
 
-Use this path when experimenting directly with Firecrawl MCP tools.
+Write any format to disk:
+
+```sh
+intellicrawl research "observability platforms" \
+  --format json \
+  --output reports/observability.json
+```
+
+Parent directories are created automatically. The destination is replaced atomically after a complete write.
+
+## Exit Codes
+
+| Code | Meaning |
+| ---: | --- |
+| `0` | report completed, including reports marked partial |
+| `2` | invalid configuration, invalid input, or research failure |
+| `130` | interrupted by the user |
+
+Warnings inside a report identify incomplete profiles or unavailable synthesis without discarding valid results.
+
+## Reproduce The Public Artifacts
+
+```sh
+python -m pip install -e ".[media,dev]"
+python scripts/build_demo_artifacts.py
+python scripts/render_preview.py
+```
+
+Generated report examples live in `examples/`; the animated README preview lives in `docs/media/`.

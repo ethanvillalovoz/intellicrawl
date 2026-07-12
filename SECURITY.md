@@ -1,17 +1,39 @@
 # Security Policy
 
-## Supported Scope
+## Supported Version
 
-IntelliCrawl is a portfolio/research project that calls external APIs. Security reports should focus on API-key handling, dependency issues, unsafe file handling, cache leakage, prompt/data exposure, or behavior that could surprise users running the CLI locally.
+Security fixes target the latest release and the `main` branch.
 
-## Secrets
+## Report A Vulnerability
 
-Do not commit `.env` files, API keys, Firecrawl caches, OpenAI request/response logs, scraped private content, or generated output that contains sensitive data. The repository includes `.env.example` files only.
+Use GitHub's private vulnerability reporting for this repository when available. Otherwise contact the maintainer through the email listed on [ethanvillalovoz.com](https://ethanvillalovoz.com/). Do not put credentials, exploit payloads, private source content, or sensitive logs in a public issue.
 
-## External Services
+Include affected versions, reproduction steps, impact, and a minimal sanitized example. You can expect an initial response within seven days.
 
-The advanced agent sends user queries and scraped web content to OpenAI for analysis and uses Firecrawl for search/scraping. Users should avoid submitting private or confidential information unless they understand the external service policies involved.
+## Trust Boundaries
 
-## Reporting
+Live mode sends a user query to Firecrawl and sends public source content to OpenAI for structured analysis. Review the providers' current data and retention policies before submitting sensitive information. IntelliCrawl is designed for public developer-tool research, not confidential documents.
 
-Open a GitHub issue with reproduction steps, affected files, dependency versions, and any relevant logs. Do not include secrets or private scraped data in public issues.
+Web content is untrusted input. Prompts tell the model to ignore instructions embedded in source text, but prompt injection defenses are not absolute. Inspect citations and avoid treating generated recommendations as executable instructions.
+
+## Local Data
+
+Never commit:
+
+- `.env` files or API keys
+- provider caches or raw API responses
+- private source content
+- unsanitized reports or logs
+
+The local TTL cache may contain scraped page bodies. Restrict its filesystem access and delete it when no longer needed. API keys are excluded from `LiveSettings` representations.
+
+## Defensive Behavior
+
+- Source URLs must be public HTTP(S) URLs without embedded credentials.
+- Provider calls have bounded timeouts and concurrency.
+- Full scraped content is excluded from report serialization.
+- Evidence IDs must resolve to the report's source list.
+- CSV exports prefix formula-like cells before spreadsheet use.
+- File exports use atomic replacement.
+
+These controls reduce common risks but do not turn IntelliCrawl into a sandboxed browser or a security decision engine.
