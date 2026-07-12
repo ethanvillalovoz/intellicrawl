@@ -41,7 +41,7 @@ media = [
 dev = [
   "pytest>=8.4,<9",
   "pytest-asyncio>=1.2,<2",
-  "pytest-cov>=6.3,<7",
+  "pytest-cov>=6.3,<8",
   "ruff>=0.15,<1",
 ]
 
