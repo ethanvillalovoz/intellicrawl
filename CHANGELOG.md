@@ -4,7 +4,7 @@ All notable changes to IntelliCrawl are documented here.
 
 ## [Unreleased]
 
-## [2.0.0] - 2026-07-11
+## [2.0.0] - 2026-07-12
 
 ### Added
 
@@ -12,7 +12,7 @@ All notable changes to IntelliCrawl are documented here.
 - Deterministic no-key demo that exercises the production graph.
 - Field-level evidence records and strict source-reference validation.
 - Atomic Markdown, JSON, and CSV exports with committed examples.
-- Animated, reproducible README preview.
+- Native macOS Terminal capture of the installed no-key demo.
 - Provider, pipeline, CLI, renderer, prompt, settings, and model tests with a 90% coverage gate.
 
 ### Changed

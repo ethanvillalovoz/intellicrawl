@@ -1,6 +1,7 @@
 # IntelliCrawl
 
 [![CI](https://github.com/ethanvillalovoz/intellicrawl/actions/workflows/ci.yml/badge.svg)](https://github.com/ethanvillalovoz/intellicrawl/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/ethanvillalovoz/intellicrawl?color=171717)](https://github.com/ethanvillalovoz/intellicrawl/releases/latest)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-3776ab)](https://www.python.org/)
 [![MIT License](https://img.shields.io/badge/license-MIT-171717)](LICENSE)
 
@@ -14,12 +15,11 @@ IntelliCrawl turns a comparison question into a compact report whose claims stay
 
 ## Try It Without API Keys
 
+Install the tagged wheel and run the deterministic research pipeline:
+
 ```sh
-git clone https://github.com/ethanvillalovoz/intellicrawl.git
-cd intellicrawl
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install -e .
+python -m pip install \
+  https://github.com/ethanvillalovoz/intellicrawl/releases/download/v2.0.0/intellicrawl-2.0.0-py3-none-any.whl
 intellicrawl demo
 ```
 
