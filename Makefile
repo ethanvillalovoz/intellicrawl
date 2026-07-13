@@ -1,13 +1,10 @@
-.PHONY: install demo media lint test artifacts package check
+.PHONY: install demo lint test artifacts package check
 
 install:
-	python -m pip install -e ".[live,media,dev]"
+	python -m pip install -e ".[live,dev]"
 
 demo:
 	intellicrawl demo
-
-media: artifacts
-	python scripts/render_preview.py
 
 lint:
 	ruff check .

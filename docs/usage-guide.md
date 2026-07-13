@@ -94,12 +94,11 @@ Parent directories are created automatically. The destination is replaced atomic
 
 Warnings inside a report identify incomplete profiles or unavailable synthesis without discarding valid results.
 
-## Reproduce The Public Artifacts
+## Reproduce The Public Report Artifacts
 
 ```sh
-python -m pip install -e ".[media,dev]"
+python -m pip install -e ".[dev]"
 python scripts/build_demo_artifacts.py
-python scripts/render_preview.py
 ```
 
-Generated report examples live in `examples/`; the animated README preview lives in `docs/media/`.
+Generated report examples live in `examples/`. The README demonstration in `docs/media/` is a real macOS Terminal capture of `intellicrawl demo`, retained separately from deterministic report generation so the project never presents a drawn terminal as runtime evidence.

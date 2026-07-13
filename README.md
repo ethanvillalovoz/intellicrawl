@@ -6,7 +6,9 @@
 
 Source-backed developer-tool research with Firecrawl, OpenAI, and LangGraph.
 
-![Deterministic IntelliCrawl terminal output with source IDs, evidence-backed comparisons, and a recommendation](docs/media/intellicrawl-evidence.png)
+https://github.com/user-attachments/assets/bcbe5300-92e9-40c1-837b-3a71d9ede4fa
+
+The demo above is the actual installed CLI running in macOS Terminal against IntelliCrawl's deterministic, no-key provider. The tracked [MP4 recording](docs/media/intellicrawl-terminal.mp4) and [poster frame](docs/media/intellicrawl-terminal.webp) preserve the original capture.
 
 IntelliCrawl turns a comparison question into a compact report whose claims stay connected to public sources. It discovers candidate tools, profiles them concurrently, preserves unknowns instead of guessing, and exports the result as a terminal table, Markdown, JSON, or CSV.
 
@@ -81,9 +83,8 @@ Read the [architecture notes](docs/architecture.md) for boundaries and state tra
 ## Development
 
 ```sh
-python -m pip install -e ".[live,media,dev]"
+python -m pip install -e ".[live,dev]"
 make check
-make media
 ```
 
 `make check` runs Ruff, 49 deterministic tests with a 90% coverage gate, regenerates the example exports, and fails if committed artifacts drift. CI tests Python 3.11 and 3.12 and never spends API credits.
