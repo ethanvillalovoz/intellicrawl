@@ -6,7 +6,7 @@
 
 Source-backed developer-tool research with Firecrawl, OpenAI, and LangGraph.
 
-![IntelliCrawl research pipeline](docs/media/intellicrawl-preview.webp)
+![Deterministic IntelliCrawl terminal output with source IDs, evidence-backed comparisons, and a recommendation](docs/media/intellicrawl-evidence.png)
 
 IntelliCrawl turns a comparison question into a compact report whose claims stay connected to public sources. It discovers candidate tools, profiles them concurrently, preserves unknowns instead of guessing, and exports the result as a terminal table, Markdown, JSON, or CSV.
 
