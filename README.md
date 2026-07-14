@@ -7,9 +7,9 @@
 
 Source-backed developer-tool research with Firecrawl, OpenAI, and LangGraph.
 
-https://github.com/user-attachments/assets/bcbe5300-92e9-40c1-837b-3a71d9ede4fa
+[![IntelliCrawl demo: run an evidence-backed tool comparison in the macOS terminal](docs/media/intellicrawl-terminal.gif)](docs/media/intellicrawl-terminal.mp4)
 
-The demo above is the actual installed CLI running in macOS Terminal against IntelliCrawl's deterministic, no-key provider. The tracked [MP4 recording](docs/media/intellicrawl-terminal.mp4) and [poster frame](docs/media/intellicrawl-terminal.webp) preserve the original capture.
+This is a real run of the installed CLI in macOS Terminal, backed by IntelliCrawl's deterministic no-key provider. [MP4 recording](docs/media/intellicrawl-terminal.mp4) · [poster frame](docs/media/intellicrawl-terminal.webp)
 
 IntelliCrawl turns a comparison question into a compact report whose claims stay connected to public sources. It discovers candidate tools, profiles them concurrently, preserves unknowns instead of guessing, and exports the result as a terminal table, Markdown, JSON, or CSV.
 
@@ -56,14 +56,7 @@ Use `--format table`, `markdown`, `json`, or `csv`. Add `--no-cache` when a run 
 
 ## Pipeline
 
-```mermaid
-flowchart LR
-    Q["Research question"] --> D["Discover candidate tools"]
-    D --> P["Profile tools concurrently"]
-    P --> E["Validate claim evidence"]
-    E --> R["Generate recommendation"]
-    R --> O["Table / Markdown / JSON / CSV"]
-```
+![IntelliCrawl pipeline from research question through concurrent tool profiling, evidence validation, recommendation, and export](docs/media/pipeline.png)
 
 The provider contracts keep orchestration independent from Firecrawl and OpenAI. Deterministic providers power tests and the demo; live adapters implement the same interfaces.
 
