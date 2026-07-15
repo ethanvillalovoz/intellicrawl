@@ -5,13 +5,13 @@
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-3776ab)](https://www.python.org/)
 [![MIT License](https://img.shields.io/badge/license-MIT-171717)](LICENSE)
 
-Source-backed developer-tool research with Firecrawl, OpenAI, and LangGraph.
+I built IntelliCrawl for a specific research chore: compare a handful of developer tools without losing track of which source supports each claim. When the evidence does not answer something, the report leaves it unknown.
 
 [![IntelliCrawl demo: run an evidence-backed tool comparison in the macOS terminal](docs/media/intellicrawl-terminal.gif)](docs/media/intellicrawl-terminal.mp4)
 
-This is a real run of the installed CLI in macOS Terminal, backed by IntelliCrawl's deterministic no-key provider. [MP4 recording](docs/media/intellicrawl-terminal.mp4) · [poster frame](docs/media/intellicrawl-terminal.webp)
+The clip runs the installed CLI in macOS Terminal against the deterministic no-key provider. [MP4 recording](docs/media/intellicrawl-terminal.mp4) · [poster frame](docs/media/intellicrawl-terminal.webp)
 
-IntelliCrawl turns a comparison question into a compact report whose claims stay connected to public sources. It discovers candidate tools, profiles them concurrently, preserves unknowns instead of guessing, and exports the result as a terminal table, Markdown, JSON, or CSV.
+Under the hood, a LangGraph workflow discovers candidates, profiles them concurrently, validates source IDs, and exports the same report as a terminal table, Markdown, JSON, or CSV.
 
 ## Try It Without API Keys
 
@@ -56,7 +56,9 @@ Use `--format table`, `markdown`, `json`, or `csv`. Add `--no-cache` when a run 
 
 ## Pipeline
 
-![IntelliCrawl pipeline from research question through concurrent tool profiling, evidence validation, recommendation, and export](docs/media/pipeline.png)
+[![IntelliCrawl pipeline from research question through concurrent tool profiling, evidence validation, recommendation, and export](docs/media/research-pipeline.svg)](docs/media/research-pipeline.excalidraw)
+
+The linked Excalidraw scene is editable and lives beside the export.
 
 The provider contracts keep orchestration independent from Firecrawl and OpenAI. Deterministic providers power tests and the demo; live adapters implement the same interfaces.
 
