@@ -32,32 +32,32 @@
       "bytes": 19901,
       "path": "docs/figures/evidence-trace/editable/intellicrawl-evidence-trace.pptx",
       "role": "editable_pptx",
-      "sha256": "128040de457ec4335406b42a847ab3da49de7d2ca5d0dc58329507bc551f55d5"
+      "sha256": "301c1676388058be2c3516d3043f23859b7a4f7ab3fc1256d0a63fac846884fb"
     },
     {
-      "bytes": 576156,
+      "bytes": 576651,
       "path": "docs/figures/evidence-trace/exports/intellicrawl-evidence-trace.svg",
       "role": "svg",
-      "sha256": "b89dbe3924eaf688458e4ae80218af56c5ec7266d7dcc83d283b0cddc0931d71"
+      "sha256": "1f310987bd50c727919baffa67e69313a8fd2b00ddae38592eb8f843919ecaa2"
     },
     {
-      "bytes": 225106,
+      "bytes": 224881,
       "path": "docs/figures/evidence-trace/exports/intellicrawl-evidence-trace.png",
       "role": "png",
-      "sha256": "d1f8e542befac1b09e90f60a49ead82807bd6c327fe5192763e0a809f54d7649"
+      "sha256": "77a6f41082282a8341e4761ad5e8fed36fca0ee6c389082e26819917c0796b86"
     },
     {
-      "bytes": 131624,
+      "bytes": 131636,
       "path": "docs/figures/evidence-trace/exports/intellicrawl-evidence-trace.pdf",
       "role": "pdf",
-      "sha256": "8298117198a55c678db2123721db5438f8a242573cbaa93928eaa6ad1a21c3bd"
+      "sha256": "8d2dc14c15f7e7d08de49db69e6eeba29b93e570f04f0ba1f930338893f1c51c"
     }
   ],
   "processing_notes": [
-    "Native editable provenance graph exported through LibreOffice; no raster images; PowerPoint overflow, final-size, grayscale, and PDF checks completed."
+    "Native editable provenance graph with a cartographic juniper, terracotta, ochre, and plum palette; exported through LibreOffice; no raster images; PowerPoint overflow, final-size, grayscale, and PDF checks completed."
   ],
   "schema_version": 1,
-  "source_revision": "06d17ff82c87c0fd0bfdfcb9cc504743e904e985",
+  "source_revision": "67b16ea5e750f0885f9bc7c7e2f369e2b9696048",
   "selection_note": "Complete committed 2026-07-11 demo report; all profiles, fields, source IDs, and warnings represented.",
   "target_width_in": 7.16,
   "venue": "GitHub README"
