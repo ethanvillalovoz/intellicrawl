@@ -1,5 +1,5 @@
 {
-  "bytes": 231197,
+  "bytes": 131624,
   "failures": [],
   "file": "/Users/ethanvillalovoz/Documents/Codex/2026-07-15/ok/work/visual-audit/repos/intellicrawl/docs/figures/evidence-trace/exports/intellicrawl-evidence-trace.pdf",
   "font_report": {
@@ -32,7 +32,7 @@
       {
         "embedded": true,
         "encoding": "WinAnsi",
-        "name": "EAAAAA+Carlito",
+        "name": "EAAAAA+Carlito-Bold",
         "subset": true,
         "type": "TrueType",
         "unicode": true
@@ -40,7 +40,7 @@
       {
         "embedded": true,
         "encoding": "WinAnsi",
-        "name": "FAAAAA+Carlito-Bold",
+        "name": "FAAAAA+Carlito",
         "subset": true,
         "type": "TrueType",
         "unicode": true
@@ -88,7 +88,7 @@
       {
         "embedded": true,
         "encoding": "WinAnsi",
-        "name": "LAAAAA+Carlito-Bold",
+        "name": "LAAAAA+Carlito",
         "subset": true,
         "type": "TrueType",
         "unicode": true
@@ -100,30 +100,36 @@
         "subset": true,
         "type": "TrueType",
         "unicode": true
+      },
+      {
+        "embedded": true,
+        "encoding": "WinAnsi",
+        "name": "NAAAAA+Carlito-Bold",
+        "subset": true,
+        "type": "TrueType",
+        "unicode": true
+      },
+      {
+        "embedded": true,
+        "encoding": "WinAnsi",
+        "name": "OAAAAA+Carlito",
+        "subset": true,
+        "type": "TrueType",
+        "unicode": true
+      },
+      {
+        "embedded": true,
+        "encoding": "WinAnsi",
+        "name": "PAAAAA+Carlito",
+        "subset": true,
+        "type": "TrueType",
+        "unicode": true
       }
     ]
   },
   "image_report": {
     "available": true,
-    "images": [
-      {
-        "effective_ppi": [
-          558.7,
-          558.7
-        ],
-        "native_ppi": [
-          300.0,
-          300.0
-        ],
-        "number": 0,
-        "page": 1,
-        "pixels": [
-          1600,
-          1114
-        ],
-        "type": "image"
-      }
-    ]
+    "images": []
   },
   "pdf": {
     "available": true,
@@ -143,7 +149,6 @@
     "pdfinfo": "/Users/ethanvillalovoz/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/pdfinfo"
   },
   "warnings": [
-    "manually verify that raster line art reaches 600 ppi at placed size",
     "manual review required for final-size text, line weight, clipping, color accessibility, and scientific correctness"
   ]
 }
