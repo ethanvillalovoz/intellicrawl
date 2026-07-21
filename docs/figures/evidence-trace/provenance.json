@@ -1,64 +1,27 @@
 {
-  "claim": "The dated deterministic fixture preserves field-level source traceability for all three profiles and exposes failure and export semantics.",
+  "claim": "IntelliCrawl runs deterministic and live provider assemblies through the same typed discover-research-recommend graph and explicit failure boundaries.",
   "figure_id": "intellicrawl-evidence-trace",
   "inputs": [
-    {
-      "bytes": 6154,
-      "path": "examples/demo-report.json",
-      "role": "report",
-      "sha256": "cd1577aa07480c79799d48aa7007e15dcf8eab65c7bc4cb7d0f1aa732e4bc140"
-    },
-    {
-      "bytes": 7764,
-      "path": "src/intellicrawl/pipeline.py",
-      "role": "pipeline",
-      "sha256": "20ed253857695a3730d306d4d78a814d6225c1afaa6f01066832103bfb241164"
-    },
-    {
-      "bytes": 7065,
-      "path": "src/intellicrawl/demo.py",
-      "role": "demo",
-      "sha256": "e00b117156fdd9f2112ad99068fd4e51e53821f2fe59eeabb48c8b2898adf2af"
-    },
-    {
-      "bytes": 8108,
-      "path": "src/intellicrawl/renderers.py",
-      "role": "renderers",
-      "sha256": "50f6eac86991afc3c06c0f44be5b92e68774dc8493974492d9715dd83e3a6b2c"
-    }
+    {"bytes": 7764, "path": "src/intellicrawl/pipeline.py", "role": "graph_and_failures", "sha256": "20ed253857695a3730d306d4d78a814d6225c1afaa6f01066832103bfb241164"},
+    {"bytes": 854, "path": "src/intellicrawl/contracts.py", "role": "provider_interfaces", "sha256": "87c4fae33a3f5f855160bbad311637b4483c518652c398abcaaba3e5765fd05a"},
+    {"bytes": 7065, "path": "src/intellicrawl/demo.py", "role": "demo_assembly", "sha256": "e00b117156fdd9f2112ad99068fd4e51e53821f2fe59eeabb48c8b2898adf2af"},
+    {"bytes": 3796, "path": "src/intellicrawl/live.py", "role": "live_analysis", "sha256": "cbc39939ef2ad1d1331dee49f25b6fd3ee96af067cba98fd7bd9b09d76881204"},
+    {"bytes": 7099, "path": "src/intellicrawl/providers.py", "role": "live_search_and_cache", "sha256": "d5c24c96543d36d03726343662d99c074d91c12fedcbae9a88a1a564e1a738b3"},
+    {"bytes": 3887, "path": "src/intellicrawl/models.py", "role": "typed_report", "sha256": "6c499330305c582c85d01eb5128f4998067e5fe0454c841763dbf5dfcaaa0f68"},
+    {"bytes": 8108, "path": "src/intellicrawl/renderers.py", "role": "renderers", "sha256": "50f6eac86991afc3c06c0f44be5b92e68774dc8493974492d9715dd83e3a6b2c"}
   ],
   "outputs": [
-    {
-      "bytes": 19901,
-      "path": "docs/figures/evidence-trace/editable/intellicrawl-evidence-trace.pptx",
-      "role": "editable_pptx",
-      "sha256": "301c1676388058be2c3516d3043f23859b7a4f7ab3fc1256d0a63fac846884fb"
-    },
-    {
-      "bytes": 576651,
-      "path": "docs/figures/evidence-trace/exports/intellicrawl-evidence-trace.svg",
-      "role": "svg",
-      "sha256": "1f310987bd50c727919baffa67e69313a8fd2b00ddae38592eb8f843919ecaa2"
-    },
-    {
-      "bytes": 224881,
-      "path": "docs/figures/evidence-trace/exports/intellicrawl-evidence-trace.png",
-      "role": "png",
-      "sha256": "77a6f41082282a8341e4761ad5e8fed36fca0ee6c389082e26819917c0796b86"
-    },
-    {
-      "bytes": 131636,
-      "path": "docs/figures/evidence-trace/exports/intellicrawl-evidence-trace.pdf",
-      "role": "pdf",
-      "sha256": "8d2dc14c15f7e7d08de49db69e6eeba29b93e570f04f0ba1f930338893f1c51c"
-    }
+    {"bytes": 18397, "path": "docs/figures/evidence-trace/editable/intellicrawl-evidence-trace.pptx", "role": "editable_pptx", "sha256": "7da6a9a84c8c7ab61c13b6cad7d81a1f27df60d792a7c5cd6add6f97f4231416"},
+    {"bytes": 592609, "path": "docs/figures/evidence-trace/exports/intellicrawl-evidence-trace.svg", "role": "svg", "sha256": "f3ef35ad5420f4cf6201652338de05031d9a8f50d33913879215980aa23da8aa"},
+    {"bytes": 209546, "path": "docs/figures/evidence-trace/exports/intellicrawl-evidence-trace.png", "role": "png", "sha256": "9a81762a3f5c1752a3c96819532b9843b65052f336cf5839d02834251916eb55"},
+    {"bytes": 153914, "path": "docs/figures/evidence-trace/exports/intellicrawl-evidence-trace.pdf", "role": "pdf", "sha256": "d706b2fbf06c5a312e126794fd37f141b8fea8250a45ae3bb8c7db9ee6108304"}
   ],
   "processing_notes": [
-    "Native editable provenance graph with a cartographic juniper, terracotta, ochre, and plum palette; exported through LibreOffice; no raster images; PowerPoint overflow, final-size, grayscale, and PDF checks completed."
+    "Native editable architecture diagram with distinct provider, graph, synthesis, and output roles; exported through LibreOffice; no raster images in the PDF; PowerPoint overflow, final-size, grayscale, and PDF checks completed."
   ],
   "schema_version": 1,
-  "source_revision": "67b16ea5e750f0885f9bc7c7e2f369e2b9696048",
-  "selection_note": "Complete committed 2026-07-11 demo report; all profiles, fields, source IDs, and warnings represented.",
+  "source_revision": "cdedcb09a97705e72199777045fa1dee3aadf75c",
+  "selection_note": "Only maintained provider assemblies, graph stages, schemas, renderers, and failure branches are represented; no live outcome or benchmark is shown.",
   "target_width_in": 7.16,
   "venue": "GitHub README"
 }

@@ -56,9 +56,9 @@ Use `--format table`, `markdown`, `json`, or `csv`. Add `--no-cache` when a run 
 
 ## Pipeline
 
-[![IntelliCrawl evidence trace showing the dated demo report, field-level source IDs, recommendation boundary, failure semantics, and exports](docs/figures/evidence-trace/exports/intellicrawl-evidence-trace.svg)](docs/figures/evidence-trace/exports/intellicrawl-evidence-trace.pdf)
+[![IntelliCrawl architecture showing demo and live provider assemblies, replaceable interfaces, the discover-research-recommend LangGraph, typed output, and failure boundaries](docs/figures/evidence-trace/exports/intellicrawl-evidence-trace.svg)](docs/figures/evidence-trace/exports/intellicrawl-evidence-trace.pdf)
 
-The overview uses the complete committed demo report and distinguishes that dated fixture from live research. [Figure contract, editable source, provenance, and preflight records](docs/figures/evidence-trace/)
+The overview traces both provider assemblies through the same typed research graph and makes validation, partial-run, and export boundaries explicit. [Figure contract, editable source, provenance, and preflight records](docs/figures/evidence-trace/)
 
 The provider contracts keep orchestration independent from Firecrawl and OpenAI. Deterministic providers power tests and the demo; live adapters implement the same interfaces.
 
