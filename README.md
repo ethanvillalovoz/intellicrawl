@@ -56,9 +56,9 @@ Use `--format table`, `markdown`, `json`, or `csv`. Add `--no-cache` when a run 
 
 ## Pipeline
 
-[![IntelliCrawl pipeline from research question through concurrent tool profiling, evidence validation, recommendation, and export](docs/media/research-pipeline.svg)](docs/media/research-pipeline.excalidraw)
+[![IntelliCrawl evidence trace showing the dated demo report, field-level source IDs, recommendation boundary, failure semantics, and exports](docs/figures/evidence-trace/exports/intellicrawl-evidence-trace.svg)](docs/figures/evidence-trace/exports/intellicrawl-evidence-trace.pdf)
 
-The linked Excalidraw scene is editable and lives beside the export.
+The overview uses the complete committed demo report and distinguishes that dated fixture from live research. [Figure contract, editable source, provenance, and preflight records](docs/figures/evidence-trace/)
 
 The provider contracts keep orchestration independent from Firecrawl and OpenAI. Deterministic providers power tests and the demo; live adapters implement the same interfaces.
 

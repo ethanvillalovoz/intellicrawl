@@ -1,0 +1,54 @@
+{"kind":"deck","id":"pr/6rdfbx","name":"Deck"}
+{"kind":"layout","layoutId":"7c32bf64-5fba-4117-bc19-5ecd07fe6fef","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"604998e0-0ba7-49b0-a52a-3e802a2ba872","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/rkcaxb","slide":1,"title":"IntelliCrawl ties every comparison claim to a validated source ID","textShapes":36}
+{"kind":"textbox","id":"sh/dkv2hoba","slide":1,"name":"title","text":"IntelliCrawl ties every comparison claim to a validated source ID","textPreview":"IntelliCrawl ties every comparison claim to a validated source ID","textChars":65,"textLines":1,"bbox":[44,24,1190,44]}
+{"kind":"textbox","id":"sh/qhkjm9sj","slide":1,"name":"subtitle","text":"The complete dated fixture passes through the same graph, evidence checks, and export models used by live research.","textPreview":"The complete dated fixture passes through the same graph, evidence checks, and export models used by live research.","textChars":115,"textLines":1,"bbox":[44,72,1180,26]}
+{"kind":"shape","id":"sh/rit0fet4","slide":1,"name":"header-rule","bbox":[44,111,1192,0]}
+{"kind":"textbox","id":"sh/0nm1s3a1","slide":1,"name":"demo-label","text":"DATED DEMO REPORT","textPreview":"DATED DEMO REPORT","textChars":17,"textLines":1,"bbox":[44,130,260,22]}
+{"kind":"shape","id":"sh/1ov2lob6","slide":1,"name":"terminal-frame","bbox":[44,158,518,334]}
+{"kind":"textbox","id":"sh/zmdkjytg","slide":1,"name":"demo-caption","text":"2026-07-11 · deterministic fixture · 3 tools · 6 citations · 0 warnings","textPreview":"2026-07-11 · deterministic fixture · 3 tools · 6 citations · 0 warnings","textChars":71,"textLines":1,"bbox":[44,500,518,23]}
+{"kind":"textbox","id":"sh/gri1gzah","slide":1,"name":"trace-label","text":"FIELD-LEVEL EVIDENCE TRACE","textPreview":"FIELD-LEVEL EVIDENCE TRACE","textChars":26,"textLines":1,"bbox":[608,130,310,22]}
+{"kind":"shape","id":"sh/hsbi94b2","slide":1,"name":"query","bbox":[608,158,348,48]}
+{"kind":"textbox","id":"sh/x8f6547i","slide":1,"name":"query-eyebrow","text":"RESEARCH QUESTION","textPreview":"RESEARCH QUESTION","textChars":17,"textLines":1,"bbox":[624,166,140,15]}
+{"kind":"textbox","id":"sh/w765cz6x","slide":1,"name":"query-text","text":"vector databases for production RAG","textPreview":"vector databases for production RAG","textChars":35,"textLines":1,"bbox":[624,182,320,19]}
+{"kind":"shape","id":"sh/b6x43upc","slide":1,"name":"query-arrow","bbox":[968,176,48,12]}
+{"kind":"shape","id":"sh/a5onapor","slide":1,"name":"source-pool","bbox":[1028,158,208,48]}
+{"kind":"textbox","id":"sh/lcz694ne","slide":1,"name":"source-count","text":"6 public citations","textPreview":"6 public citations","textChars":18,"textLines":1,"bbox":[1044,165,180,20]}
+{"kind":"textbox","id":"sh/kbq5gz6t","slide":1,"name":"source-note","text":"2 retained per profile","textPreview":"2 retained per profile","textChars":22,"textLines":1,"bbox":[1044,184,180,16]}
+{"kind":"shape","id":"sh/jaho7up8","slide":1,"name":"profile-0","bbox":[608,226,628,60]}
+{"kind":"textbox","id":"sh/y98ne9on","slide":1,"name":"profile-0-name","text":"Weaviate","textPreview":"Weaviate","textChars":8,"textLines":1,"bbox":[624,236,106,22]}
+{"kind":"textbox","id":"sh/t0z6dona","slide":1,"name":"profile-0-status","text":"complete","textPreview":"complete","textChars":8,"textLines":1,"bbox":[624,260,82,16]}
+{"kind":"textbox","id":"sh/8zq5kj65","slide":1,"name":"profile-0-fields","text":"description · pricing · openness · API · SDKs · integrations","textPreview":"description · pricing · openness · API · SDKs · integrations","textChars":60,"textLines":1,"bbox":[744,238,388,18]}
+{"kind":"textbox","id":"sh/sjypgne1","slide":1,"name":"profile-0-sources","text":"S1  S2","textPreview":"S1  S2","textChars":6,"textLines":1,"bbox":[1144,237,70,20]}
+{"kind":"textbox","id":"sh/d47q9svm","slide":1,"name":"profile-0-evidence","text":"6/6 fields","textPreview":"6/6 fields","textChars":10,"textLines":1,"bbox":[744,261,120,16]}
+{"kind":"textbox","id":"sh/qhg7edwb","slide":1,"name":"profile-0-validated","text":"IDs validated against source list","textPreview":"IDs validated against source list","textChars":33,"textLines":1,"bbox":[856,261,300,16]}
+{"kind":"shape","id":"sh/rip87idg","slide":1,"name":"profile-1","bbox":[608,300,628,60]}
+{"kind":"textbox","id":"sh/07ipk7ed","slide":1,"name":"profile-1-name","text":"Pinecone","textPreview":"Pinecone","textChars":8,"textLines":1,"bbox":[624,310,106,22]}
+{"kind":"textbox","id":"sh/18rqdsvy","slide":1,"name":"profile-1-status","text":"complete","textPreview":"complete","textChars":8,"textLines":1,"bbox":[624,334,82,16]}
+{"kind":"textbox","id":"sh/e507ixw7","slide":1,"name":"profile-1-fields","text":"description · pricing · openness · API · SDKs · integrations","textPreview":"description · pricing · openness · API · SDKs · integrations","textChars":60,"textLines":1,"bbox":[744,312,388,18]}
+{"kind":"textbox","id":"sh/f698b2ds","slide":1,"name":"profile-1-sources","text":"S1  S2","textPreview":"S1  S2","textChars":6,"textLines":1,"bbox":[1144,311,70,20]}
+{"kind":"textbox","id":"sh/gbep83et","slide":1,"name":"profile-1-evidence","text":"6/6 fields","textPreview":"6/6 fields","textChars":10,"textLines":1,"bbox":[744,335,120,16]}
+{"kind":"textbox","id":"sh/hcn618ve","slide":1,"name":"profile-1-validated","text":"IDs validated against source list","textPreview":"IDs validated against source list","textChars":33,"textLines":1,"bbox":[856,335,300,16]}
+{"kind":"shape","id":"sh/jixk3a18","slide":1,"name":"profile-2","bbox":[608,374,628,60]}
+{"kind":"textbox","id":"sh/yhoju5kn","slide":1,"name":"profile-2-name","text":"Qdrant","textPreview":"Qdrant","textChars":6,"textLines":1,"bbox":[624,384,106,22]}
+{"kind":"textbox","id":"sh/lkf250je","slide":1,"name":"profile-2-status","text":"complete","textPreview":"complete","textChars":8,"textLines":1,"bbox":[624,408,82,16]}
+{"kind":"textbox","id":"sh/kj61wf2t","slide":1,"name":"profile-2-fields","text":"description · pricing · openness · API · SDKs · integrations","textPreview":"description · pricing · openness · API · SDKs · integrations","textChars":60,"textLines":1,"bbox":[744,386,388,18]}
+{"kind":"textbox","id":"sh/bedkzq1c","slide":1,"name":"profile-2-sources","text":"S1  S2","textPreview":"S1  S2","textChars":6,"textLines":1,"bbox":[1144,385,70,20]}
+{"kind":"textbox","id":"sh/ad4jqlkr","slide":1,"name":"profile-2-evidence","text":"6/6 fields","textPreview":"6/6 fields","textChars":10,"textLines":1,"bbox":[744,409,120,16]}
+{"kind":"textbox","id":"sh/xgv210j2","slide":1,"name":"profile-2-validated","text":"IDs validated against source list","textPreview":"IDs validated against source list","textChars":33,"textLines":1,"bbox":[856,409,300,16]}
+{"kind":"shape","id":"sh/wfm1sv2h","slide":1,"name":"recommendation","bbox":[608,452,628,72]}
+{"kind":"textbox","id":"sh/nad0vq10","slide":1,"name":"recommendation-label","text":"RECOMMENDATION AFTER VALIDATION","textPreview":"RECOMMENDATION AFTER VALIDATION","textChars":31,"textLines":1,"bbox":[624,462,285,17]}
+{"kind":"textbox","id":"sh/m9kjmlkf","slide":1,"name":"recommendation-copy","text":"Pinecone for managed operations; Weaviate or Qdrant for open-source deployment flexibility.","textPreview":"Pinecone for managed operations; Weaviate or Qdrant for open-source deployment flexibility.","textChars":91,"textLines":1,"bbox":[624,482,584,34]}
+{"kind":"shape","id":"sh/2honq9gz","slide":1,"name":"boundary-rule","bbox":[44,551,1192,0]}
+{"kind":"textbox","id":"sh/3ixozexk","slide":1,"name":"failure-head","text":"FAILURE SEMANTICS","textPreview":"FAILURE SEMANTICS","textChars":17,"textLines":1,"bbox":[44,570,230,20]}
+{"kind":"textbox","id":"sh/oj65sjy5","slide":1,"name":"failure-copy","text":"Missing fields become partial. A failed tool becomes a warning. No sourced profile means no report.","textPreview":"Missing fields become partial. A failed tool becomes a warning. No sourced profile means no report.","textChars":99,"textLines":1,"bbox":[44,596,338,48]}
+{"kind":"shape","id":"sh/pkf61ofq","slide":1,"name":"divider-1","bbox":[405,570,0,74]}
+{"kind":"textbox","id":"sh/ut4nm9g3","slide":1,"name":"export-head","text":"ONE REPORT, FOUR EXPORTS","textPreview":"ONE REPORT, FOUR EXPORTS","textChars":24,"textLines":1,"bbox":[432,570,270,20]}
+{"kind":"textbox","id":"sh/fud4vexo","slide":1,"name":"export-copy","text":"Terminal table  ·  Markdown  ·  JSON  ·  CSV","textPreview":"Terminal table  ·  Markdown  ·  JSON  ·  CSV","textChars":44,"textLines":1,"bbox":[432,598,348,24]}
+{"kind":"shape","id":"sh/gvm5ojy9","slide":1,"name":"divider-2","bbox":[810,570,0,74]}
+{"kind":"textbox","id":"sh/1wfmx4fu","slide":1,"name":"boundary-head","text":"NOT CLAIMED","textPreview":"NOT CLAIMED","textChars":11,"textLines":1,"bbox":[838,570,180,20]}
+{"kind":"textbox","id":"sh/6p4nipg7","slide":1,"name":"boundary-copy","text":"Not a live crawl, current market comparison, recommendation-quality study, or factuality evaluation.","textPreview":"Not a live crawl, current market comparison, recommendation-quality study, or factuality evaluation.","textChars":100,"textLines":1,"bbox":[838,596,366,48]}
+{"kind":"textbox","id":"sh/7qd4ruxc","slide":1,"name":"sources","text":"Sources: examples/demo-report.json · src/intellicrawl/pipeline.py · demo.py · renderers.py","textPreview":"Sources: examples/demo-report.json · src/intellicrawl/pipeline.py · demo.py · renderers.py","textChars":90,"textLines":1,"bbox":[44,681,1192,18]}
+{"kind":"image","id":"im/f61kjy50","slide":1,"name":"","alt":"IntelliCrawl deterministic terminal report showing three vector database profiles and a recommendation","bbox":[47,161,512,328]}
+{"kind":"notes","id":"nt/rkcaxb","slide":1,"text":""}
