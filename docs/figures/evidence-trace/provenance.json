@@ -1,0 +1,70 @@
+{
+  "claim": "The dated deterministic fixture preserves field-level source traceability for all three profiles and exposes failure and export semantics.",
+  "figure_id": "intellicrawl-evidence-trace",
+  "inputs": [
+    {
+      "bytes": 6154,
+      "path": "examples/demo-report.json",
+      "role": "report",
+      "sha256": "cd1577aa07480c79799d48aa7007e15dcf8eab65c7bc4cb7d0f1aa732e4bc140"
+    },
+    {
+      "bytes": 7764,
+      "path": "src/intellicrawl/pipeline.py",
+      "role": "pipeline",
+      "sha256": "20ed253857695a3730d306d4d78a814d6225c1afaa6f01066832103bfb241164"
+    },
+    {
+      "bytes": 7065,
+      "path": "src/intellicrawl/demo.py",
+      "role": "demo",
+      "sha256": "e00b117156fdd9f2112ad99068fd4e51e53821f2fe59eeabb48c8b2898adf2af"
+    },
+    {
+      "bytes": 8108,
+      "path": "src/intellicrawl/renderers.py",
+      "role": "renderers",
+      "sha256": "50f6eac86991afc3c06c0f44be5b92e68774dc8493974492d9715dd83e3a6b2c"
+    },
+    {
+      "bytes": 68442,
+      "path": "docs/media/intellicrawl-terminal.webp",
+      "role": "terminal_capture",
+      "sha256": "b9aaa994924c020fd39a3a3fc09e6a1794f7ede5ffb0c3656781f738e5f1a108"
+    }
+  ],
+  "outputs": [
+    {
+      "bytes": 84036,
+      "path": "docs/figures/evidence-trace/editable/intellicrawl-evidence-trace.pptx",
+      "role": "editable_pptx",
+      "sha256": "64ef5dd8ba3061681676f72fca69623a5cce045bc96511e579d4873c81f24562"
+    },
+    {
+      "bytes": 680719,
+      "path": "docs/figures/evidence-trace/exports/intellicrawl-evidence-trace.svg",
+      "role": "svg",
+      "sha256": "517f406f1864188f1c7973ff09aca256e1bd86be5b8e39b00d1e503c084c6033"
+    },
+    {
+      "bytes": 605434,
+      "path": "docs/figures/evidence-trace/exports/intellicrawl-evidence-trace.png",
+      "role": "png",
+      "sha256": "51dac825c31bb7a5e45d29093cc84fe738708a2cdfccd65402da40a6a241ee66"
+    },
+    {
+      "bytes": 231197,
+      "path": "docs/figures/evidence-trace/exports/intellicrawl-evidence-trace.pdf",
+      "role": "pdf",
+      "sha256": "65c9d7dc83ede87c776f03b2366f423d7e4af8bfe2af732023fcbb4549bee70a"
+    }
+  ],
+  "processing_notes": [
+    "Editable composition created in PowerPoint-compatible PPTX and exported through LibreOffice; final-size and grayscale renders inspected manually."
+  ],
+  "schema_version": 1,
+  "source_revision": "45b809c1aee8b8d52e32eee73396feb977291e3e",
+  "selection_note": "Complete committed 2026-07-11 demo report; all profiles, fields, source IDs, and warnings represented.",
+  "target_width_in": 7.16,
+  "venue": "GitHub README"
+}
