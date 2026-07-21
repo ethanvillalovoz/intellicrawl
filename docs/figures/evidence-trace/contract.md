@@ -6,11 +6,11 @@ This figure should let a technical reviewer reconstruct how IntelliCrawl swaps d
 
 ## Figure form
 
-A left-to-right system architecture: provider assemblies implement two narrow interfaces; the shared graph executes `discover -> research -> recommend`; a strict `ResearchReport` crosses the public boundary into four renderers. Validation and degraded-run behavior sit beneath the execution path rather than inside a UI screenshot.
+A graph-native orchestration map. A compact provider rail exposes the interchangeable demo and live assemblies, circular state nodes show the maintained LangGraph, and an explicit research fan-out converges from per-tool work into `ToolReport[]`. A strict `ResearchReport` then crosses the public-output boundary into four renderers. Validation and degraded-run behavior are attached to the transitions they govern.
 
 ## Visual encoding
 
-The figure uses a warm editorial palette: green and orange distinguish provider assemblies, forest marks the shared graph, plum marks synthesis, and ochre marks the typed output. Every role is also named, so the architecture remains legible without color.
+The figure uses an editorial map palette: green identifies search/discovery, orange identifies analysis/research, plum identifies recommendation and report synthesis, and a dark provider rail separates replaceable dependencies from graph state. Shape and labels remain redundant with color.
 
 ## Supported claim
 

@@ -1,88 +1,98 @@
-{"kind":"deck","id":"pr/xo7pqs","name":"Deck"}
-{"kind":"layout","layoutId":"54f5da0c-5a65-4d32-aecb-5e071ee6099e","name":"Master","type":"master"}
-{"kind":"layout","layoutId":"2842ac69-7fb6-4735-afa3-c0e3f86ea110","name":"Title Slide","type":"title"}
-{"kind":"slide","id":"sl/ozq1ah","slide":1,"title":"IntelliCrawl runs one typed research graph across replaceable providers","textShapes":54}
-{"kind":"textbox","id":"sh/8bm94vat","slide":1,"name":"title","text":"IntelliCrawl runs one typed research graph across replaceable providers","textPreview":"IntelliCrawl runs one typed research graph across replaceable providers","textChars":71,"textLines":1,"bbox":[44,22,1192,42]}
-{"kind":"textbox","id":"sh/7adsvqt8","slide":1,"name":"subtitle","text":"Demo fixtures and live Firecrawl/OpenAI adapters implement the same contracts; validation and failure semantics stay inside the shared LangGraph pipeline.","textPreview":"Demo fixtures and live Firecrawl/OpenAI adapters implement the same contracts; validation and failure semantics stay inside the shared La...","textChars":154,"textLines":1,"bbox":[44,69,1192,25]}
-{"kind":"shape","id":"sh/m94r2lsn","slide":1,"name":"header-rule","bbox":[44,108,1192,0]}
-{"kind":"textbox","id":"sh/hgfa1kba","slide":1,"name":"provider-label","text":"PROVIDER ASSEMBLIES","textPreview":"PROVIDER ASSEMBLIES","textChars":19,"textLines":1,"bbox":[44,128,250,18]}
-{"kind":"shape","id":"sh/wf6t8fap","slide":1,"name":"demo-frame","bbox":[44,154,216,110]}
-{"kind":"textbox","id":"sh/vedszat4","slide":1,"name":"demo-title","text":"DEMO · NO KEYS","textPreview":"DEMO · NO KEYS","textChars":14,"textLines":1,"bbox":[60,169,180,18]}
-{"kind":"textbox","id":"sh/ud4b65sj","slide":1,"name":"demo-search","text":"DemoSearchProvider","textPreview":"DemoSearchProvider","textChars":18,"textLines":1,"bbox":[60,197,180,18]}
-{"kind":"textbox","id":"sh/xkbapgb6","slide":1,"name":"demo-analysis","text":"DemoAnalysisProvider","textPreview":"DemoAnalysisProvider","textChars":20,"textLines":1,"bbox":[60,223,180,18]}
-{"kind":"textbox","id":"sh/cj29wbal","slide":1,"name":"demo-note","text":"deterministic fixtures","textPreview":"deterministic fixtures","textChars":22,"textLines":1,"bbox":[60,244,180,16]}
-{"kind":"shape","id":"sh/elcfutkv","slide":1,"name":"live-frame","bbox":[44,292,216,166]}
-{"kind":"textbox","id":"sh/f6lgny1g","slide":1,"name":"live-title","text":"LIVE · OPTIONAL","textPreview":"LIVE · OPTIONAL","textChars":15,"textLines":1,"bbox":[60,307,180,18]}
-{"kind":"textbox","id":"sh/g7uxw3i1","slide":1,"name":"live-search","text":"Firecrawl search + scrape","textPreview":"Firecrawl search + scrape","textChars":25,"textLines":1,"bbox":[60,335,180,18]}
-{"kind":"textbox","id":"sh/183ypojm","slide":1,"name":"live-cache","text":"private TTL disk cache","textPreview":"private TTL disk cache","textChars":22,"textLines":1,"bbox":[60,360,180,17]}
-{"kind":"textbox","id":"sh/29cfyt0r","slide":1,"name":"live-analysis","text":"OpenAI structured output","textPreview":"OpenAI structured output","textChars":24,"textLines":1,"bbox":[60,389,180,18]}
-{"kind":"textbox","id":"sh/3a5gry1c","slide":1,"name":"live-note","text":"timeouts · bounded concurrency","textPreview":"timeouts · bounded concurrency","textChars":30,"textLines":1,"bbox":[60,416,180,17]}
-{"kind":"textbox","id":"sh/obex03ix","slide":1,"name":"contract-label","text":"REPLACEABLE INTERFACES","textPreview":"REPLACEABLE INTERFACES","textChars":22,"textLines":1,"bbox":[288,128,170,18]}
-{"kind":"shape","id":"sh/pcnyt8ji","slide":1,"name":"contracts-frame","bbox":[288,178,150,230]}
-{"kind":"textbox","id":"sh/qdwf2d03","slide":1,"name":"contracts-title","text":"Provider contracts","textPreview":"Provider contracts","textChars":18,"textLines":1,"bbox":[301,197,124,24]}
-{"kind":"shape","id":"sh/be5gvi1o","slide":1,"name":"contracts-rule","bbox":[306,239,114,0]}
-{"kind":"textbox","id":"sh/7ipwjihg","slide":1,"name":"search-contract","text":"SearchProvider","textPreview":"SearchProvider","textChars":14,"textLines":1,"bbox":[301,260,124,20]}
-{"kind":"textbox","id":"sh/mhgfqdgb","slide":1,"name":"search-return","text":"SourceDocument[]","textPreview":"SourceDocument[]","textChars":16,"textLines":1,"bbox":[297,287,132,18]}
-{"kind":"textbox","id":"sh/947elszm","slide":1,"name":"analysis-contract","text":"AnalysisProvider","textPreview":"AnalysisProvider","textChars":16,"textLines":1,"bbox":[301,321,124,20]}
-{"kind":"textbox","id":"sh/83yxsny1","slide":1,"name":"analysis-return","text":"typed schemas","textPreview":"typed schemas","textChars":13,"textLines":1,"bbox":[301,348,124,18]}
-{"kind":"textbox","id":"sh/ze5wfyhk","slide":1,"name":"same-graph","text":"same graph · both modes","textPreview":"same graph · both modes","textChars":23,"textLines":1,"bbox":[299,377,128,20]}
-{"kind":"textbox","id":"sh/ydwfmtgz","slide":1,"name":"graph-label","text":"RESEARCHPIPELINE · LANGGRAPH","textPreview":"RESEARCHPIPELINE · LANGGRAPH","textChars":28,"textLines":1,"bbox":[455,128,370,18]}
-{"kind":"shape","id":"sh/lgneh8zq","slide":1,"name":"graph-shell","bbox":[455,154,565,354]}
-{"kind":"shape","id":"sh/kfexo3y5","slide":1,"name":"discover-frame","bbox":[470,184,140,246]}
-{"kind":"shape","id":"sh/ba5wbyho","slide":1,"name":"discover-num","bbox":[482,196,26,26]}
-{"kind":"textbox","id":"sh/q9cvitg3","slide":1,"name":"discover-num-text","text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[482,201,26,16]}
-{"kind":"textbox","id":"sh/g3qlwvap","slide":1,"name":"discover-title","text":"Discover","textPreview":"Discover","textChars":8,"textLines":1,"bbox":[513,197,92,24]}
-{"kind":"textbox","id":"sh/h4z250ba","slide":1,"name":"discover-query","text":"normalized query","textPreview":"normalized query","textChars":16,"textLines":1,"bbox":[484,233,112,18]}
-{"kind":"textbox","id":"sh/uh83ulsj","slide":1,"name":"discover-search","text":"search comparison\ndocuments","textPreview":"search comparison | documents","textChars":27,"textLines":2,"bbox":[484,266,112,38]}
-{"kind":"textbox","id":"sh/f2hk3qt4","slide":1,"name":"discover-select","text":"select_tools()","textPreview":"select_tools()","textChars":14,"textLines":1,"bbox":[484,320,112,20]}
-{"kind":"textbox","id":"sh/47al0fal","slide":1,"name":"discover-bound","text":"deduplicate\n1–6 tools","textPreview":"deduplicate | 1–6 tools","textChars":21,"textLines":2,"bbox":[484,362,112,42]}
-{"kind":"shape","id":"sh/p8j29kb6","slide":1,"name":"research-frame","bbox":[635,184,195,246]}
-{"kind":"shape","id":"sh/25s3y5sf","slide":1,"name":"research-num","bbox":[647,196,26,26]}
-{"kind":"textbox","id":"sh/361k7at0","slide":1,"name":"research-num-text","text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[647,201,26,16]}
-{"kind":"textbox","id":"sh/kb61obah","slide":1,"name":"research-title","text":"Research","textPreview":"Research","textChars":8,"textLines":1,"bbox":[678,197,147,24]}
-{"kind":"textbox","id":"sh/5cf2xgb2","slide":1,"name":"research-fanout","text":"asyncio.gather","textPreview":"asyncio.gather","textChars":14,"textLines":1,"bbox":[652,231,161,20]}
-{"kind":"shape","id":"sh/xkbmdkfi","slide":1,"name":"worker-0","bbox":[652,265,161,35]}
-{"kind":"textbox","id":"sh/cj2lkfex","slide":1,"name":"worker-0-text","text":"tool A · search + analyze","textPreview":"tool A · search + analyze","textChars":25,"textLines":1,"bbox":[659,274,147,17]}
-{"kind":"shape","id":"sh/bitkbaxc","slide":1,"name":"worker-1","bbox":[652,311,161,35]}
-{"kind":"textbox","id":"sh/ahk3i5wr","slide":1,"name":"worker-1-text","text":"tool B · search + analyze","textPreview":"tool B · search + analyze","textChars":25,"textLines":1,"bbox":[659,320,147,17]}
-{"kind":"shape","id":"sh/pgb290f6","slide":1,"name":"worker-2","bbox":[652,357,161,35]}
-{"kind":"textbox","id":"sh/of2lgve1","slide":1,"name":"worker-2-text","text":"tool N · search + analyze","textPreview":"tool N · search + analyze","textChars":25,"textLines":1,"bbox":[659,366,147,17]}
-{"kind":"textbox","id":"sh/ne9knqxg","slide":1,"name":"research-evidence","text":"filter unknown IDs\ncomplete or partial","textPreview":"filter unknown IDs | complete or partial","textChars":38,"textLines":2,"bbox":[652,393,161,34]}
-{"kind":"shape","id":"sh/2d03elwv","slide":1,"name":"recommend-frame","bbox":[855,184,145,246]}
-{"kind":"shape","id":"sh/1cr2l0fa","slide":1,"name":"recommend-num","bbox":[867,196,26,26]}
-{"kind":"textbox","id":"sh/0bilcvep","slide":1,"name":"recommend-num-text","text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[867,201,26,16]}
-{"kind":"textbox","id":"sh/qhgjm1cn","slide":1,"name":"recommend-title","text":"Recommend","textPreview":"Recommend","textChars":9,"textLines":1,"bbox":[898,197,97,24]}
-{"kind":"textbox","id":"sh/rip0fmd8","slide":1,"name":"recommend-input","text":"validated\nToolReport[]","textPreview":"validated | ToolReport[]","textChars":22,"textLines":2,"bbox":[870,245,115,42]}
-{"kind":"textbox","id":"sh/sjy1orut","slide":1,"name":"recommend-call","text":"recommend()","textPreview":"recommend()","textChars":11,"textLines":1,"bbox":[870,315,115,20]}
-{"kind":"textbox","id":"sh/dk7ihwvy","slide":1,"name":"recommend-fallback","text":"neutral fallback\n+ warning on failure","textPreview":"neutral fallback | + warning on failure","textChars":37,"textLines":2,"bbox":[870,371,115,42]}
-{"kind":"textbox","id":"sh/itwzihcb","slide":1,"name":"output-label","text":"TYPED OUTPUT","textPreview":"TYPED OUTPUT","textChars":12,"textLines":1,"bbox":[1040,128,196,18]}
-{"kind":"shape","id":"sh/3u50bmdw","slide":1,"name":"report-frame","bbox":[1040,174,196,175]}
-{"kind":"textbox","id":"sh/4vehkruh","slide":1,"name":"report-title","text":"ResearchReport","textPreview":"ResearchReport","textChars":14,"textLines":1,"bbox":[1057,194,162,24]}
-{"kind":"textbox","id":"sh/5g7idwv2","slide":1,"name":"report-fields","text":"query · snapshot · mode\nToolReport[] · recommendation\nwarnings · complete/partial","textPreview":"query · snapshot · mode | ToolReport[] · recommendation | warnings · complete/partial","textChars":81,"textLines":3,"bbox":[1057,239,162,62]}
-{"kind":"textbox","id":"sh/upwzehcf","slide":1,"name":"report-content","text":"citations serialized\nscraped bodies excluded","textPreview":"citations serialized | scraped bodies excluded","textChars":44,"textLines":2,"bbox":[1057,312,162,34]}
-{"kind":"shape","id":"sh/vq5072d0","slide":1,"name":"render-frame","bbox":[1040,378,196,104]}
-{"kind":"textbox","id":"sh/zihozepg","slide":1,"name":"render-title","text":"Renderers","textPreview":"Renderers","textChars":9,"textLines":1,"bbox":[1057,395,162,20]}
-{"kind":"textbox","id":"sh/yh87q9ov","slide":1,"name":"render-types","text":"terminal · Markdown\nJSON · CSV","textPreview":"terminal · Markdown | JSON · CSV","textChars":30,"textLines":2,"bbox":[1057,426,162,42]}
-{"kind":"shape","id":"sh/lkj61o7m","slide":1,"name":"demo-to-contract","bbox":[260,205,40,12]}
-{"kind":"shape","id":"sh/0japsj61","slide":1,"name":"live-to-contract","bbox":[260,375,40,12]}
-{"kind":"shape","id":"sh/7m1o3epc","slide":1,"name":"contract-to-graph","bbox":[438,288,17,12]}
-{"kind":"shape","id":"sh/mls7uto7","slide":1,"name":"discover-to-research","bbox":[610,295,25,12]}
-{"kind":"shape","id":"sh/9oj65o7i","slide":1,"name":"research-to-recommend","bbox":[830,295,25,12]}
-{"kind":"shape","id":"sh/8napwj6x","slide":1,"name":"graph-to-report","bbox":[1000,245,40,12]}
-{"kind":"shape","id":"sh/3qxorup8","slide":1,"name":"report-to-render","bbox":[1128,349,12,30]}
-{"kind":"shape","id":"sh/2ponipon","slide":1,"name":"boundary-rule","bbox":[44,538,1192,0]}
-{"kind":"textbox","id":"sh/svmlsvml","slide":1,"name":"boundary-label","text":"EVIDENCE + FAILURE BOUNDARY","textPreview":"EVIDENCE + FAILURE BOUNDARY","textChars":27,"textLines":1,"bbox":[44,556,245,18]}
-{"kind":"shape","id":"sh/twvm10n6","slide":1,"name":"boundary-0","bbox":[44,586,274,74]}
-{"kind":"textbox","id":"sh/6t43ql4f","slide":1,"name":"boundary-head-0","text":"PUBLIC URLS","textPreview":"PUBLIC URLS","textChars":11,"textLines":1,"bbox":[58,600,246,16]}
-{"kind":"textbox","id":"sh/rud4zq50","slide":1,"name":"boundary-body-0","text":"reject local, private, reserved, or credentialed targets","textPreview":"reject local, private, reserved, or credentialed targets","textChars":56,"textLines":1,"bbox":[58,624,246,30]}
-{"kind":"shape","id":"sh/4r2lobmp","slide":1,"name":"boundary-1","bbox":[342,586,274,74]}
-{"kind":"textbox","id":"sh/5sv2xgnu","slide":1,"name":"boundary-head-1","text":"SOURCE IDS","textPreview":"SOURCE IDS","textChars":10,"textLines":1,"bbox":[356,600,246,16]}
-{"kind":"textbox","id":"sh/ipk3ml4j","slide":1,"name":"boundary-body-1","text":"Pydantic rejects evidence that names an unknown source","textPreview":"Pydantic rejects evidence that names an unknown source","textChars":54,"textLines":1,"bbox":[356,624,246,30]}
-{"kind":"shape","id":"sh/jqtkvq54","slide":1,"name":"boundary-2","bbox":[640,586,274,74]}
-{"kind":"textbox","id":"sh/on6l0fmt","slide":1,"name":"boundary-head-2","text":"PARTIAL RUNS","textPreview":"PARTIAL RUNS","textChars":12,"textLines":1,"bbox":[654,600,246,16]}
-{"kind":"textbox","id":"sh/pofm9kne","slide":1,"name":"boundary-body-2","text":"failed tools become warnings while sourced profiles continue","textPreview":"failed tools become warnings while sourced profiles continue","textChars":60,"textLines":1,"bbox":[654,624,246,30]}
-{"kind":"shape","id":"sh/x4zytwvi","slide":1,"name":"boundary-3","bbox":[938,586,274,74]}
-{"kind":"textbox","id":"sh/w3qh0rex","slide":1,"name":"boundary-head-3","text":"SAFE WRITES","textPreview":"SAFE WRITES","textChars":11,"textLines":1,"bbox":[952,600,246,16]}
-{"kind":"textbox","id":"sh/b2hg7mds","slide":1,"name":"boundary-body-3","text":"outputs use write-then-replace semantics","textPreview":"outputs use write-then-replace semantics","textChars":40,"textLines":1,"bbox":[952,624,246,30]}
-{"kind":"textbox","id":"sh/a18zyhw7","slide":1,"name":"sources","text":"Sources: pipeline.py · contracts.py · live.py · providers.py · models.py · renderers.py","textPreview":"Sources: pipeline.py · contracts.py · live.py · providers.py · models.py · renderers.py","textChars":87,"textLines":1,"bbox":[320,686,640,15]}
-{"kind":"notes","id":"nt/ozq1ah","slide":1,"text":""}
+{"kind":"deck","id":"pr/82cyo0","name":"Deck"}
+{"kind":"layout","layoutId":"7fe0cbad-9d57-42bd-a52f-4f52805b2f86","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"86c0e73c-9ebe-4fd1-adde-163602bd747c","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/k5s0ag","slide":1,"title":"SYSTEM MAP · CODE-GROUNDED","textShapes":51}
+{"kind":"shape","id":"sh/nat43a10","slide":1,"name":"editorial-rail","bbox":[0,0,252,720]}
+{"kind":"shape","id":"sh/ob2lcf2l","slide":1,"name":"rail-accent","bbox":[0,0,12,720]}
+{"kind":"textbox","id":"sh/9cbm5kj6","slide":1,"name":"rail-kicker","text":"SYSTEM MAP · CODE-GROUNDED","textPreview":"SYSTEM MAP · CODE-GROUNDED","textChars":26,"textLines":1,"bbox":[34,35,190,18]}
+{"kind":"textbox","id":"sh/ad43epkr","slide":1,"name":"rail-title","text":"IntelliCrawl\nresearch graph","textPreview":"IntelliCrawl | research graph","textChars":27,"textLines":2,"bbox":[34,73,190,100]}
+{"kind":"textbox","id":"sh/bed47u1c","slide":1,"name":"rail-copy","text":"One LangGraph owns control flow. Providers can change without changing the graph.","textPreview":"One LangGraph owns control flow. Providers can change without changing the graph.","textChars":81,"textLines":1,"bbox":[34,186,184,70]}
+{"kind":"shape","id":"sh/wfmlgz2x","slide":1,"name":"rail-rule","bbox":[34,280,184,0]}
+{"kind":"textbox","id":"sh/xgvm94j2","slide":1,"name":"rail-assemblies","text":"PROVIDER ASSEMBLIES","textPreview":"PROVIDER ASSEMBLIES","textChars":19,"textLines":1,"bbox":[34,302,180,18]}
+{"kind":"textbox","id":"sh/yh4ni9kn","slide":1,"name":"rail-demo","text":"DEMO","textPreview":"DEMO","textChars":4,"textLines":1,"bbox":[34,337,52,18]}
+{"kind":"textbox","id":"sh/jid4bu18","slide":1,"name":"rail-demo-copy","text":"deterministic search\n+ analysis fixtures","textPreview":"deterministic search | + analysis fixtures","textChars":40,"textLines":2,"bbox":[90,334,128,42]}
+{"kind":"textbox","id":"sh/3ulg7u5c","slide":1,"name":"rail-live","text":"LIVE","textPreview":"LIVE","textChars":4,"textLines":1,"bbox":[34,397,52,18]}
+{"kind":"textbox","id":"sh/itczypor","slide":1,"name":"rail-live-copy","text":"Firecrawl + cache\nOpenAI structured output","textPreview":"Firecrawl + cache | OpenAI structured output","textChars":42,"textLines":2,"bbox":[90,394,132,42]}
+{"kind":"shape","id":"sh/5w3y94ni","slide":1,"name":"rail-rule-2","bbox":[34,462,184,0]}
+{"kind":"textbox","id":"sh/4vuh0z6x","slide":1,"name":"rail-interfaces","text":"REPLACEABLE PORTS","textPreview":"REPLACEABLE PORTS","textChars":17,"textLines":1,"bbox":[34,484,180,18]}
+{"kind":"textbox","id":"sh/vq1g3u5g","slide":1,"name":"rail-search","text":"SearchProvider","textPreview":"SearchProvider","textChars":14,"textLines":1,"bbox":[34,520,150,20]}
+{"kind":"textbox","id":"sh/upszupov","slide":1,"name":"rail-source","text":"→ SourceDocument[]","textPreview":"→ SourceDocument[]","textChars":18,"textLines":1,"bbox":[34,545,160,18]}
+{"kind":"textbox","id":"sh/hs3y5kn6","slide":1,"name":"rail-analysis","text":"AnalysisProvider","textPreview":"AnalysisProvider","textChars":16,"textLines":1,"bbox":[34,578,160,20]}
+{"kind":"textbox","id":"sh/gruhwz61","slide":1,"name":"rail-schema","text":"→ typed schemas","textPreview":"→ typed schemas","textChars":15,"textLines":1,"bbox":[34,603,150,18]}
+{"kind":"textbox","id":"sh/fm50fe5k","slide":1,"name":"rail-foot","text":"Public web content remains untrusted input.","textPreview":"Public web content remains untrusted input.","textChars":43,"textLines":1,"bbox":[34,670,184,28]}
+{"kind":"shape","id":"sh/elwz69oz","slide":1,"name":"discover-research","bbox":[513,201,91,12]}
+{"kind":"shape","id":"sh/ahgjyd87","slide":1,"name":"research-recommend","bbox":[805,201,83,12]}
+{"kind":"shape","id":"sh/bi9k7ips","slide":1,"name":"recommend-report","bbox":[1044,201,61,12]}
+{"kind":"shape","id":"sh/wji10nqd","slide":1,"name":"port-search-a","bbox":[230,530,70,0]}
+{"kind":"shape","id":"sh/xkr29s7y","slide":1,"name":"port-search-b","bbox":[300,205,0,325]}
+{"kind":"shape","id":"sh/yl0j2x8j","slide":1,"name":"port-search-c","bbox":[300,205,47,0]}
+{"kind":"shape","id":"sh/jm9kb2po","slide":1,"name":"port-analysis-a","bbox":[230,590,100,0]}
+{"kind":"shape","id":"sh/knil4nq9","slide":1,"name":"port-analysis-b","bbox":[330,120,0,470]}
+{"kind":"shape","id":"sh/l8r2ds7u","slide":1,"name":"port-analysis-c","bbox":[330,120,374,0]}
+{"kind":"shape","id":"sh/epwjqt8z","slide":1,"name":"port-analysis-d","bbox":[704,120,0,48]}
+{"kind":"shape","id":"sh/zq5kzypk","slide":1,"name":"research-fan-stem","bbox":[704,301,0,64]}
+{"kind":"shape","id":"sh/h4vm5wr2","slide":1,"name":"research-fan-bus","bbox":[570,365,268,0]}
+{"kind":"shape","id":"sh/g3m5wrah","slide":1,"name":"research-fan-a","bbox":[570,365,0,35]}
+{"kind":"shape","id":"sh/v2d4369w","slide":1,"name":"research-fan-b","bbox":[704,365,0,35]}
+{"kind":"shape","id":"sh/uh4nu1sr","slide":1,"name":"research-fan-c","bbox":[838,365,0,35]}
+{"kind":"shape","id":"sh/58vm9gre","slide":1,"name":"tool-a-report","bbox":[570,474,0,36]}
+{"kind":"shape","id":"sh/47m50bat","slide":1,"name":"tool-b-report","bbox":[704,474,0,68]}
+{"kind":"shape","id":"sh/36d47698","slide":1,"name":"tool-c-report","bbox":[838,474,0,36]}
+{"kind":"shape","id":"sh/i54ny1sn","slide":1,"name":"tool-report-bus","bbox":[570,510,268,0]}
+{"kind":"shape","id":"sh/lcbmxcru","slide":1,"name":"report-renderers","bbox":[1163,450,10,38]}
+{"kind":"textbox","id":"sh/kb25o7a9","slide":1,"name":"map-label","text":"DISCOVER → PROFILE IN PARALLEL → SYNTHESIZE","textPreview":"DISCOVER → PROFILE IN PARALLEL → SYNTHESIZE","textChars":43,"textLines":1,"bbox":[284,32,620,20]}
+{"kind":"textbox","id":"sh/83ahsjy9","slide":1,"name":"map-note","text":"The node graph is stable across demo and live modes.","textPreview":"The node graph is stable across demo and live modes.","textChars":52,"textLines":1,"bbox":[284,61,540,24]}
+{"kind":"textbox","id":"sh/94jylofu","slide":1,"name":"graph-type","text":"ResearchPipeline / LangGraph","textPreview":"ResearchPipeline / LangGraph","textChars":28,"textLines":1,"bbox":[1002,39,234,20]}
+{"kind":"shape","id":"sh/mhszq9g3","slide":1,"name":"discover-circle","bbox":[347,124,166,166]}
+{"kind":"shape","id":"sh/ni1gjexo","slide":1,"name":"discover-step","bbox":[361,138,29,29]}
+{"kind":"textbox","id":"sh/0fahozyd","slide":1,"name":"discover-step-text","text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[361,144,29,17]}
+{"kind":"textbox","id":"sh/lgjyh4fi","slide":1,"name":"discover-title","text":"Discover","textPreview":"Discover","textChars":8,"textLines":1,"bbox":[372,183,116,25]}
+{"kind":"textbox","id":"sh/ed8zm9g7","slide":1,"name":"discover-body","text":"normalize query\nsearch comparison docs\ndeduplicate 1–6 tools","textPreview":"normalize query | search comparison docs | deduplicate 1–6 tools","textChars":60,"textLines":3,"bbox":[371,220,118,54]}
+{"kind":"shape","id":"sh/ze1gfuxs","slide":1,"name":"research-circle","bbox":[609,112,190,190]}
+{"kind":"shape","id":"sh/cbqhkzy1","slide":1,"name":"research-step","bbox":[623,126,29,29]}
+{"kind":"textbox","id":"sh/dczyd4fm","slide":1,"name":"research-step-text","text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[623,132,29,17]}
+{"kind":"textbox","id":"sh/f6x03u18","slide":1,"name":"research-title","text":"Research","textPreview":"Research","textChars":8,"textLines":1,"bbox":[634,183,140,25]}
+{"kind":"textbox","id":"sh/u5ozup03","slide":1,"name":"research-body","text":"asyncio.gather\nbounded per-tool work\nsearch + analyze","textPreview":"asyncio.gather | bounded per-tool work | search + analyze","textChars":53,"textLines":3,"bbox":[633,220,142,54]}
+{"kind":"shape","id":"sh/h8zi54je","slide":1,"name":"recommend-circle","bbox":[887,128,158,158]}
+{"kind":"shape","id":"sh/g7qhwzit","slide":1,"name":"recommend-step","bbox":[901,142,29,29]}
+{"kind":"textbox","id":"sh/3ah07u1k","slide":1,"name":"recommend-step-text","text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[901,148,29,17]}
+{"kind":"shape","id":"sh/298zyp0z","slide":1,"name":"recommend-title","bbox":[912,183,108,25]}
+{"kind":"textbox","id":"sh/pczi94jq","slide":1,"name":"recommend-body","text":"validated ToolReport[]\nneutral fallback\non provider failure","textPreview":"validated ToolReport[] | neutral fallback | on provider failure","textChars":59,"textLines":3,"bbox":[911,220,110,54]}
+{"kind":"textbox","id":"sh/4bqh0zi5","slide":1,"name":"recommend-title-fix","text":"Recommend","textPreview":"Recommend","textChars":9,"textLines":1,"bbox":[909,189,114,22]}
+{"kind":"textbox","id":"sh/re10be1g","slide":1,"name":"fanout-label","text":"parallel tool workers","textPreview":"parallel tool workers","textChars":21,"textLines":1,"bbox":[624,330,160,18]}
+{"kind":"shape","id":"sh/qd8z290v","slide":1,"name":"tool-0","bbox":[528,400,84,74]}
+{"kind":"textbox","id":"sh/m9c3udk3","slide":1,"name":"tool-0-title","text":"tool A","textPreview":"tool A","textChars":6,"textLines":1,"bbox":[536,418,68,18]}
+{"kind":"textbox","id":"sh/nalk3ilo","slide":1,"name":"tool-0-copy","text":"search\n+ analyze","textPreview":"search | + analyze","textChars":16,"textLines":2,"bbox":[536,440,68,28]}
+{"kind":"shape","id":"sh/8vulwn29","slide":1,"name":"tool-1","bbox":[662,400,84,74]}
+{"kind":"textbox","id":"sh/9w32583u","slide":1,"name":"tool-1-title","text":"tool B","textPreview":"tool B","textChars":6,"textLines":1,"bbox":[670,418,68,18]}
+{"kind":"textbox","id":"sh/y5s3qtk7","slide":1,"name":"tool-1-copy","text":"search\n+ analyze","textPreview":"search | + analyze","textChars":16,"textLines":2,"bbox":[670,440,68,28]}
+{"kind":"shape","id":"sh/z6lkzyls","slide":1,"name":"tool-2","bbox":[796,400,84,74]}
+{"kind":"textbox","id":"sh/07uls32d","slide":1,"name":"tool-2-title","text":"tool N","textPreview":"tool N","textChars":6,"textLines":1,"bbox":[804,418,68,18]}
+{"kind":"textbox","id":"sh/l832183y","slide":1,"name":"tool-2-copy","text":"search\n+ analyze","textPreview":"search | + analyze","textChars":16,"textLines":2,"bbox":[804,440,68,28]}
+{"kind":"shape","id":"sh/i1w32xkb","slide":1,"name":"tool-report","bbox":[630,542,148,54]}
+{"kind":"textbox","id":"sh/j25kb21w","slide":1,"name":"tool-report-title","text":"ToolReport[]","textPreview":"ToolReport[]","textChars":12,"textLines":1,"bbox":[646,552,116,18]}
+{"kind":"textbox","id":"sh/tw761wny","slide":1,"name":"tool-report-copy","text":"unknown IDs rejected","textPreview":"unknown IDs rejected","textChars":20,"textLines":1,"bbox":[640,572,128,16]}
+{"kind":"shape","id":"sh/svy5srmt","slide":1,"name":"public-url-note","bbox":[370,493,178,62]}
+{"kind":"textbox","id":"sh/7upozm58","slide":1,"name":"public-url-head","text":"PUBLIC URL GATE","textPreview":"PUBLIC URL GATE","textChars":15,"textLines":1,"bbox":[384,505,150,16]}
+{"kind":"textbox","id":"sh/6tgnqh4n","slide":1,"name":"public-url-copy","text":"reject local, private, reserved, or credentialed targets","textPreview":"reject local, private, reserved, or credentialed targets","textChars":56,"textLines":1,"bbox":[384,526,150,24]}
+{"kind":"shape","id":"sh/5s76xcn2","slide":1,"name":"partial-note","bbox":[828,535,205,64]}
+{"kind":"textbox","id":"sh/kry5ormh","slide":1,"name":"partial-head","text":"DEGRADED RUN","textPreview":"DEGRADED RUN","textChars":12,"textLines":1,"bbox":[842,548,176,16]}
+{"kind":"textbox","id":"sh/jqp4vm5w","slide":1,"name":"partial-copy","text":"failed tools become warnings; sourced profiles continue","textPreview":"failed tools become warnings; sourced profiles continue","textChars":55,"textLines":1,"bbox":[842,569,176,24]}
+{"kind":"shape","id":"sh/ipgnmh4b","slide":1,"name":"research-report","bbox":[1105,145,126,155]}
+{"kind":"textbox","id":"sh/pob69g36","slide":1,"name":"report-type","text":"STRICT OUTPUT","textPreview":"STRICT OUTPUT","textChars":13,"textLines":1,"bbox":[1119,161,98,16]}
+{"kind":"textbox","id":"sh/4ni50bm1","slide":1,"name":"report-title","text":"Research\nReport","textPreview":"Research | Report","textChars":15,"textLines":2,"bbox":[1112,190,112,48]}
+{"kind":"textbox","id":"sh/0jm98f69","slide":1,"name":"report-copy","text":"citations serialized\nscraped bodies excluded","textPreview":"citations serialized | scraped bodies excluded","textChars":44,"textLines":2,"bbox":[1117,259,102,32]}
+{"kind":"textbox","id":"sh/1kvq1kne","slide":1,"name":"renderers-label","text":"RENDER AS","textPreview":"RENDER AS","textChars":9,"textLines":1,"bbox":[1112,475,112,16]}
+{"kind":"shape","id":"sh/eh4r65o3","slide":1,"name":"renderer-0","bbox":[1060,500,82,34]}
+{"kind":"textbox","id":"sh/zid8za5o","slide":1,"name":"renderer-0-text","text":"terminal","textPreview":"terminal","textChars":8,"textLines":1,"bbox":[1066,509,70,16]}
+{"kind":"shape","id":"sh/on69cf65","slide":1,"name":"renderer-1","bbox":[1150,500,82,34]}
+{"kind":"textbox","id":"sh/9ofq5knq","slide":1,"name":"renderer-1-text","text":"Markdown","textPreview":"Markdown","textChars":8,"textLines":1,"bbox":[1156,509,70,16]}
+{"kind":"shape","id":"sh/ml4rapoz","slide":1,"name":"renderer-2","bbox":[1060,544,82,34]}
+{"kind":"textbox","id":"sh/nmd83u5k","slide":1,"name":"renderer-2-text","text":"JSON","textPreview":"JSON","textChars":4,"textLines":1,"bbox":[1066,553,70,16]}
+{"kind":"shape","id":"sh/4r2p0v61","slide":1,"name":"renderer-3","bbox":[1150,544,82,34]}
+{"kind":"textbox","id":"sh/psbqt076","slide":1,"name":"renderer-3-text","text":"CSV","textPreview":"CSV","textChars":3,"textLines":1,"bbox":[1156,553,70,16]}
+{"kind":"textbox","id":"sh/ri1kv2t0","slide":1,"name":"safe-write","text":"write → replace","textPreview":"write → replace","textChars":15,"textLines":1,"bbox":[1070,596,160,20]}
+{"kind":"textbox","id":"sh/6hs3mxcf","slide":1,"name":"safe-write-copy","text":"atomic output boundary","textPreview":"atomic output boundary","textChars":22,"textLines":1,"bbox":[1070,620,160,18]}
+{"kind":"textbox","id":"sh/tk32hsb6","slide":1,"name":"caption","text":"Provider implementations plug into a single typed state machine; validation and degraded-run behavior remain inside the graph rather than the UI.","textPreview":"Provider implementations plug into a single typed state machine; validation and degraded-run behavior remain inside the graph rather than...","textChars":145,"textLines":1,"bbox":[285,650,900,34]}
+{"kind":"textbox","id":"sh/sjalonul","slide":1,"name":"sources","text":"pipeline.py · contracts.py · demo.py · live.py · providers.py · models.py · renderers.py","textPreview":"pipeline.py · contracts.py · demo.py · live.py · providers.py · models.py · renderers.py","textChars":88,"textLines":1,"bbox":[285,694,900,14]}
+{"kind":"notes","id":"nt/k5s0ag","slide":1,"text":""}
