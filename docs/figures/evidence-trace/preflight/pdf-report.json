@@ -1,5 +1,5 @@
 {
-  "bytes": 131636,
+  "bytes": 153914,
   "failures": [],
   "file": "/Users/ethanvillalovoz/Documents/Codex/2026-07-15/ok/work/visual-audit/repos/intellicrawl/docs/figures/evidence-trace/exports/intellicrawl-evidence-trace.pdf",
   "font_report": {
@@ -40,7 +40,7 @@
       {
         "embedded": true,
         "encoding": "WinAnsi",
-        "name": "FAAAAA+Carlito",
+        "name": "FAAAAA+Carlito-Bold",
         "subset": true,
         "type": "TrueType",
         "unicode": true
@@ -48,7 +48,7 @@
       {
         "embedded": true,
         "encoding": "WinAnsi",
-        "name": "GAAAAA+Carlito-Bold",
+        "name": "GAAAAA+Carlito",
         "subset": true,
         "type": "TrueType",
         "unicode": true
@@ -64,7 +64,7 @@
       {
         "embedded": true,
         "encoding": "WinAnsi",
-        "name": "IAAAAA+Carlito",
+        "name": "IAAAAA+Carlito-Bold",
         "subset": true,
         "type": "TrueType",
         "unicode": true
@@ -72,7 +72,7 @@
       {
         "embedded": true,
         "encoding": "WinAnsi",
-        "name": "JAAAAA+Carlito-Bold",
+        "name": "JAAAAA+Carlito",
         "subset": true,
         "type": "TrueType",
         "unicode": true
@@ -88,7 +88,7 @@
       {
         "embedded": true,
         "encoding": "WinAnsi",
-        "name": "LAAAAA+Carlito",
+        "name": "LAAAAA+Carlito-Bold",
         "subset": true,
         "type": "TrueType",
         "unicode": true
@@ -121,6 +121,46 @@
         "embedded": true,
         "encoding": "WinAnsi",
         "name": "PAAAAA+Carlito",
+        "subset": true,
+        "type": "TrueType",
+        "unicode": true
+      },
+      {
+        "embedded": true,
+        "encoding": "WinAnsi",
+        "name": "QAAAAA+Carlito",
+        "subset": true,
+        "type": "TrueType",
+        "unicode": true
+      },
+      {
+        "embedded": true,
+        "encoding": "WinAnsi",
+        "name": "RAAAAA+Carlito",
+        "subset": true,
+        "type": "TrueType",
+        "unicode": true
+      },
+      {
+        "embedded": true,
+        "encoding": "WinAnsi",
+        "name": "SAAAAA+Carlito-Bold",
+        "subset": true,
+        "type": "TrueType",
+        "unicode": true
+      },
+      {
+        "embedded": true,
+        "encoding": "WinAnsi",
+        "name": "TAAAAA+Carlito-Bold",
+        "subset": true,
+        "type": "TrueType",
+        "unicode": true
+      },
+      {
+        "embedded": true,
+        "encoding": "WinAnsi",
+        "name": "UAAAAA+Carlito",
         "subset": true,
         "type": "TrueType",
         "unicode": true

@@ -1,126 +1,88 @@
-{"kind":"deck","id":"pr/khk1dm","name":"Deck"}
-{"kind":"layout","layoutId":"d1b240af-e3c8-4752-aee2-6b9a5a08412c","name":"Master","type":"master"}
-{"kind":"layout","layoutId":"2165b48c-22f2-40e4-8f94-71f603f5ec0e","name":"Title Slide","type":"title"}
-{"kind":"slide","id":"sl/4b1pya","slide":1,"title":"IntelliCrawl exposes the source behind every normalized field","textShapes":75}
-{"kind":"textbox","id":"sh/x43214vu","slide":1,"name":"title","text":"IntelliCrawl exposes the source behind every normalized field","textPreview":"IntelliCrawl exposes the source behind every normalized field","textChars":61,"textLines":1,"bbox":[44,24,1192,42]}
-{"kind":"textbox","id":"sh/a1sjq9w3","slide":1,"name":"subtitle","text":"The dated fixture fans one research question into three parallel profiles, then validates each field-level source tag before export.","textPreview":"The dated fixture fans one research question into three parallel profiles, then validates each field-level source tag before export.","textChars":132,"textLines":1,"bbox":[44,71,1192,25]}
-{"kind":"shape","id":"sh/b21kzedo","slide":1,"name":"header-rule","bbox":[44,109,1192,0]}
-{"kind":"shape","id":"sh/kru1wje5","slide":1,"name":"question-to-spine","bbox":[255,187,39,12]}
-{"kind":"shape","id":"sh/ls325ovq","slide":1,"name":"fanout-spine","bbox":[296,199,0,280]}
-{"kind":"shape","id":"sh/ypcju9wz","slide":1,"name":"spine-to-lane-0","bbox":[293,193,20,12]}
-{"kind":"shape","id":"sh/jqlk3edk","slide":1,"name":"spine-to-lane-1","bbox":[293,333,20,12]}
-{"kind":"shape","id":"sh/8ve10jeh","slide":1,"name":"spine-to-lane-2","bbox":[293,473,20,12]}
-{"kind":"shape","id":"sh/twn29ov2","slide":1,"name":"lane-to-report-0","bbox":[1002,204,34,12]}
-{"kind":"shape","id":"sh/dwnyx4ze","slide":1,"name":"lane-to-report-1","bbox":[1002,344,34,12]}
-{"kind":"shape","id":"sh/cvexozit","slide":1,"name":"lane-to-report-2","bbox":[1002,484,34,12]}
-{"kind":"shape","id":"sh/ru5gvuh8","slide":1,"name":"report-to-exports","bbox":[1142,335,28,12]}
-{"kind":"textbox","id":"sh/qtwfmp03","slide":1,"name":"input-label","text":"ONE RESEARCH QUESTION","textPreview":"ONE RESEARCH QUESTION","textChars":21,"textLines":1,"bbox":[44,130,220,18]}
-{"kind":"shape","id":"sh/107y14zq","slide":1,"name":"query","bbox":[44,153,220,92]}
-{"kind":"textbox","id":"sh/0zehszi5","slide":1,"name":"query-text","text":"vector databases for production RAG","textPreview":"vector databases for production RAG","textChars":35,"textLines":1,"bbox":[60,169,188,48]}
-{"kind":"textbox","id":"sh/zy5gzuhk","slide":1,"name":"query-date","text":"dated fixture · 2026-07-11","textPreview":"dated fixture · 2026-07-11","textChars":26,"textLines":1,"bbox":[60,220,188,16]}
-{"kind":"textbox","id":"sh/exwfqp0z","slide":1,"name":"parallel-label","text":"PARALLEL PROFILES WITH LOCAL SOURCE TAGS","textPreview":"PARALLEL PROFILES WITH LOCAL SOURCE TAGS","textChars":40,"textLines":1,"bbox":[316,130,430,18]}
-{"kind":"textbox","id":"sh/h43yp0z6","slide":1,"name":"tool-0","text":"Weaviate","textPreview":"Weaviate","textChars":8,"textLines":1,"bbox":[316,153,126,23]}
-{"kind":"textbox","id":"sh/g3uxgfil","slide":1,"name":"status-0","text":"complete","textPreview":"complete","textChars":8,"textLines":1,"bbox":[316,178,100,16]}
-{"kind":"shape","id":"sh/87yxwfqh","slide":1,"name":"source-doc-0","bbox":[316,203,112,34]}
-{"kind":"textbox","id":"sh/t87y5k72","slide":1,"name":"source-doc-text-0","text":"S1  docs","textPreview":"S1  docs","textChars":8,"textLines":1,"bbox":[328,211,88,18]}
-{"kind":"shape","id":"sh/65wfu58r","slide":1,"name":"source-price-0","bbox":[316,243,112,34]}
-{"kind":"textbox","id":"sh/76pg3apw","slide":1,"name":"source-price-text-0","text":"S2  pricing","textPreview":"S2  pricing","textChars":11,"textLines":1,"bbox":[328,251,90,18]}
-{"kind":"shape","id":"sh/gbyh0fqt","slide":1,"name":"lane-rule-0","bbox":[449,166,536,0]}
-{"kind":"shape","id":"sh/hc7y9k7e","slide":1,"name":"field-0-0","bbox":[449,184,79,72]}
-{"kind":"textbox","id":"sh/u9gzyp8n","slide":1,"name":"field-name-0-0","text":"profile","textPreview":"profile","textChars":7,"textLines":1,"bbox":[456,195,65,28]}
-{"kind":"textbox","id":"sh/vapg7ap8","slide":1,"name":"field-source-0-0","text":"S1","textPreview":"S1","textChars":2,"textLines":1,"bbox":[463,231,51,17]}
-{"kind":"shape","id":"sh/4fih4zqp","slide":1,"name":"field-0-1","bbox":[538,184,79,72]}
-{"kind":"textbox","id":"sh/5gryd47a","slide":1,"name":"field-name-0-1","text":"price","textPreview":"price","textChars":5,"textLines":1,"bbox":[545,195,65,28]}
-{"kind":"textbox","id":"sh/fat03y9c","slide":1,"name":"field-source-0-1","text":"S2","textPreview":"S2","textChars":2,"textLines":1,"bbox":[552,231,51,17]}
-{"kind":"shape","id":"sh/e9kjatsr","slide":1,"name":"field-0-2","bbox":[627,184,79,72]}
-{"kind":"textbox","id":"sh/1wb258ri","slide":1,"name":"field-name-0-2","text":"OSS","textPreview":"OSS","textChars":3,"textLines":1,"bbox":[634,195,65,28]}
-{"kind":"textbox","id":"sh/0v21c3ax","slide":1,"name":"field-source-0-2","text":"S1","textPreview":"S1","textChars":2,"textLines":1,"bbox":[641,231,51,17]}
-{"kind":"shape","id":"sh/r6t0ze9g","slide":1,"name":"field-0-3","bbox":[716,184,79,72]}
-{"kind":"textbox","id":"sh/q5kj69sv","slide":1,"name":"field-name-0-3","text":"API","textPreview":"API","textChars":3,"textLines":1,"bbox":[723,195,65,28]}
-{"kind":"textbox","id":"sh/d8bi1orm","slide":1,"name":"field-source-0-3","text":"S1","textPreview":"S1","textChars":2,"textLines":1,"bbox":[730,231,51,17]}
-{"kind":"shape","id":"sh/s7218ja1","slide":1,"name":"field-0-4","bbox":[805,184,79,72]}
-{"kind":"textbox","id":"sh/b2dkbi9k","slide":1,"name":"field-name-0-4","text":"SDKs","textPreview":"SDKs","textChars":4,"textLines":1,"bbox":[812,195,65,28]}
-{"kind":"textbox","id":"sh/a14jidsz","slide":1,"name":"field-source-0-4","text":"S1","textPreview":"S1","textChars":2,"textLines":1,"bbox":[819,231,51,17]}
-{"kind":"shape","id":"sh/y9kn6hoj","slide":1,"name":"field-0-5","bbox":[894,184,79,72]}
-{"kind":"textbox","id":"sh/jat4z2p4","slide":1,"name":"field-name-0-5","text":"integr.","textPreview":"integr.","textChars":7,"textLines":1,"bbox":[901,195,65,28]}
-{"kind":"textbox","id":"sh/kbm58769","slide":1,"name":"field-source-0-5","text":"S1","textPreview":"S1","textChars":2,"textLines":1,"bbox":[908,231,51,17]}
-{"kind":"textbox","id":"sh/lcvm1c7u","slide":1,"name":"validation-0","text":"6 fields · source IDs validated against this profile’s two retained sources","textPreview":"6 fields · source IDs validated against this profile’s two retained sources","textChars":75,"textLines":1,"bbox":[449,263,536,17]}
-{"kind":"textbox","id":"sh/alkn2xo7","slide":1,"name":"tool-1","text":"Pinecone","textPreview":"Pinecone","textChars":8,"textLines":1,"bbox":[316,293,126,23]}
-{"kind":"textbox","id":"sh/bmt4v2ps","slide":1,"name":"status-1","text":"complete","textPreview":"complete","textChars":8,"textLines":1,"bbox":[316,318,100,16]}
-{"kind":"shape","id":"sh/w725476d","slide":1,"name":"source-doc-1","bbox":[316,343,112,34]}
-{"kind":"textbox","id":"sh/x8bmxc7y","slide":1,"name":"source-doc-text-1","text":"S1  docs","textPreview":"S1  docs","textChars":8,"textLines":1,"bbox":[328,351,88,18]}
-{"kind":"shape","id":"sh/uh4ne1or","slide":1,"name":"source-price-1","bbox":[316,383,112,34]}
-{"kind":"textbox","id":"sh/fido7m5w","slide":1,"name":"source-price-text-1","text":"S2  pricing","textPreview":"S2  pricing","textChars":11,"textLines":1,"bbox":[328,391,90,18]}
-{"kind":"shape","id":"sh/p8jytkvq","slide":1,"name":"lane-rule-1","bbox":[449,306,536,0]}
-{"kind":"shape","id":"sh/onqhkfu5","slide":1,"name":"field-1-0","bbox":[449,324,79,72]}
-{"kind":"textbox","id":"sh/3mhgradk","slide":1,"name":"field-name-1-0","text":"profile","textPreview":"profile","textChars":7,"textLines":1,"bbox":[456,335,65,28]}
-{"kind":"textbox","id":"sh/2l8zipcz","slide":1,"name":"field-source-1-0","text":"S1","textPreview":"S1","textChars":2,"textLines":1,"bbox":[463,371,51,17]}
-{"kind":"shape","id":"sh/1kzypkve","slide":1,"name":"field-1-1","bbox":[538,324,79,72]}
-{"kind":"textbox","id":"sh/gjqhgfut","slide":1,"name":"field-name-1-1","text":"price","textPreview":"price","textChars":5,"textLines":1,"bbox":[545,335,65,28]}
-{"kind":"textbox","id":"sh/fihgnad8","slide":1,"name":"field-source-1-1","text":"S2","textPreview":"S2","textChars":2,"textLines":1,"bbox":[552,371,51,17]}
-{"kind":"shape","id":"sh/eh8ze5cn","slide":1,"name":"field-1-2","bbox":[627,324,79,72]}
-{"kind":"textbox","id":"sh/lg3i14bi","slide":1,"name":"field-name-1-2","text":"OSS","textPreview":"OSS","textChars":3,"textLines":1,"bbox":[634,335,65,28]}
-{"kind":"textbox","id":"sh/0fuhszud","slide":1,"name":"field-source-1-2","text":"S1","textPreview":"S1","textChars":2,"textLines":1,"bbox":[641,371,51,17]}
-{"kind":"shape","id":"sh/kj21on29","slide":1,"name":"field-1-3","bbox":[716,324,79,72]}
-{"kind":"textbox","id":"sh/lkbix8ju","slide":1,"name":"field-name-1-3","text":"API","textPreview":"API","textChars":3,"textLines":1,"bbox":[723,335,65,28]}
-{"kind":"textbox","id":"sh/yh0jmdk3","slide":1,"name":"field-source-1-3","text":"S1","textPreview":"S1","textChars":2,"textLines":1,"bbox":[730,371,51,17]}
-{"kind":"shape","id":"sh/ji90vi1o","slide":1,"name":"field-1-4","bbox":[805,324,79,72]}
-{"kind":"textbox","id":"sh/wfi1k32d","slide":1,"name":"field-name-1-4","text":"SDKs","textPreview":"SDKs","textChars":4,"textLines":1,"bbox":[812,335,65,28]}
-{"kind":"textbox","id":"sh/xgrit8jy","slide":1,"name":"field-source-1-4","text":"S1","textPreview":"S1","textChars":2,"textLines":1,"bbox":[819,371,51,17]}
-{"kind":"shape","id":"sh/at0jitk7","slide":1,"name":"field-1-5","bbox":[894,324,79,72]}
-{"kind":"textbox","id":"sh/bu90ry1s","slide":1,"name":"field-name-1-5","text":"integr.","textPreview":"integr.","textChars":7,"textLines":1,"bbox":[901,335,65,28]}
-{"kind":"textbox","id":"sh/ory1g321","slide":1,"name":"field-source-1-5","text":"S1","textPreview":"S1","textChars":2,"textLines":1,"bbox":[908,371,51,17]}
-{"kind":"textbox","id":"sh/9sripojm","slide":1,"name":"validation-1","text":"6 fields · source IDs validated against this profile’s two retained sources","textPreview":"6 fields · source IDs validated against this profile’s two retained sources","textChars":75,"textLines":1,"bbox":[449,403,536,17]}
-{"kind":"textbox","id":"sh/rmpkzy5o","slide":1,"name":"tool-2","text":"Qdrant","textPreview":"Qdrant","textChars":6,"textLines":1,"bbox":[316,433,126,23]}
-{"kind":"textbox","id":"sh/qlgj6t43","slide":1,"name":"status-2","text":"complete","textPreview":"complete","textChars":8,"textLines":1,"bbox":[316,458,100,16]}
-{"kind":"shape","id":"sh/do721one","slide":1,"name":"source-doc-2","bbox":[316,483,112,34]}
-{"kind":"textbox","id":"sh/cny18jm9","slide":1,"name":"source-doc-text-2","text":"S1  docs","textPreview":"S1  docs","textChars":8,"textLines":1,"bbox":[328,491,88,18]}
-{"kind":"shape","id":"sh/zqpk3y5k","slide":1,"name":"source-price-2","bbox":[316,523,112,34]}
-{"kind":"textbox","id":"sh/epgjat4z","slide":1,"name":"source-price-text-2","text":"S2  pricing","textPreview":"S2  pricing","textChars":11,"textLines":1,"bbox":[328,531,90,18]}
-{"kind":"shape","id":"sh/1sr258nq","slide":1,"name":"lane-rule-2","bbox":[449,446,536,0]}
-{"kind":"shape","id":"sh/0ry1c3m5","slide":1,"name":"field-2-0","bbox":[449,464,79,72]}
-{"kind":"textbox","id":"sh/ne9k7i5w","slide":1,"name":"field-name-2-0","text":"profile","textPreview":"profile","textChars":7,"textLines":1,"bbox":[456,475,65,28]}
-{"kind":"textbox","id":"sh/md03ed4b","slide":1,"name":"field-source-2-0","text":"S1","textPreview":"S1","textChars":2,"textLines":1,"bbox":[463,511,51,17]}
-{"kind":"shape","id":"sh/a1gn2x0f","slide":1,"name":"field-2-1","bbox":[538,464,79,72]}
-{"kind":"textbox","id":"sh/v2pov210","slide":1,"name":"field-name-2-1","text":"price","textPreview":"price","textChars":5,"textLines":1,"bbox":[545,475,65,28]}
-{"kind":"textbox","id":"sh/w3y547il","slide":1,"name":"field-source-2-1","text":"S2","textPreview":"S2","textChars":2,"textLines":1,"bbox":[552,511,51,17]}
-{"kind":"shape","id":"sh/x476xcj6","slide":1,"name":"field-2-2","bbox":[627,464,79,72]}
-{"kind":"textbox","id":"sh/i5gn6h0b","slide":1,"name":"field-name-2-2","text":"OSS","textPreview":"OSS","textChars":3,"textLines":1,"bbox":[634,475,65,28]}
-{"kind":"textbox","id":"sh/jqpozm1w","slide":1,"name":"field-source-2-2","text":"S1","textPreview":"S1","textChars":2,"textLines":1,"bbox":[641,511,51,17]}
-{"kind":"shape","id":"sh/4ri587ih","slide":1,"name":"field-2-3","bbox":[716,464,79,72]}
-{"kind":"textbox","id":"sh/5sr61cj2","slide":1,"name":"field-name-2-3","text":"API","textPreview":"API","textChars":3,"textLines":1,"bbox":[723,475,65,28]}
-{"kind":"textbox","id":"sh/6t0nah0n","slide":1,"name":"field-source-2-3","text":"S1","textPreview":"S1","textChars":2,"textLines":1,"bbox":[730,511,51,17]}
-{"kind":"shape","id":"sh/ru9o3m18","slide":1,"name":"field-2-4","bbox":[805,464,79,72]}
-{"kind":"textbox","id":"sh/1obqtg3a","slide":1,"name":"field-name-2-4","text":"SDKs","textPreview":"SDKs","textChars":4,"textLines":1,"bbox":[812,475,65,28]}
-{"kind":"textbox","id":"sh/gn290b2p","slide":1,"name":"field-source-2-4","text":"S1","textPreview":"S1","textChars":2,"textLines":1,"bbox":[819,511,51,17]}
-{"kind":"shape","id":"sh/fmt8rql4","slide":1,"name":"field-2-5","bbox":[894,464,79,72]}
-{"kind":"textbox","id":"sh/elkrylkj","slide":1,"name":"field-name-2-5","text":"integr.","textPreview":"integr.","textChars":7,"textLines":1,"bbox":[901,475,65,28]}
-{"kind":"textbox","id":"sh/psvqx03m","slide":1,"name":"field-source-2-5","text":"S1","textPreview":"S1","textChars":2,"textLines":1,"bbox":[908,511,51,17]}
-{"kind":"textbox","id":"sh/orm94v21","slide":1,"name":"validation-2","text":"6 fields · source IDs validated against this profile’s two retained sources","textPreview":"6 fields · source IDs validated against this profile’s two retained sources","textChars":75,"textLines":1,"bbox":[449,543,536,17]}
-{"kind":"textbox","id":"sh/3qd8vqlg","slide":1,"name":"report-label","text":"VALIDATED REPORT","textPreview":"VALIDATED REPORT","textChars":16,"textLines":1,"bbox":[1034,130,178,18]}
-{"kind":"shape","id":"sh/2pkr2lkv","slide":1,"name":"report","bbox":[1034,153,118,356]}
-{"kind":"textbox","id":"sh/dgvq103i","slide":1,"name":"report-count","text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[1050,171,86,40]}
-{"kind":"textbox","id":"sh/cvm98v2x","slide":1,"name":"report-profiles","text":"complete\nprofiles","textPreview":"complete | profiles","textChars":17,"textLines":2,"bbox":[1050,207,86,38]}
-{"kind":"shape","id":"sh/pof2lc36","slide":1,"name":"report-rule-1","bbox":[1050,259,86,0]}
-{"kind":"textbox","id":"sh/4n6ls7ml","slide":1,"name":"report-citations","text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1050,275,86,38]}
-{"kind":"textbox","id":"sh/32xkjmlg","slide":1,"name":"report-citation-label","text":"public\ncitations","textPreview":"public | citations","textChars":16,"textLines":2,"bbox":[1050,308,86,38]}
-{"kind":"shape","id":"sh/21ojqh4v","slide":1,"name":"report-rule-2","bbox":[1050,361,86,0]}
-{"kind":"textbox","id":"sh/dsz2pw3i","slide":1,"name":"report-warnings","text":"0","textPreview":"0","textChars":1,"textLines":1,"bbox":[1050,377,86,38]}
-{"kind":"textbox","id":"sh/crqlwrmx","slide":1,"name":"report-warning-label","text":"warnings","textPreview":"warnings","textChars":8,"textLines":1,"bbox":[1050,412,86,20]}
-{"kind":"textbox","id":"sh/rqhknmlc","slide":1,"name":"report-note","text":"validated\nrecommendation","textPreview":"validated | recommendation","textChars":24,"textLines":2,"bbox":[1039,458,108,34]}
-{"kind":"textbox","id":"sh/qp83uh4r","slide":1,"name":"exports-label","text":"FOUR VIEWS","textPreview":"FOUR VIEWS","textChars":10,"textLines":1,"bbox":[1170,130,66,18]}
-{"kind":"shape","id":"sh/1wz2tw3e","slide":1,"name":"export-0","bbox":[1170,171,66,56]}
-{"kind":"textbox","id":"sh/0vql0bmt","slide":1,"name":"export-label-0","text":"TBL","textPreview":"TBL","textChars":3,"textLines":1,"bbox":[1174,189,58,20]}
-{"kind":"shape","id":"sh/i1kzutkb","slide":1,"name":"export-1","bbox":[1170,253,66,56]}
-{"kind":"textbox","id":"sh/j2t0ny1w","slide":1,"name":"export-label-1","text":"MD","textPreview":"MD","textChars":2,"textLines":1,"bbox":[1174,271,58,20]}
-{"kind":"shape","id":"sh/k32hw32h","slide":1,"name":"export-2","bbox":[1170,335,66,56]}
-{"kind":"textbox","id":"sh/54bip8j2","slide":1,"name":"export-label-2","text":"JSON","textPreview":"JSON","textChars":4,"textLines":1,"bbox":[1174,353,58,20]}
-{"kind":"shape","id":"sh/65kzydkn","slide":1,"name":"export-3","bbox":[1170,417,66,56]}
-{"kind":"textbox","id":"sh/76d0ri18","slide":1,"name":"export-label-3","text":"CSV","textPreview":"CSV","textChars":3,"textLines":1,"bbox":[1174,435,58,20]}
-{"kind":"shape","id":"sh/s7mh0n2d","slide":1,"name":"footer-rule","bbox":[44,588,1192,0]}
-{"kind":"textbox","id":"sh/t8vit8jy","slide":1,"name":"failure-label","text":"FAILURE SEMANTICS","textPreview":"FAILURE SEMANTICS","textChars":17,"textLines":1,"bbox":[44,607,180,18]}
-{"kind":"textbox","id":"sh/ut4z2dkj","slide":1,"name":"failure-copy","text":"missing field → partial profile   ·   failed provider → warning   ·   no sourced profile → no report","textPreview":"missing field → partial profile   ·   failed provider → warning   ·   no sourced profile → no report","textChars":100,"textLines":1,"bbox":[205,603,700,24]}
-{"kind":"textbox","id":"sh/fud0vi14","slide":1,"name":"boundary-label","text":"EVIDENCE BOUNDARY","textPreview":"EVIDENCE BOUNDARY","textChars":17,"textLines":1,"bbox":[44,648,180,18]}
-{"kind":"textbox","id":"sh/ryxgjihc","slide":1,"name":"boundary-copy","text":"Complete deterministic fixture—not a live crawl, current market comparison, recommendation-quality study, or factuality evaluation.","textPreview":"Complete deterministic fixture—not a live crawl, current market comparison, recommendation-quality study, or factuality evaluation.","textChars":131,"textLines":1,"bbox":[205,643,1000,28]}
-{"kind":"textbox","id":"sh/qxozad0r","slide":1,"name":"sources","text":"Sources: examples/demo-report.json · src/intellicrawl/pipeline.py · demo.py · renderers.py","textPreview":"Sources: examples/demo-report.json · src/intellicrawl/pipeline.py · demo.py · renderers.py","textChars":90,"textLines":1,"bbox":[44,692,1192,14]}
-{"kind":"notes","id":"nt/4b1pya","slide":1,"text":""}
+{"kind":"deck","id":"pr/xo7pqs","name":"Deck"}
+{"kind":"layout","layoutId":"54f5da0c-5a65-4d32-aecb-5e071ee6099e","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"2842ac69-7fb6-4735-afa3-c0e3f86ea110","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/ozq1ah","slide":1,"title":"IntelliCrawl runs one typed research graph across replaceable providers","textShapes":54}
+{"kind":"textbox","id":"sh/8bm94vat","slide":1,"name":"title","text":"IntelliCrawl runs one typed research graph across replaceable providers","textPreview":"IntelliCrawl runs one typed research graph across replaceable providers","textChars":71,"textLines":1,"bbox":[44,22,1192,42]}
+{"kind":"textbox","id":"sh/7adsvqt8","slide":1,"name":"subtitle","text":"Demo fixtures and live Firecrawl/OpenAI adapters implement the same contracts; validation and failure semantics stay inside the shared LangGraph pipeline.","textPreview":"Demo fixtures and live Firecrawl/OpenAI adapters implement the same contracts; validation and failure semantics stay inside the shared La...","textChars":154,"textLines":1,"bbox":[44,69,1192,25]}
+{"kind":"shape","id":"sh/m94r2lsn","slide":1,"name":"header-rule","bbox":[44,108,1192,0]}
+{"kind":"textbox","id":"sh/hgfa1kba","slide":1,"name":"provider-label","text":"PROVIDER ASSEMBLIES","textPreview":"PROVIDER ASSEMBLIES","textChars":19,"textLines":1,"bbox":[44,128,250,18]}
+{"kind":"shape","id":"sh/wf6t8fap","slide":1,"name":"demo-frame","bbox":[44,154,216,110]}
+{"kind":"textbox","id":"sh/vedszat4","slide":1,"name":"demo-title","text":"DEMO · NO KEYS","textPreview":"DEMO · NO KEYS","textChars":14,"textLines":1,"bbox":[60,169,180,18]}
+{"kind":"textbox","id":"sh/ud4b65sj","slide":1,"name":"demo-search","text":"DemoSearchProvider","textPreview":"DemoSearchProvider","textChars":18,"textLines":1,"bbox":[60,197,180,18]}
+{"kind":"textbox","id":"sh/xkbapgb6","slide":1,"name":"demo-analysis","text":"DemoAnalysisProvider","textPreview":"DemoAnalysisProvider","textChars":20,"textLines":1,"bbox":[60,223,180,18]}
+{"kind":"textbox","id":"sh/cj29wbal","slide":1,"name":"demo-note","text":"deterministic fixtures","textPreview":"deterministic fixtures","textChars":22,"textLines":1,"bbox":[60,244,180,16]}
+{"kind":"shape","id":"sh/elcfutkv","slide":1,"name":"live-frame","bbox":[44,292,216,166]}
+{"kind":"textbox","id":"sh/f6lgny1g","slide":1,"name":"live-title","text":"LIVE · OPTIONAL","textPreview":"LIVE · OPTIONAL","textChars":15,"textLines":1,"bbox":[60,307,180,18]}
+{"kind":"textbox","id":"sh/g7uxw3i1","slide":1,"name":"live-search","text":"Firecrawl search + scrape","textPreview":"Firecrawl search + scrape","textChars":25,"textLines":1,"bbox":[60,335,180,18]}
+{"kind":"textbox","id":"sh/183ypojm","slide":1,"name":"live-cache","text":"private TTL disk cache","textPreview":"private TTL disk cache","textChars":22,"textLines":1,"bbox":[60,360,180,17]}
+{"kind":"textbox","id":"sh/29cfyt0r","slide":1,"name":"live-analysis","text":"OpenAI structured output","textPreview":"OpenAI structured output","textChars":24,"textLines":1,"bbox":[60,389,180,18]}
+{"kind":"textbox","id":"sh/3a5gry1c","slide":1,"name":"live-note","text":"timeouts · bounded concurrency","textPreview":"timeouts · bounded concurrency","textChars":30,"textLines":1,"bbox":[60,416,180,17]}
+{"kind":"textbox","id":"sh/obex03ix","slide":1,"name":"contract-label","text":"REPLACEABLE INTERFACES","textPreview":"REPLACEABLE INTERFACES","textChars":22,"textLines":1,"bbox":[288,128,170,18]}
+{"kind":"shape","id":"sh/pcnyt8ji","slide":1,"name":"contracts-frame","bbox":[288,178,150,230]}
+{"kind":"textbox","id":"sh/qdwf2d03","slide":1,"name":"contracts-title","text":"Provider contracts","textPreview":"Provider contracts","textChars":18,"textLines":1,"bbox":[301,197,124,24]}
+{"kind":"shape","id":"sh/be5gvi1o","slide":1,"name":"contracts-rule","bbox":[306,239,114,0]}
+{"kind":"textbox","id":"sh/7ipwjihg","slide":1,"name":"search-contract","text":"SearchProvider","textPreview":"SearchProvider","textChars":14,"textLines":1,"bbox":[301,260,124,20]}
+{"kind":"textbox","id":"sh/mhgfqdgb","slide":1,"name":"search-return","text":"SourceDocument[]","textPreview":"SourceDocument[]","textChars":16,"textLines":1,"bbox":[297,287,132,18]}
+{"kind":"textbox","id":"sh/947elszm","slide":1,"name":"analysis-contract","text":"AnalysisProvider","textPreview":"AnalysisProvider","textChars":16,"textLines":1,"bbox":[301,321,124,20]}
+{"kind":"textbox","id":"sh/83yxsny1","slide":1,"name":"analysis-return","text":"typed schemas","textPreview":"typed schemas","textChars":13,"textLines":1,"bbox":[301,348,124,18]}
+{"kind":"textbox","id":"sh/ze5wfyhk","slide":1,"name":"same-graph","text":"same graph · both modes","textPreview":"same graph · both modes","textChars":23,"textLines":1,"bbox":[299,377,128,20]}
+{"kind":"textbox","id":"sh/ydwfmtgz","slide":1,"name":"graph-label","text":"RESEARCHPIPELINE · LANGGRAPH","textPreview":"RESEARCHPIPELINE · LANGGRAPH","textChars":28,"textLines":1,"bbox":[455,128,370,18]}
+{"kind":"shape","id":"sh/lgneh8zq","slide":1,"name":"graph-shell","bbox":[455,154,565,354]}
+{"kind":"shape","id":"sh/kfexo3y5","slide":1,"name":"discover-frame","bbox":[470,184,140,246]}
+{"kind":"shape","id":"sh/ba5wbyho","slide":1,"name":"discover-num","bbox":[482,196,26,26]}
+{"kind":"textbox","id":"sh/q9cvitg3","slide":1,"name":"discover-num-text","text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[482,201,26,16]}
+{"kind":"textbox","id":"sh/g3qlwvap","slide":1,"name":"discover-title","text":"Discover","textPreview":"Discover","textChars":8,"textLines":1,"bbox":[513,197,92,24]}
+{"kind":"textbox","id":"sh/h4z250ba","slide":1,"name":"discover-query","text":"normalized query","textPreview":"normalized query","textChars":16,"textLines":1,"bbox":[484,233,112,18]}
+{"kind":"textbox","id":"sh/uh83ulsj","slide":1,"name":"discover-search","text":"search comparison\ndocuments","textPreview":"search comparison | documents","textChars":27,"textLines":2,"bbox":[484,266,112,38]}
+{"kind":"textbox","id":"sh/f2hk3qt4","slide":1,"name":"discover-select","text":"select_tools()","textPreview":"select_tools()","textChars":14,"textLines":1,"bbox":[484,320,112,20]}
+{"kind":"textbox","id":"sh/47al0fal","slide":1,"name":"discover-bound","text":"deduplicate\n1–6 tools","textPreview":"deduplicate | 1–6 tools","textChars":21,"textLines":2,"bbox":[484,362,112,42]}
+{"kind":"shape","id":"sh/p8j29kb6","slide":1,"name":"research-frame","bbox":[635,184,195,246]}
+{"kind":"shape","id":"sh/25s3y5sf","slide":1,"name":"research-num","bbox":[647,196,26,26]}
+{"kind":"textbox","id":"sh/361k7at0","slide":1,"name":"research-num-text","text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[647,201,26,16]}
+{"kind":"textbox","id":"sh/kb61obah","slide":1,"name":"research-title","text":"Research","textPreview":"Research","textChars":8,"textLines":1,"bbox":[678,197,147,24]}
+{"kind":"textbox","id":"sh/5cf2xgb2","slide":1,"name":"research-fanout","text":"asyncio.gather","textPreview":"asyncio.gather","textChars":14,"textLines":1,"bbox":[652,231,161,20]}
+{"kind":"shape","id":"sh/xkbmdkfi","slide":1,"name":"worker-0","bbox":[652,265,161,35]}
+{"kind":"textbox","id":"sh/cj2lkfex","slide":1,"name":"worker-0-text","text":"tool A · search + analyze","textPreview":"tool A · search + analyze","textChars":25,"textLines":1,"bbox":[659,274,147,17]}
+{"kind":"shape","id":"sh/bitkbaxc","slide":1,"name":"worker-1","bbox":[652,311,161,35]}
+{"kind":"textbox","id":"sh/ahk3i5wr","slide":1,"name":"worker-1-text","text":"tool B · search + analyze","textPreview":"tool B · search + analyze","textChars":25,"textLines":1,"bbox":[659,320,147,17]}
+{"kind":"shape","id":"sh/pgb290f6","slide":1,"name":"worker-2","bbox":[652,357,161,35]}
+{"kind":"textbox","id":"sh/of2lgve1","slide":1,"name":"worker-2-text","text":"tool N · search + analyze","textPreview":"tool N · search + analyze","textChars":25,"textLines":1,"bbox":[659,366,147,17]}
+{"kind":"textbox","id":"sh/ne9knqxg","slide":1,"name":"research-evidence","text":"filter unknown IDs\ncomplete or partial","textPreview":"filter unknown IDs | complete or partial","textChars":38,"textLines":2,"bbox":[652,393,161,34]}
+{"kind":"shape","id":"sh/2d03elwv","slide":1,"name":"recommend-frame","bbox":[855,184,145,246]}
+{"kind":"shape","id":"sh/1cr2l0fa","slide":1,"name":"recommend-num","bbox":[867,196,26,26]}
+{"kind":"textbox","id":"sh/0bilcvep","slide":1,"name":"recommend-num-text","text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[867,201,26,16]}
+{"kind":"textbox","id":"sh/qhgjm1cn","slide":1,"name":"recommend-title","text":"Recommend","textPreview":"Recommend","textChars":9,"textLines":1,"bbox":[898,197,97,24]}
+{"kind":"textbox","id":"sh/rip0fmd8","slide":1,"name":"recommend-input","text":"validated\nToolReport[]","textPreview":"validated | ToolReport[]","textChars":22,"textLines":2,"bbox":[870,245,115,42]}
+{"kind":"textbox","id":"sh/sjy1orut","slide":1,"name":"recommend-call","text":"recommend()","textPreview":"recommend()","textChars":11,"textLines":1,"bbox":[870,315,115,20]}
+{"kind":"textbox","id":"sh/dk7ihwvy","slide":1,"name":"recommend-fallback","text":"neutral fallback\n+ warning on failure","textPreview":"neutral fallback | + warning on failure","textChars":37,"textLines":2,"bbox":[870,371,115,42]}
+{"kind":"textbox","id":"sh/itwzihcb","slide":1,"name":"output-label","text":"TYPED OUTPUT","textPreview":"TYPED OUTPUT","textChars":12,"textLines":1,"bbox":[1040,128,196,18]}
+{"kind":"shape","id":"sh/3u50bmdw","slide":1,"name":"report-frame","bbox":[1040,174,196,175]}
+{"kind":"textbox","id":"sh/4vehkruh","slide":1,"name":"report-title","text":"ResearchReport","textPreview":"ResearchReport","textChars":14,"textLines":1,"bbox":[1057,194,162,24]}
+{"kind":"textbox","id":"sh/5g7idwv2","slide":1,"name":"report-fields","text":"query · snapshot · mode\nToolReport[] · recommendation\nwarnings · complete/partial","textPreview":"query · snapshot · mode | ToolReport[] · recommendation | warnings · complete/partial","textChars":81,"textLines":3,"bbox":[1057,239,162,62]}
+{"kind":"textbox","id":"sh/upwzehcf","slide":1,"name":"report-content","text":"citations serialized\nscraped bodies excluded","textPreview":"citations serialized | scraped bodies excluded","textChars":44,"textLines":2,"bbox":[1057,312,162,34]}
+{"kind":"shape","id":"sh/vq5072d0","slide":1,"name":"render-frame","bbox":[1040,378,196,104]}
+{"kind":"textbox","id":"sh/zihozepg","slide":1,"name":"render-title","text":"Renderers","textPreview":"Renderers","textChars":9,"textLines":1,"bbox":[1057,395,162,20]}
+{"kind":"textbox","id":"sh/yh87q9ov","slide":1,"name":"render-types","text":"terminal · Markdown\nJSON · CSV","textPreview":"terminal · Markdown | JSON · CSV","textChars":30,"textLines":2,"bbox":[1057,426,162,42]}
+{"kind":"shape","id":"sh/lkj61o7m","slide":1,"name":"demo-to-contract","bbox":[260,205,40,12]}
+{"kind":"shape","id":"sh/0japsj61","slide":1,"name":"live-to-contract","bbox":[260,375,40,12]}
+{"kind":"shape","id":"sh/7m1o3epc","slide":1,"name":"contract-to-graph","bbox":[438,288,17,12]}
+{"kind":"shape","id":"sh/mls7uto7","slide":1,"name":"discover-to-research","bbox":[610,295,25,12]}
+{"kind":"shape","id":"sh/9oj65o7i","slide":1,"name":"research-to-recommend","bbox":[830,295,25,12]}
+{"kind":"shape","id":"sh/8napwj6x","slide":1,"name":"graph-to-report","bbox":[1000,245,40,12]}
+{"kind":"shape","id":"sh/3qxorup8","slide":1,"name":"report-to-render","bbox":[1128,349,12,30]}
+{"kind":"shape","id":"sh/2ponipon","slide":1,"name":"boundary-rule","bbox":[44,538,1192,0]}
+{"kind":"textbox","id":"sh/svmlsvml","slide":1,"name":"boundary-label","text":"EVIDENCE + FAILURE BOUNDARY","textPreview":"EVIDENCE + FAILURE BOUNDARY","textChars":27,"textLines":1,"bbox":[44,556,245,18]}
+{"kind":"shape","id":"sh/twvm10n6","slide":1,"name":"boundary-0","bbox":[44,586,274,74]}
+{"kind":"textbox","id":"sh/6t43ql4f","slide":1,"name":"boundary-head-0","text":"PUBLIC URLS","textPreview":"PUBLIC URLS","textChars":11,"textLines":1,"bbox":[58,600,246,16]}
+{"kind":"textbox","id":"sh/rud4zq50","slide":1,"name":"boundary-body-0","text":"reject local, private, reserved, or credentialed targets","textPreview":"reject local, private, reserved, or credentialed targets","textChars":56,"textLines":1,"bbox":[58,624,246,30]}
+{"kind":"shape","id":"sh/4r2lobmp","slide":1,"name":"boundary-1","bbox":[342,586,274,74]}
+{"kind":"textbox","id":"sh/5sv2xgnu","slide":1,"name":"boundary-head-1","text":"SOURCE IDS","textPreview":"SOURCE IDS","textChars":10,"textLines":1,"bbox":[356,600,246,16]}
+{"kind":"textbox","id":"sh/ipk3ml4j","slide":1,"name":"boundary-body-1","text":"Pydantic rejects evidence that names an unknown source","textPreview":"Pydantic rejects evidence that names an unknown source","textChars":54,"textLines":1,"bbox":[356,624,246,30]}
+{"kind":"shape","id":"sh/jqtkvq54","slide":1,"name":"boundary-2","bbox":[640,586,274,74]}
+{"kind":"textbox","id":"sh/on6l0fmt","slide":1,"name":"boundary-head-2","text":"PARTIAL RUNS","textPreview":"PARTIAL RUNS","textChars":12,"textLines":1,"bbox":[654,600,246,16]}
+{"kind":"textbox","id":"sh/pofm9kne","slide":1,"name":"boundary-body-2","text":"failed tools become warnings while sourced profiles continue","textPreview":"failed tools become warnings while sourced profiles continue","textChars":60,"textLines":1,"bbox":[654,624,246,30]}
+{"kind":"shape","id":"sh/x4zytwvi","slide":1,"name":"boundary-3","bbox":[938,586,274,74]}
+{"kind":"textbox","id":"sh/w3qh0rex","slide":1,"name":"boundary-head-3","text":"SAFE WRITES","textPreview":"SAFE WRITES","textChars":11,"textLines":1,"bbox":[952,600,246,16]}
+{"kind":"textbox","id":"sh/b2hg7mds","slide":1,"name":"boundary-body-3","text":"outputs use write-then-replace semantics","textPreview":"outputs use write-then-replace semantics","textChars":40,"textLines":1,"bbox":[952,624,246,30]}
+{"kind":"textbox","id":"sh/a18zyhw7","slide":1,"name":"sources","text":"Sources: pipeline.py · contracts.py · live.py · providers.py · models.py · renderers.py","textPreview":"Sources: pipeline.py · contracts.py · live.py · providers.py · models.py · renderers.py","textChars":87,"textLines":1,"bbox":[320,686,640,15]}
+{"kind":"notes","id":"nt/ozq1ah","slide":1,"text":""}
