@@ -12,4 +12,4 @@ This directory contains the public architecture overview and the code evidence u
 | `exports/intellicrawl-evidence-trace.pdf` | Print/preflight artifact |
 | `preflight/` | PowerPoint, final-size, grayscale, and PDF checks |
 
-The diagram traces the deterministic and live provider assemblies through their shared interfaces, LangGraph stages, typed report, renderers, and failure boundaries. It describes maintained code paths; it is not a live benchmark or a current tool comparison.
+The graph map traces deterministic and live provider assemblies through shared interfaces, explicit LangGraph state transitions, parallel per-tool research, typed output, renderers, and failure boundaries. It describes maintained code paths; it is not a live benchmark or a current tool comparison.
