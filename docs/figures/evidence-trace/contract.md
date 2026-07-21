@@ -6,11 +6,11 @@ This figure should let a technical reviewer reconstruct how IntelliCrawl swaps d
 
 ## Figure form
 
-A graph-native orchestration map. A compact provider rail exposes the interchangeable demo and live assemblies, circular state nodes show the maintained LangGraph, and an explicit research fan-out converges from per-tool work into `ToolReport[]`. A strict `ResearchReport` then crosses the public-output boundary into four renderers. Validation and degraded-run behavior are attached to the transitions they govern.
+A graph-native orchestration map. A light provider group exposes the interchangeable demo and live assemblies, circular state nodes show the maintained LangGraph, and an explicit research fan-out converges from per-tool work into `ToolReport[]`. A strict `ResearchReport` then crosses the public-output boundary into four renderers. Validation and degraded-run behavior are attached to the transitions they govern.
 
 ## Visual encoding
 
-The figure uses an editorial map palette: green identifies search/discovery, orange identifies analysis/research, plum identifies recommendation and report synthesis, and a dark provider rail separates replaceable dependencies from graph state. Shape and labels remain redundant with color.
+The figure uses a white technical-sheet treatment informed by the project's terminal demo: restrained blue identifies search/discovery, terminal orange identifies analysis/research, and charcoal identifies recommendation and typed synthesis. A light neutral group separates replaceable dependencies from graph state. Shape and labels remain redundant with color.
 
 ## Supported claim
 

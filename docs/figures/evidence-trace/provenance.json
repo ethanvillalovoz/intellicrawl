@@ -11,16 +11,16 @@
     {"bytes": 8108, "path": "src/intellicrawl/renderers.py", "role": "renderers", "sha256": "50f6eac86991afc3c06c0f44be5b92e68774dc8493974492d9715dd83e3a6b2c"}
   ],
   "outputs": [
-    {"bytes": 19000, "path": "docs/figures/evidence-trace/editable/intellicrawl-evidence-trace.pptx", "role": "editable_pptx", "sha256": "1764fbd346baf82c8b488df1bcab1db8ae135d15ab39b4d99ce81082302770d5"},
-    {"bytes": 588558, "path": "docs/figures/evidence-trace/exports/intellicrawl-evidence-trace.svg", "role": "svg", "sha256": "0fcb00479798de7dd8f92fc29a331c6af51ea5c8cd69a2cd91dd47f6d5720004"},
-    {"bytes": 198632, "path": "docs/figures/evidence-trace/exports/intellicrawl-evidence-trace.png", "role": "png", "sha256": "c026614a4ef3a488b7ec93f9dded6d9f9a7203edd25fcbf670d8b79e37ceac29"},
-    {"bytes": 156148, "path": "docs/figures/evidence-trace/exports/intellicrawl-evidence-trace.pdf", "role": "pdf", "sha256": "d99928511a383db8fb9c22413b990d46e536e3f5db4a3d369c40c2b72cec1158"}
+    {"bytes": 19044, "path": "docs/figures/evidence-trace/editable/intellicrawl-evidence-trace.pptx", "role": "editable_pptx", "sha256": "9c2932edd250f371b86d5270ff3e57a6f8454ae3bc85d33a8848634ee9a10a5b"},
+    {"bytes": 591593, "path": "docs/figures/evidence-trace/exports/intellicrawl-evidence-trace.svg", "role": "svg", "sha256": "b8cf71bd4287ca2fb0284459923aba78b6e5604fd113c88b68778af9b0642188"},
+    {"bytes": 200403, "path": "docs/figures/evidence-trace/exports/intellicrawl-evidence-trace.png", "role": "png", "sha256": "2c053890fe3e93dec39b03db1bd83a95361e3fed0c04993146f9cfbbc659d46a"},
+    {"bytes": 147622, "path": "docs/figures/evidence-trace/exports/intellicrawl-evidence-trace.pdf", "role": "pdf", "sha256": "1e9955e0314034d85b05aee24eb40b9bd83f89f79b1d99b3f064f7bf7da1f7f6"}
   ],
   "processing_notes": [
-    "Native editable graph-orchestration map with a provider rail, circular state nodes, explicit research fan-out, and terminal output boundary; exported through LibreOffice; no raster images in the PDF; PowerPoint overflow, final-size, grayscale, and PDF checks completed."
+    "Native editable graph-orchestration map on a white technical sheet with a light provider group, circular state nodes, explicit research fan-out, and restrained terminal-orange accents; exported through LibreOffice; no raster images in the PDF; PowerPoint overflow, final-size, grayscale, and PDF checks completed."
   ],
   "schema_version": 1,
-  "source_revision": "7f7f4ffc3c516873527723bab97381f641d2c842",
+  "source_revision": "0a9103fea3e20a5bd4ce2df95aa429e3372a16ad",
   "selection_note": "Only maintained provider assemblies, graph stages, schemas, renderers, and failure branches are represented; no live outcome or benchmark is shown.",
   "target_width_in": 7.16,
   "venue": "GitHub README"
