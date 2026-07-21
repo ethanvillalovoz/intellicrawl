@@ -25,45 +25,39 @@
       "path": "src/intellicrawl/renderers.py",
       "role": "renderers",
       "sha256": "50f6eac86991afc3c06c0f44be5b92e68774dc8493974492d9715dd83e3a6b2c"
-    },
-    {
-      "bytes": 68442,
-      "path": "docs/media/intellicrawl-terminal.webp",
-      "role": "terminal_capture",
-      "sha256": "b9aaa994924c020fd39a3a3fc09e6a1794f7ede5ffb0c3656781f738e5f1a108"
     }
   ],
   "outputs": [
     {
-      "bytes": 84036,
+      "bytes": 19901,
       "path": "docs/figures/evidence-trace/editable/intellicrawl-evidence-trace.pptx",
       "role": "editable_pptx",
-      "sha256": "64ef5dd8ba3061681676f72fca69623a5cce045bc96511e579d4873c81f24562"
+      "sha256": "128040de457ec4335406b42a847ab3da49de7d2ca5d0dc58329507bc551f55d5"
     },
     {
-      "bytes": 680719,
+      "bytes": 576156,
       "path": "docs/figures/evidence-trace/exports/intellicrawl-evidence-trace.svg",
       "role": "svg",
-      "sha256": "517f406f1864188f1c7973ff09aca256e1bd86be5b8e39b00d1e503c084c6033"
+      "sha256": "b89dbe3924eaf688458e4ae80218af56c5ec7266d7dcc83d283b0cddc0931d71"
     },
     {
-      "bytes": 605434,
+      "bytes": 225106,
       "path": "docs/figures/evidence-trace/exports/intellicrawl-evidence-trace.png",
       "role": "png",
-      "sha256": "51dac825c31bb7a5e45d29093cc84fe738708a2cdfccd65402da40a6a241ee66"
+      "sha256": "d1f8e542befac1b09e90f60a49ead82807bd6c327fe5192763e0a809f54d7649"
     },
     {
-      "bytes": 231197,
+      "bytes": 131624,
       "path": "docs/figures/evidence-trace/exports/intellicrawl-evidence-trace.pdf",
       "role": "pdf",
-      "sha256": "65c9d7dc83ede87c776f03b2366f423d7e4af8bfe2af732023fcbb4549bee70a"
+      "sha256": "8298117198a55c678db2123721db5438f8a242573cbaa93928eaa6ad1a21c3bd"
     }
   ],
   "processing_notes": [
-    "Editable composition created in PowerPoint-compatible PPTX and exported through LibreOffice; final-size and grayscale renders inspected manually."
+    "Native editable provenance graph exported through LibreOffice; no raster images; PowerPoint overflow, final-size, grayscale, and PDF checks completed."
   ],
   "schema_version": 1,
-  "source_revision": "45b809c1aee8b8d52e32eee73396feb977291e3e",
+  "source_revision": "06d17ff82c87c0fd0bfdfcb9cc504743e904e985",
   "selection_note": "Complete committed 2026-07-11 demo report; all profiles, fields, source IDs, and warnings represented.",
   "target_width_in": 7.16,
   "venue": "GitHub README"
